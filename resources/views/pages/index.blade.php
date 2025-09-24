@@ -99,15 +99,17 @@
         <div class="row align-items-center">
           <div class="col-md-6">
             <div class="heading-39101 mb-5">
-              <span class="backdrop">Story</span>
-              <span class="subtitle-39191">Discover Story</span>
-              <h3>Our Story</h3>
+            <span class="backdrop">Csapat
+              </span>
+              <span class="subtitle-39191">A HKO csapata</span>
+              <h3>Csapatunk</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quae expedita fugiat quo incidunt, possimus temporibus aperiam eum, quaerat sapiente.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis enim a pariatur molestiae.</p>
+            <p>A HKO csapata három lelkes diákból áll, akik közösen dolgoznak egy online platformon, hogy segítsenek a világjáróknak a tökéletes utazás megtervezéséhez. Célunk, hogy egyszerűen hozzáférhetővé tegyük a legjobb ajánlatokat, megvalósítsuk az utazók álmait. 
+            </p>
+            <p>A csapatunk úgy gondolja, mindenkinek megjár az a lehetőség, hogy álmaikat megvalósítsák. Velünk mindenki megtalálja a legideálisabb lehetőséget!</p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/traveler.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/hegy.jpg" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
@@ -119,9 +121,9 @@
         <div class="row justify-content-center text-center">
           <div class="col-md-7">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Journey</span>
-              <span class="subtitle-39191">Journey</span>
-              <h3>Your Journey Starts Here</h3>
+              <span class="backdrop text-center">Ajánlatok</span>
+              <span class="subtitle-39191">Próbáld ki</span>
+              <h3>Utazz velünk!</h3>
             </div>
           </div>
         </div>
@@ -162,118 +164,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-            <div class="listing-item">
-              <div class="listing-image">
-                <img src="/oldal/images/img_4.jpg" alt="Image" class="img-fluid">
-              </div>
-              <div class="listing-item-content">
-                <a class="px-3 mb-3 category bg-primary" href="#">$600.00</a>
-                <h2 class="mb-1"><a href="/trip-single">Expedita fugiat</a></h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-            <div class="listing-item">
-              <div class="listing-image">
-                <img src="/oldal/images/img_5.jpg" alt="Image" class="img-fluid">
-              </div>
-              <div class="listing-item-content">
-                <a class="px-3 mb-3 category bg-primary" href="#">$330.00</a>
-                <h2 class="mb-1"><a href="/trip-single">Consectetur adipisicing</a></h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-            <div class="listing-item">
-              <div class="listing-image">
-                <img src="/oldal/images/img_6.jpg" alt="Image" class="img-fluid">
-              </div>
-              <div class="listing-item-content">
-                <a class="px-3 mb-3 category bg-primary" href="#">$450.00</a>
-                <h2 class="mb-1"><a href="/trip-single">Consectetur Amet</a></h2>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </div>
 
-    <div class="site-section">
-
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-10">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Our Team</span>
-              <span class="subtitle-39191">Amazing Staff</span>
-              <h3>Meet Our Team</h3>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="person-29191 text-center">
-              <img src="/oldal/images/person_1.jpg" alt="Image" class="img-fluid mb-4">
-              <div class="px-4">
-                <h2 class="mb-2">John Doe</h2>
-                <p class="caption mb-4">Staff</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
-                <div class="social_29128 mt-5">
-                <a href="#"><span class="icon-facebook"></span></a>  
-                <a href="#"><span class="icon-instagram"></span></a>  
-                <a href="#"><span class="icon-twitter"></span></a>  
-               </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="person-29191 text-center">
-              <img src="/oldal/images/person_2.jpg" alt="Image" class="img-fluid mb-4">
-              <div class="px-4">
-                <h2 class="mb-2">Jean Doe</h2>
-                <p class="caption mb-4">Staff</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
-                <div class="social_29128 mt-5">
-                <a href="#"><span class="icon-facebook"></span></a>  
-                <a href="#"><span class="icon-instagram"></span></a>  
-                <a href="#"><span class="icon-twitter"></span></a>  
-               </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="person-29191 text-center">
-              <img src="/oldal/images/person_3.jpg" alt="Image" class="img-fluid mb-4">
-              <div class="px-4">
-                <h2 class="mb-2">Claire Dormey</h2>
-                <p class="caption mb-4">Staff</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
-                <div class="social_29128 mt-5">
-                <a href="#"><span class="icon-facebook"></span></a>  
-                <a href="#"><span class="icon-instagram"></span></a>  
-                <a href="#"><span class="icon-twitter"></span></a>  
-               </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
     </div>
-
-
-    
 
     <div class="site-section">
 
@@ -282,39 +178,54 @@
         <div class="row justify-content-center text-center">
           <div class="col-md-10">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Testimonials</span>
-              <span class="subtitle-39191">Testimony</span>
-              <h3>Happy Customers</h3>
+              <span class="backdrop text-center">Tervben</span>
+              <span class="subtitle-39191">Tervben vannak</span>
+              <h3>Közelgő utazások</h3>
             </div>
           </div>
         </div>
+
+        <style>
+          /* Scoped styles: only affect the upcoming trips carousel on this page */
+          .slide-one-item .upcoming-card { display: block; padding: 24px; background: #1f4f7b; border-radius: 8px; }
+          /* Uniform image sizing within the upcoming-card */
+          .slide-one-item .upcoming-card img { width: 100%; height: 320px; object-fit: cover; display: block; border-radius: 6px; }
+          .slide-one-item .upcoming-card p { color: #fff; margin-top: 12px; margin-bottom: 0; }
+
+          /* Move carousel arrows to the far left/right edges of this section */
+          .slide-one-item { position: relative; }
+          .slide-one-item .owl-nav { position: static; }
+          .slide-one-item .owl-nav button.owl-prev,
+          .slide-one-item .owl-nav button.owl-next { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; width: 56px; height: 56px; border-radius: 50%; background: #0d6efd !important; color: #fff !important; border: none; display: flex; align-items: center; justify-content: center; font-size: 28px !important; line-height: 1; box-shadow: 0 4px 12px rgba(0,0,0,.2); cursor: pointer; }
+          .slide-one-item .owl-nav button.owl-prev { left: -64px; }
+          .slide-one-item .owl-nav button.owl-next { right: -64px; }
+          .slide-one-item .owl-nav button[disabled] { opacity: .5 !important; cursor: default; }
+          .slide-one-item .owl-nav button.owl-prev span,
+          .slide-one-item .owl-nav button.owl-next span { font-size: 28px; line-height: 1; }
+
+          /* Add horizontal gap between the two cards so their blue backgrounds don't touch */
+          .slide-one-item .row { margin-left: 0; margin-right: 0; }
+          .slide-one-item .row > .col-md-6 { padding-left: 18px; padding-right: 18px; }
+        </style>
 
         <div class="owl-carousel slide-one-item">
           <div class="row">
             <div class="col-md-6">
 
-              <div class="testimonial-39191 d-flex">
-                <div class="mr-4">
-                  <img src="/oldal/images/person_1.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div>
-                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>
-                <p>&mdash; John Doe</p>
-                </div>
+              <div class="testimonial-39191 upcoming-card text-center">
+                <img src="/oldal/images/japankor.jpg" alt="Image" class="img-fluid">
+                <p><strong>Ismerd meg Japánt!</strong></p>
+                <p>Hamarosan elérhető</p>
               </div>    
               
             </div>
 
             <div class="col-md-6">
 
-              <div class="testimonial-39191 d-flex">
-                <div class="mr-4">
-                  <img src="/oldal/images/person_2.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div>
-                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>
-                <p>&mdash; John Doe</p>
-                </div>
+              <div class="testimonial-39191 upcoming-card text-center">
+                <img src="/oldal/images/albankor.jpg" alt="Image" class="img-fluid">
+                <p><strong>Ismerd meg Albániát!</strong></p>
+                <p>Hamarosan elérhető</p>
               </div>    
               
             </div>
@@ -323,28 +234,20 @@
           <div class="row">
             <div class="col-md-6">
 
-              <div class="testimonial-39191 d-flex">
-                <div class="mr-4">
-                  <img src="/oldal/images/person_1.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div>
-                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>
-                <p>&mdash; John Doe</p>
-                </div>
+              <div class="testimonial-39191 upcoming-card text-center">
+                <img src="/oldal/images/izlandkor.jpg" alt="Image" class="img-fluid">
+                <p><strong>Ismerd meg Izlandot!</strong></p>
+                <p>Hamarosan elérhető</p>
               </div>    
               
             </div>
 
             <div class="col-md-6">
 
-              <div class="testimonial-39191 d-flex">
-                <div class="mr-4">
-                  <img src="/oldal/images/person_2.jpg" alt="Image" class="img-fluid">
-                </div>
-                <div>
-                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>
-                <p>&mdash; John Doe</p>
-                </div>
+              <div class="testimonial-39191 upcoming-card text-center">
+                <img src="/oldal/images/spanyolkor.jpg" alt="Image" class="img-fluid">
+                <p><strong>Ismerd meg Spanyolországot!</strong></p>
+                <p>Hamarosan elérhető</p>
               </div>    
               
             </div>
@@ -355,76 +258,13 @@
       </div>
     </div>
 
-
-    <div class="site-section">
-
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-10">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Blog</span>
-              <span class="subtitle-39191">Updates</span>
-              <h3>Our Blog</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="post-entry-1 h-100">
-              <a href="/single">
-                <img src="/oldal/images/img_1.jpg" alt="Image"
-                 class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                
-                <h2><a href="/single">Lorem ipsum dolor sit amet</a></h2>
-                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="post-entry-1 h-100">
-              <a href="/single">
-                <img src="/oldal/images/img_2.jpg" alt="Image"
-                 class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                
-                <h2><a href="/single">Lorem ipsum dolor sit amet</a></h2>
-                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="post-entry-1 h-100">
-              <a href="/single">
-                <img src="/oldal/images/img_3.jpg" alt="Image"
-                 class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                
-                <h2><a href="/single">Lorem ipsum dolor sit amet</a></h2>
-                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
     <div class="site-section bg-image overlay" style="background-image: url('/oldal/images/banner.png')">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
-            <h2 class="font-weight-bold text-white">Join and Trip With Us</h2>
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ut, doloremque quo molestiae nesciunt officiis veniam, beatae dignissimos!</p>
-            <p class="mb-0"><a href="#" class="btn btn-primary text-white py-3 px-4">Get In Touch</a></p>
+          <h2 class="font-weight-bold text-white">Utazz velünk!</h2>
+            <p class="text-white">Ha érdekelnének az utazások vedd fel velünk a kapcsolatot!</p>
+            <p class="mb-0"><a href="/contact" class="btn btn-primary text-white py-3 px-4">Kapcsolat</a></p>
           </div>
         </div>
       </div>
@@ -434,7 +274,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Instagram</h2>
+            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
             <div class="row">
               <div class="col-4 gal_col">
                 <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
@@ -458,10 +298,10 @@
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
-              <div class="col-lg-6 ml-auto">
+            <div class="col-lg-6 ml-auto">
                 <h2 class="footer-heading mb-4">Gyors elérés</h2>
                 <ul class="list-unstyled">
-                <li><a href="/">Kezdőlap</a></li>
+                  <li><a href="/">Kezdőlap</a></li>
                   <li><a href="/about">Rólunk</a></li>
                   <li><a href="/trips">Utazások</a></li>
                   <li><a href="/contact">Kapcsolat</a></li>
@@ -469,14 +309,10 @@
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Newsletter</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odio iure animi ullam quam, deleniti rem!</p>
-                <form action="#" class="d-flex" class="subscribe">
-                  <input type="text" class="form-control mr-3" placeholder="Email">
-                  <input type="submit" value="Send" class="btn btn-primary">
-                </form>
+                <h2 class="footer-heading mb-4">Köszönjük!</h2>
+                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
+                
               </div>
-              
             </div>
           </div>
         

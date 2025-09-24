@@ -26,7 +26,6 @@
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-    
     <div class="site-wrap" id="home-section">
 
       <div class="site-mobile-menu site-navbar-target">
@@ -37,8 +36,6 @@
         </div>
         <div class="site-mobile-menu-body"></div>
       </div>
-
-
 
       <header class="site-navbar site-navbar-target" role="banner">
 
@@ -55,10 +52,7 @@
 
             <div class="col-9  text-right">
               
-
               <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
-
-              
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
@@ -70,9 +64,7 @@
 
                 </ul>
               </nav>
-            </div>
-
-            
+            </div>  
           </div>
         </div>
 
@@ -83,8 +75,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">About Us</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
+              <h1 class="mb-3 text-white">Rólunk</h1>
+              <p>A HKO csapata egy 3 emberből álló csapat, akik szeretnék az emberek mindennapjait színesebbé változtatni</p>
               
             </div>
           </div>
@@ -92,46 +84,44 @@
       </div>
     </div>
 
-
     <div class="site-section py-5">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
             <div class="heading-39101 mb-5">
-              <span class="backdrop">Story</span>
-              <span class="subtitle-39191">Discover Story</span>
-              <h3>Our Story</h3>
+              <span class="backdrop">Csapat
+              </span>
+              <span class="subtitle-39191">A HKO csapata</span>
+              <h3>Csapatunk</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quae expedita fugiat quo incidunt, possimus temporibus aperiam eum, quaerat sapiente.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis enim a pariatur molestiae.</p>
+            <p>A HKO csapata három lelkes diákból áll, akik közösen dolgoznak egy online platformon, hogy segítsenek a világjáróknak a tökéletes utazás megtervezéséhez. Célunk, hogy egyszerűen hozzáférhetővé tegyük a legjobb ajánlatokat, megvalósítsuk az utazók álmait. 
+            </p>
+            <p>A csapatunk úgy gondolja, mindenkinek megjár az a lehetőség, hogy álmaikat megvalósítsák. Velünk mindenki megtalálja a legideálisabb lehetőséget!</p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/traveler.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/kep2.jpg" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
-
 
     <div class="site-section py-5">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-5 order-2 ml-auto">
             <div class="heading-39101 mb-5">
-              <span class="backdrop">Mission</span>
-              <span class="subtitle-39191">Our Mission</span>
-              <h3>Our Mission</h3>
+              <span class="backdrop">Céljaink</span>
+              <span class="subtitle-39191">Miket szeretnénk elérni</span>
+              <h3>Céljaink</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quae expedita fugiat quo incidunt, possimus temporibus aperiam eum, quaerat sapiente.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis enim a pariatur molestiae.</p>
+            <p>A HKO célja, hogy egyszerűsíti és személyre szabja az utazások tervezését és megvalósítását, segítve a felhasználókat abban, hogy könnyedén felfedezhessék a legjobb ajánlatokat és helyeket.</p>
           </div>
           <div class="col-md-6 order-1" data-aos="fade-left">
-            <img src="/oldal/images/banner.png" alt="Image" class="img-fluid">
+            <img src="/oldal/images/kep.jpg" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
-
     
     <div class="site-section">
 
@@ -139,27 +129,23 @@
         <div class="row justify-content-center text-center">
           <div class="col-md-10">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Our Team</span>
-              <span class="subtitle-39191">Amazing Staff</span>
-              <h3>Meet Our Team</h3>
+              <span class="backdrop text-center">A csapat</span>
+              <span class="subtitle-39191">Csapat tagjai</span>
+              <h3>A csapat</h3>
             </div>
           </div>
         </div>
-
 
         <div class="row">
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/person_1.jpg" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/dorina2.jpg" alt="Image" class="img-fluid mb-4">
               <div class="px-4">
-                <h2 class="mb-2">John Doe</h2>
-                <p class="caption mb-4">Staff</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
+                <h2 class="mb-2">Horváth Dorina</h2>
+                <p class="caption mb-4">Backend, Frontend</p>
+                <p>A kód és a design is biztos kezekben nála.</p>
                 <div class="social_29128 mt-5">
-                <a href="#"><span class="icon-facebook"></span></a>  
-                <a href="#"><span class="icon-instagram"></span></a>  
-                <a href="#"><span class="icon-twitter"></span></a>  
                </div>
               </div>
             </div>
@@ -167,15 +153,12 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/person_2.jpg" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/dodi.jpg" alt="Image" class="img-fluid mb-4">
               <div class="px-4">
-                <h2 class="mb-2">Jean Doe</h2>
-                <p class="caption mb-4">Staff</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
+                <h2 class="mb-2">Koszednár Dorina</h2>
+                <p class="caption mb-4">Frontend, Backend</p>
+                <p>Kreativitása és rendszerszemlélete jól egészítik ki egymást.</p>
                 <div class="social_29128 mt-5">
-                <a href="#"><span class="icon-facebook"></span></a>  
-                <a href="#"><span class="icon-instagram"></span></a>  
-                <a href="#"><span class="icon-twitter"></span></a>  
                </div>
               </div>
             </div>
@@ -183,15 +166,12 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/person_3.jpg" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/ádám.png" alt="Image" class="img-fluid mb-4">
               <div class="px-4">
-                <h2 class="mb-2">Claire Dormey</h2>
-                <p class="caption mb-4">Staff</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
+                <h2 class="mb-2">Osbáth Ádám</h2>
+                <p class="caption mb-4">Adatbázis, Frontend</p>
+                <p>Megbízhatóan kezeli az adatokat és a felhasználói élményt.</p>
                 <div class="social_29128 mt-5">
-                <a href="#"><span class="icon-facebook"></span></a>  
-                <a href="#"><span class="icon-instagram"></span></a>  
-                <a href="#"><span class="icon-twitter"></span></a>  
                </div>
               </div>
             </div>
@@ -202,18 +182,13 @@
       </div>
     </div>
 
-
-    
-
-    
-
     <div class="site-section bg-image overlay" style="background-image: url('/oldal/images/banner.png')">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
-            <h2 class="font-weight-bold text-white">Join and Trip With Us</h2>
-            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ut, doloremque quo molestiae nesciunt officiis veniam, beatae dignissimos!</p>
-            <p class="mb-0"><a href="#" class="btn btn-primary text-white py-3 px-4">Get In Touch</a></p>
+            <h2 class="font-weight-bold text-white">Utazz velünk!</h2>
+            <p class="text-white">Ha érdekelnének az utazások vedd fel velünk a kapcsolatot!</p>
+            <p class="mb-0"><a href="/contact" class="btn btn-primary text-white py-3 px-4">Kapcsolat</a></p>
           </div>
         </div>
       </div>
@@ -223,7 +198,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Instagram</h2>
+            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
             <div class="row">
               <div class="col-4 gal_col">
                 <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
@@ -258,12 +233,9 @@
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Newsletter</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odio iure animi ullam quam, deleniti rem!</p>
-                <form action="#" class="d-flex" class="subscribe">
-                  <input type="text" class="form-control mr-3" placeholder="Email">
-                  <input type="submit" value="Send" class="btn btn-primary">
-                </form>
+                <h2 class="footer-heading mb-4">Köszönjük!</h2>
+                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
+                
               </div>
               
             </div>
