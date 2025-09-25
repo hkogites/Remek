@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="hu">
 
   <head>
-    <title>SmartVoyager</title>
+    <title>{{ $destination->title }} - SmartVoyager</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,7 +25,6 @@
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-    
     <div class="site-wrap" id="home-section">
 
       <div class="site-mobile-menu site-navbar-target">
@@ -46,7 +45,7 @@
 
             <div class="col-3 ">
               <div class="site-logo">
-                <a href="index.html" class="font-weight-bold">
+                <a href="/" class="font-weight-bold">
                   <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
                 </a>
               </div>
@@ -61,10 +60,10 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="index.html" class="nav-link">Kezdőlap</a></li>
-                  <li><a href="about.html" class="nav-link">Rólunk</a></li>
-                  <li><a href="trips.html" class="nav-link">Utazások</a></li>
-                  <li class="active"><a href="contact.html" class="nav-link">Kapcsolat</a></li>
+                  <li><a href="/" class="nav-link">Kezdőlap</a></li>
+                  <li><a href="/about" class="nav-link">Rólunk</a></li>
+                  <li class="active"><a href="/trips" class="nav-link">Utazások</a></li>
+                  <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
                   @auth
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
@@ -88,13 +87,15 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/banner.png')">
+      <div class="site-section-cover overlay" style="background-image: url('{{ $destination->image_path }}')">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">Kapcsolatfelvétel</h1>
-              <p>Probléma merült fel? Lépjen kapcsolatba velünk, és utazása biztonságát gyorsan rendezni fogjuk. Kérjük, ne habozzon! Ne késlekedjen, segítünk! Kérjük, írjon nekünk! Kérjük, kérjük ne várjon sokáig! Hamarosan válaszolunk Önnek! Kérjük, keressen minket!</p>
-              
+              <span class="text-white d-block mb-4">Ár: <strong>{{ number_format($destination->price_huf, 0, ' ', ' ') }} Ft</strong></span>
+              <h1 class="mb-3 text-white">{{ $destination->title }}</h1>
+              @if($destination->start_date && $destination->end_date)
+              <p>{{ \Illuminate\Support\Carbon::parse($destination->start_date)->format('Y.m.d') }} - {{ \Illuminate\Support\Carbon::parse($destination->end_date)->format('Y.m.d') }}</p>
+              @endif
             </div>
           </div>
         </div>
@@ -102,80 +103,48 @@
     </div>
 
 
-    <div class="site-section">
-      <div class="container">
+  <div class="site-section">
 
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-10">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Kapcsolat</span>
-              <span class="subtitle-39191">Lépjen kapcsolatba velünk!</span>
-              <h3>Kapcsolatfelvétel</h3>
+    <div class="container">
+      @if(session('status'))
+        <div class="alert alert-info">{{ session('status') }}</div>
+      @endif
+
+        <div class="row mt-3 pt-3">
+          @if(!empty($destination->leiras))
+            <div class="col-md-12">
+              {!! $destination->leiras !!}
+          @else
+            <div class="col-md-6">
+              <p>Ez az oldal dinamikusan jött létre az adatbázis bejegyzés alapján. Itt jeleníthetünk meg részletes leírást, útitervet, szolgáltatásokat, stb.</p>
+              <p><a href="/contact" class="btn btn-primary py-3 px-4 my-4">Kapcsolat</a></p>
             </div>
+            <div class="col-md-6">
+              <img src="{{ $destination->image_path }}" alt="{{ $destination->title }}" class="img-fluid">
+            </div>
+          @endif
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-12 text-center">
+            @auth
+              @if(!empty($isFull) && $isFull)
+                <a class="btn btn-secondary disabled" href="#" aria-disabled="true" style="pointer-events:none; opacity:0.7;">Betelt</a>
+              @else
+                <a class="btn btn-primary" href="{{ route('reservations.create', $destination->slug) }}">Lefoglalom</a>
+              @endif
+            @else
+              <a class="btn btn-outline-primary" href="{{ route('login') }}">Bejelentkezés a foglaláshoz</a>
+            @endauth
+            @if(!empty($limit))
+              <p class="mt-2 text-muted">Foglalások: {{ $currentReservations }}{{ $limit ? ' / '.$limit : '' }}</p>
+            @endif
           </div>
         </div>
-       
-        <div class="row">
-          <div class="col-lg-8 mb-5" >
-            @if(session('status'))
-              <div class="alert alert-success">{{ session('status') }}</div>
-            @endif
-            @if ($errors->any())
-              <div class="alert alert-danger">
-                <ul class="mb-0">
-                  @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                  @endforeach
-                </ul>
-              </div>
-            @endif
-            <form action="{{ route('contact.send') }}" method="post">
-              @csrf
-              <div class="form-group row">
-                <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" placeholder="Keresztnév" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" placeholder="Vezetéknév (nem kötelező)">
-                </div>
-              </div>
 
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-mail cím" required>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <textarea name="message" id="message" class="form-control" placeholder="Írja meg üzenetét..." cols="30" rows="10" required>{{ old('message') }}</textarea>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-lg-4 ml-auto">
-            <div class="bg-white p-3 p-md-5">
-              <h3 class="text-black mb-4">Elérhetőségeink</h3>
-              <ul class="list-unstyled footer-link">
-                <li class="d-block mb-3">
-                  <span class="d-block text-black">Cím:</span>
-                  <span>Kaposvár, Pázmány Péter u. 17, 7400</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Telefon:</span><span>+36 30 911 2222</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>hkogites@gmail.com</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
       </div>
-    </div> <!-- END .site-section -->
+    </div>
 
-    
 
     <footer class="site-footer bg-light">
       <div class="container">
@@ -226,4 +195,3 @@
   </body>
 
 </html>
-

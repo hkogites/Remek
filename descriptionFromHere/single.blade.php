@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
   <head>
@@ -46,7 +46,7 @@
 
             <div class="col-3 ">
               <div class="site-logo">
-                <a href="/" class="font-weight-bold">
+                <a href="index.html" class="font-weight-bold">
                   <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
                 </a>
               </div>
@@ -61,11 +61,11 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="/" class="nav-link">Kezdőlap</a></li>
-                  <li><a href="/about" class="nav-link">Rólunk</a></li>
-                  <li><a href="/trips" class="nav-link">Utazások</a></li>
-                  <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
-                  <li class="active"><a href="/blog" class="nav-link">Regisztráció</a></li>
+                  <li><a href="index.html" class="nav-link">Kezdőlap</a></li>
+                  <li><a href="about.html" class="nav-link">Rólunk</a></li>
+                  <li><a href="trips.html" class="nav-link">Utazások</a></li>
+                  <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
+                  <li class="active"><a href="blog.html" class="nav-link">Regisztráció</a></li>
                 </ul>
               </nav>
             </div>
@@ -268,16 +268,39 @@
     <footer class="site-footer bg-light">
       <div class="container">
         <div class="row">
+          <div class="col-lg-3">
+            <h2 class="footer-heading mb-3">Instagram</h2>
+            <div class="row">
+              <div class="col-4 gal_col">
+                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div class="col-4 gal_col">
+                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div class="col-4 gal_col">
+                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div class="col-4 gal_col">
+                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div class="col-4 gal_col">
+                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div class="col-4 gal_col">
+                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+            </div>
+          </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">
                 <h2 class="footer-heading mb-4">Gyors elérés</h2>
                 <ul class="list-unstyled">
-                  <li><a href="/">Kezdőlap</a></li>
-                  <li><a href="/about">Rólunk</a></li>
-                  <li><a href="/trips">Utazások</a></li>
-                  <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
+                  <li><a href="index.html">Kezdőlap</a></li>
+                  <li><a href="about.html">Rólunk</a></li>
+                  <li><a href="trips.html">Utazások</a></li>
+                  <li><a href="contact.html">Kapcsolat</a></li>
+                  <li><a href="blog.html">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">

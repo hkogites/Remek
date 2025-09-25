@@ -13,6 +13,16 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
+     * Use singular 'user' table from existing database.
+     */
+    protected $table = 'user';
+
+    /**
+     * Existing table has no created_at/updated_at columns.
+     */
+    public $timestamps = false;
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
