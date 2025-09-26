@@ -86,111 +86,113 @@
 
             
           </div>
-        </div>
-
       </header>
 
     <div class="ftco-blocks-cover-1">
-      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/banner.png')">
+      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/banner.png'); height: 500px;">
         <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">Utazási lista</h1>
-              <p>Találd meg a hozzád legjobban illő uticélt.</p>
-              
+          <div class="row align-items-center justify-content-center text-center h-100">
+            <div class="col-md-7 d-flex align-items-center h-100">
+              <div class="heading-39101 mb-5">
+                <span class="backdrop text-center">Utazások</span>
+                <span class="subtitle-39191">Utazások</span>
+                <h3>Utazási ajánlataink</h3>
+              </div>
             </div>
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- .site-section-cover -->
+  </div> <!-- .ftco-blocks-cover-1 -->
+
+  <div class="site-section">
+    <div class="container">
+        <div class="col-md-8 text-center">
+          <div class="btn-group" role="group" aria-label="Évszak szűrő">
+            <a href="{{ url('/trips') }}?season=1" class="btn btn-outline-primary {{ ($selectedSeason===1) ? 'active' : '' }}">Tél</a>
+            <a href="{{ url('/trips') }}?season=2" class="btn btn-outline-primary {{ ($selectedSeason===2) ? 'active' : '' }}">Tavasz</a>
+            <a href="{{ url('/trips') }}?season=3" class="btn btn-outline-primary {{ ($selectedSeason===3) ? 'active' : '' }}">Nyár</a>
+            <a href="{{ url('/trips') }}?season=4" class="btn btn-outline-primary {{ ($selectedSeason===4) ? 'active' : '' }}">Ősz</a>
+            <a href="{{ url('/trips') }}" class="btn btn-link">Összes</a>
           </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="site-section">
-
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-7">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Utazások</span>
-              <span class="subtitle-39191">Utazások</span>
-              <h3>Utazási ajánlataink</h3>
+      <div class="row">
+        @foreach(($destinations ?? []) as $d)
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+          <div class="listing-item">
+            <div class="listing-image">
+              <a href="{{ route('trip.show', $d->slug) }}">
+                <img src="{{ $d->image_path }}" alt="{{ $d->title }}" class="img-fluid">
+              </a>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          @foreach(($destinations ?? []) as $d)
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-            <div class="listing-item">
-              <div class="listing-image">
+            <div class="listing-item-content">
+              <a class="px-3 mb-3 category bg-primary" href="{{ route('trip.show', $d->slug) }}">{{ number_format($d->price_huf, 0, ' ', ' ') }} Ft</a>
+              <h2 class="mb-1">
                 <a href="{{ route('trip.show', $d->slug) }}">
-                  <img src="{{ $d->image_path }}" alt="{{ $d->title }}" class="img-fluid">
+                  {{ $d->title }}<br>
+                  @if($d->start_date && $d->end_date)
+                    {{ \Illuminate\Support\Carbon::parse($d->start_date)->format('Y.m.d') }}-{{ \Illuminate\Support\Carbon::parse($d->end_date)->format('m.d') }}
+                  @endif
                 </a>
-              </div>
-              <div class="listing-item-content">
-                <a class="px-3 mb-3 category bg-primary" href="{{ route('trip.show', $d->slug) }}">{{ number_format($d->price_huf, 0, ' ', ' ') }} Ft</a>
-                <h2 class="mb-1">
-                  <a href="{{ route('trip.show', $d->slug) }}">
-                    {{ $d->title }}<br>
-                    @if($d->start_date && $d->end_date)
-                      {{ \Illuminate\Support\Carbon::parse($d->start_date)->format('Y.m.d') }}-{{ \Illuminate\Support\Carbon::parse($d->end_date)->format('m.d') }}
-                    @endif
-                  </a>
-                </h2>
-              </div>
+              </h2>
             </div>
           </div>
-          @endforeach
         </div>
-
+        @endforeach
+        @if(($destinations ?? collect())->isEmpty())
+          <div class="col-12 text-center text-muted">Nincs találat az adott évszakban.</div>
+        @endif
       </div>
-    </div>
+    </div> <!-- .container -->
+  </div> <!-- .site-section -->
 
-
-
-
-
-    
-
-    <footer class="site-footer bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 ml-auto">
-            <div class="row">
+  <footer class="site-footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ml-auto">
+          <div class="row">
             <div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors elérés</h2>
-                <ul class="list-unstyled">
-                  <li><a href="/">Kezdőlap</a></li>
-                  <li><a href="/about">Rólunk</a></li>
-                  <li><a href="/trips">Utazások</a></li>
-                  <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
+              <h2 class="footer-heading mb-4">Gyors elérés</h2>
+              <ul class="list-unstyled">
+                <li><a href="/">Kezdőlap</a></li>
+                <li><a href="/about">Rólunk</a></li>
+                <li><a href="/trips">Utazások</a></li>
+                <li><a href="/contact">Kapcsolat</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
               <h2 class="footer-heading mb-4">Köszönjük!</h2>
               <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-              </div>
-              
-            </div>
           </div>
         </div>
       </div>
-    </footer>
-
     </div>
-
-    <script src="/oldal/js/jquery-3.3.1.min.js"></script>
-    <script src="/oldal/js/jquery-migrate-3.0.0.js"></script>
-    <script src="/oldal/js/popper.min.js"></script>
-    <script src="/oldal/js/bootstrap.min.js"></script>
-    <script src="/oldal/js/owl.carousel.min.js"></script>
-    <script src="/oldal/js/jquery.sticky.js"></script>
-    <script src="/oldal/js/jquery.waypoints.min.js"></script>
+  </footer>
+    </div> <!-- end .site-wrap -->
+    <style>
+      .btn-group a.active {
+        background-color: #007bff;
+        color: white;
+      }
+      .site-section { padding-top: 60px; padding-bottom: 60px; }
+      /* Fix overlapping hero title on trips page */
+      .ftco-blocks-cover-1 .heading-39101 .backdrop,
+      .ftco-blocks-cover-1 .heading-39101 .subtitle-39191 {
+        display: none !important;
+      }
+      .ftco-blocks-cover-1 .heading-39101 h3 {
+        font-size: 48px;
+        color: #fff;
+        margin: 0;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+        font-weight: bold;
+        line-height: 1.2;
+      }
+    </style>
     <script src="/oldal/js/jquery.animateNumber.min.js"></script>
     <script src="/oldal/js/jquery.fancybox.min.js"></script>
     <script src="/oldal/js/jquery.stellar.min.js"></script>
     <script src="/oldal/js/jquery.easing.1.3.js"></script>
-    <script src="/oldal/js/bootstrap-datepicker.min.js"></script>
     <script src="/oldal/js/isotope.pkgd.min.js"></script>
     <script src="/oldal/js/aos.js"></script>
 

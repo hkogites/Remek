@@ -23,6 +23,7 @@
                   <th>Úti cél</th>
                   <th>Dátum</th>
                   <th>Státusz</th>
+                  <th>Létrehozva</th>
                   <th>Művelet</th>
                 </tr>
               </thead>
@@ -57,6 +58,7 @@
               </tbody>
             </table>
           </div>
+        @else
           <p>Még nincs foglalásod.</p>
         @endif
       </div>
