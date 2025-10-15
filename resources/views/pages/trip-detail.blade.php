@@ -1,9 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="hu">
 
   <head>
-    <title>SmartVoyager</title>
-    <link rel="icon" type="image/x-icon" href="/oldal/images/logokicsi.png">
+    <title>{{ $destination->title }} - SmartVoyager</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -37,6 +36,8 @@
         <div class="site-mobile-menu-body"></div>
       </div>
 
+
+
       <header class="site-navbar site-navbar-target" role="banner">
 
         <div class="container">
@@ -52,13 +53,16 @@
 
             <div class="col-9  text-right">
               
+
               <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
+
+              
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li><a href="/" class="nav-link">Kezdőlap</a></li>
-                  <li class="active"><a href="/about" class="nav-link">Rólunk</a></li>
-                  <li><a href="/trips" class="nav-link">Utazások</a></li>
+                  <li><a href="/about" class="nav-link">Rólunk</a></li>
+                  <li class="active"><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
                   @auth
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
@@ -72,138 +76,75 @@
                   <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
                   <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
                   @endauth
-
                 </ul>
               </nav>
-            </div>  
+            </div>
+
+            
           </div>
         </div>
 
       </header>
 
     <div class="ftco-blocks-cover-1">
-      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/banner.png')">
+      <div class="site-section-cover overlay" style="background-image: url('{{ $destination->image2_path ?? $destination->image_path }}')">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">Rólunk</h1>
-              <p>A HKO csapata egy 3 emberből álló csapat, akik szeretnék az emberek mindennapjait színesebbé változtatni</p>
-              
+              <span class="text-white d-block mb-4">Ár: <strong>{{ number_format($destination->price_huf, 0, ' ', ' ') }} Ft</strong></span>
+              <h1 class="mb-3 text-white">{{ $destination->title }}</h1>
+              @if($destination->start_date && $destination->end_date)
+              <p>{{ \Illuminate\Support\Carbon::parse($destination->start_date)->format('Y.m.d') }} - {{ \Illuminate\Support\Carbon::parse($destination->end_date)->format('Y.m.d') }}</p>
+              @endif
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop">Csapat
-              </span>
-              <span class="subtitle-39191">A HKO csapata</span>
-              <h3>Csapatunk</h3>
-            </div>
-            <p>A HKO csapata három lelkes diákból áll, akik közösen dolgoznak egy online platformon, hogy segítsenek a világjáróknak a tökéletes utazás megtervezéséhez. Célunk, hogy egyszerűen hozzáférhetővé tegyük a legjobb ajánlatokat, megvalósítsuk az utazók álmait. 
-            </p>
-            <p>A csapatunk úgy gondolja, mindenkinek megjár az a lehetőség, hogy álmaikat megvalósítsák. Velünk mindenki megtalálja a legideálisabb lehetőséget!</p>
-          </div>
-          <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/kep2.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="site-section py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5 order-2 ml-auto">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop">Céljaink</span>
-              <span class="subtitle-39191">Miket szeretnénk elérni</span>
-              <h3>Céljaink</h3>
-            </div>
-            <p>A HKO célja, hogy egyszerűsíti és személyre szabja az utazások tervezését és megvalósítását, segítve a felhasználókat abban, hogy könnyedén felfedezhessék a legjobb ajánlatokat és helyeket.</p>
-          </div>
-          <div class="col-md-6 order-1" data-aos="fade-left">
-            <img src="/oldal/images/kep.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="site-section">
+  <div class="site-section">
 
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-10">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">A csapat</span>
-              <span class="subtitle-39191">Csapat tagjai</span>
-              <h3>A csapat</h3>
+    <div class="container">
+      @if(session('status'))
+        <div class="alert alert-info">{{ session('status') }}</div>
+      @endif
+
+        <div class="row mt-3 pt-3">
+          @if(!empty($destination->leiras))
+            <div class="col-md-12">
+              {!! $destination->leiras !!}
+          @else
+            <div class="col-md-6">
+              <p>Ez az oldal dinamikusan jött létre az adatbázis bejegyzés alapján. Itt jeleníthetünk meg részletes leírást, útitervet, szolgáltatásokat, stb.</p>
+              <p><a href="/contact" class="btn btn-primary py-3 px-4 my-4">Kapcsolat</a></p>
             </div>
-          </div>
+            <div class="col-md-6">
+              <img src="{{ $destination->image2_path ?? $destination->image_path }}" alt="{{ $destination->title }}" class="img-fluid">
+            </div>
+          @endif
         </div>
 
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="person-29191 text-center">
-              <img src="/oldal/images/dorina2.jpg" alt="Image" class="img-fluid mb-4">
-              <div class="px-4">
-                <h2 class="mb-2">Horváth Dorina</h2>
-                <p class="caption mb-4">Backend, Frontend</p>
-                <p>A kód és a design is biztos kezekben nála.</p>
-                <div class="social_29128 mt-5">
-               </div>
-              </div>
-            </div>
+        <div class="row mt-4">
+          <div class="col-md-12 text-center">
+            @auth
+              @if(!empty($isFull) && $isFull)
+                <a class="btn btn-secondary disabled" href="#" aria-disabled="true" style="pointer-events:none; opacity:0.7;">Betelt</a>
+              @else
+                <a class="btn btn-primary" href="{{ route('reservations.create', $destination->slug) }}">Lefoglalom</a>
+              @endif
+            @else
+              <a class="btn btn-outline-primary" href="{{ route('login') }}">Bejelentkezés a foglaláshoz</a>
+            @endauth
+            @if(!empty($limit))
+              <p class="mt-2 text-muted">Foglalások: {{ $currentReservations }}{{ $limit ? ' / '.$limit : '' }}</p>
+            @endif
           </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="person-29191 text-center">
-              <img src="/oldal/images/dodi.jpg" alt="Image" class="img-fluid mb-4">
-              <div class="px-4">
-                <h2 class="mb-2">Koszednár Dorina</h2>
-                <p class="caption mb-4">Frontend, Backend</p>
-                <p>Kreativitása és rendszerszemlélete jól egészítik ki egymást.</p>
-                <div class="social_29128 mt-5">
-               </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="person-29191 text-center">
-              <img src="/oldal/images/ádám.png" alt="Image" class="img-fluid mb-4">
-              <div class="px-4">
-                <h2 class="mb-2">Osbáth Ádám</h2>
-                <p class="caption mb-4">Adatbázis, Frontend</p>
-                <p>Megbízhatóan kezeli az adatokat és a felhasználói élményt.</p>
-                <div class="social_29128 mt-5">
-               </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </div>
 
-    <div class="site-section bg-image overlay" style="background-image: url('/oldal/images/banner.png')">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="font-weight-bold text-white">Utazz velünk!</h2>
-            <p class="text-white">Ha érdekelnének az utazások vedd fel velünk a kapcsolatot!</p>
-            <p class="mb-0"><a href="/contact" class="btn btn-primary text-white py-3 px-4">Kapcsolat</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <footer class="site-footer bg-light">
       <div class="container">
@@ -246,7 +187,6 @@
               <div class="col-lg-6">
                 <h2 class="footer-heading mb-4">Köszönjük!</h2>
                 <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-                
               </div>
               
             </div>
@@ -278,4 +218,3 @@
   </body>
 
 </html>
-

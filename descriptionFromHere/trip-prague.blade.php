@@ -63,20 +63,9 @@
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li><a href="index.html" class="nav-link">Kezdőlap</a></li>
                   <li><a href="about.html" class="nav-link">Rólunk</a></li>
-                  <li><a href="trips.html" class="nav-link">Utazások</a></li>
-                  <li class="active"><a href="contact.html" class="nav-link">Kapcsolat</a></li>
-                  @auth
-                  <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
-                  <li>
-                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
-                      @csrf
-                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
-                    </form>
-                  </li>
-                  @else
-                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
-                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
-                  @endauth
+                  <li class="active"><a href="trips.html" class="nav-link">Utazások</a></li>
+                  <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
+                  <li><a href="blog.html" class="nav-link">Regisztráció</a></li>
                 </ul>
               </nav>
             </div>
@@ -88,12 +77,13 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/banner.png')">
+      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/praga2.jpeg')">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">Kapcsolatfelvétel</h1>
-              <p>Probléma merült fel? Lépjen kapcsolatba velünk, és utazása biztonságát gyorsan rendezni fogjuk. Kérjük, ne habozzon! Ne késlekedjen, segítünk! Kérjük, írjon nekünk! Kérjük, kérjük ne várjon sokáig! Hamarosan válaszolunk Önnek! Kérjük, keressen minket!</p>
+              <span class="text-white d-block mb-4">Price: <strong>75 000 Ft</strong></span>
+              <h1 class="mb-3 text-white">Prága</h1>
+              <p>Fedezze fel velünk Prága mesés történelmi városát egy kellemes, buszos hétvégi kiránduláson! 3 nap alatt bejárjuk a város főbb nevezetességeit, élvezzük a helyi hangulatot és megkóstoljuk a cseh konyha remekeit. Tökéletes program baráti társaságoknak, iskolai csoportoknak vagy céges rendezvényekhez.</p>
               
             </div>
           </div>
@@ -103,77 +93,91 @@
 
 
     <div class="site-section">
+
       <div class="container">
-
         <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-10">
+          <div class="col-md-12">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Kapcsolat</span>
-              <span class="subtitle-39191">Lépjen kapcsolatba velünk!</span>
-              <h3>Kapcsolatfelvétel</h3>
+            <span class="backdrop text-center">Utazás részletei</span>
+              <span class="subtitle-39191">Utazás</span>
+              <h3>Utazás részletei</h3>
             </div>
           </div>
         </div>
-       
-        <div class="row">
-          <div class="col-lg-8 mb-5" >
-            @if(session('status'))
-              <div class="alert alert-success">{{ session('status') }}</div>
-            @endif
-            @if ($errors->any())
-              <div class="alert alert-danger">
-                <ul class="mb-0">
-                  @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                  @endforeach
+
+
+        <div class="row mt-5 pt-5">
+          <div class="col-md-6">
+            <p><b>Prágai csoportosutazás – 3 nap / 2 éjszaka</b><hr>
+
+            <p>1. nap: Indulás és érkezés Prágába<br>
+                <ul>
+                    <li>Kora reggeli indulás Budapestről kényelmes, légkondicionált busszal.</li>
+                    <li>Útközben rövid megállók pihenőre.</li>
+                    <li>Érkezés Prágába délután, transzfer a szállodába (3-4 csillagos, belvárosi elhelyezkedéssel).</li>
+                    <li>Szállás elfoglalása, pihenő.</li>
+                    <li>Este séta a Vencel téren, közös vacsora egy hangulatos cseh étteremben.</li>
                 </ul>
-              </div>
-            @endif
-            <form action="{{ route('contact.send') }}" method="post">
-              @csrf
-              <div class="form-group row">
-                <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" placeholder="Keresztnév" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" placeholder="Vezetéknév (nem kötelező)">
-                </div>
-              </div>
 
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-mail cím" required>
-                </div>
-              </div>
+            </p><hr>
 
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <textarea name="message" id="message" class="form-control" placeholder="Írja meg üzenetét..." cols="30" rows="10" required>{{ old('message') }}</textarea>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
-                </div>
-              </div>
-            </form>
+            <p>2. nap: Prága főbb nevezetességei<br>
+
+                <ul>
+                    <li>Reggeli a szállodában.</li>
+                    <li>Egész napos városnézés gyalogosan és busszal:<br>- Károly-híd, Óvárosi tér az Orloj órával.<br>-Prágai vár és Szent Vitus-székesegyház.<br>-Kisoldal (Malá Strana) hangulatos utcái.<br>-Ebéd egy helyi étteremben (nem tartozik az árba).</li>
+                    <li>Délután szabadprogram vagy fakultatív programlehetőség:<br>-Vltava folyó hajókirándulás.<br>-Zsidó negyed látogatása.</li>
+                    <li>Este csoportos vacsora, hagyományos cseh specialitásokkal.</li>
+                </ul>
+            </p><hr>
+
+            <p>3. nap: Szabadprogram és hazautazás<br>
+
+                <ul>
+                    <li>Reggeli után szabadidő vásárlásra, kávézásra vagy múzeumlátogatásra.</li>
+                    <li>Kora délutáni indulás vissza Budapestre.</li>
+                    <li>Érkezés Budapestre az esti órákban.</li>
+                </ul>
+            </p><hr>
+
+            <p>Az ár tartalmazza:<br>
+
+                <ul>
+                    <li>Kényelmes, légkondicionált buszos utazást oda-vissza Budapestről Prágába.</li>
+                    <li>2 éjszaka szállás 3-4 csillagos szállodában, kétágyas szobákban.</li>
+                    <li>Reggeli a szállodában.</li>
+                    <li>Magyar nyelvű idegenvezetés a városnézés alatt.</li>
+                    <li>Transzferek Prágán belül.</li>
+                    <li>Csoportos vacsorák a program szerint.</li>
+                    <li>Utasbiztosítás.<li>
+                </ul>
+            </p><hr>
+
+            <p>Nem tartalmazza:<br>
+
+                <ul>
+                    <li>Ebéd.</li>
+                    <li>Egyéni fakultatív programok díjai.</li>
+                    <li>Személyes kiadások.</li>
+                </ul>
+            </p><hr>
+
+            <p>Ár: 75.000 Ft / fő</p><hr>
+
+            <p><a href="contact.html" class="btn btn-primary py-3 px-4 my-4">Contact Us</a></p>
           </div>
-          <div class="col-lg-4 ml-auto">
-            <div class="bg-white p-3 p-md-5">
-              <h3 class="text-black mb-4">Elérhetőségeink</h3>
-              <ul class="list-unstyled footer-link">
-                <li class="d-block mb-3">
-                  <span class="d-block text-black">Cím:</span>
-                  <span>Kaposvár, Pázmány Péter u. 17, 7400</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Telefon:</span><span>+36 30 911 2222</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>hkogites@gmail.com</span></li>
-              </ul>
-            </div>
+          <div class="col-md-6">
+            <img src="/oldal/images/praga.jpg" alt="Image" class="img-fluid">
           </div>
         </div>
-        
+
       </div>
-    </div> <!-- END .site-section -->
+    </div>
+
+
+    
+    </div>
+
 
     
 
@@ -181,7 +185,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
+            <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
                 <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
@@ -208,16 +212,17 @@
             <div class="col-lg-6 ml-auto">
                 <h2 class="footer-heading mb-4">Gyors elérés</h2>
                 <ul class="list-unstyled">
-                  <li><a href="/">Kezdőlap</a></li>
-                  <li><a href="/about">Rólunk</a></li>
-                  <li><a href="/trips">Utazások</a></li>
-                  <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
+                  <li><a href="index.html">Kezdőlap</a></li>
+                  <li><a href="about.html">Rólunk</a></li>
+                  <li><a href="trips.html">Utazások</a></li>
+                  <li><a href="contact.html">Kapcsolat</a></li>
+                  <li><a href="blog.html">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
+              <h2 class="footer-heading mb-4">Köszönjük!</h2>
+              <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
+                </form>
               </div>
               
             </div>

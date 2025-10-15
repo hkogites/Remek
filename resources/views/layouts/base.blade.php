@@ -17,7 +17,107 @@
     @stack('styles')
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    @yield('body')
+
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+      <header class="site-navbar site-navbar-target" role="banner">
+        <div class="container">
+          <div class="row align-items-center position-relative">
+            <div class="col-3 ">
+              <div class="site-logo">
+                <a href="{{ url('/') }}" class="font-weight-bold">
+                  <img src="{{ asset('oldal/images/logo.png') }}" alt="Image" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <div class="col-9  text-right">
+              <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
+              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                  <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="{{ url('/') }}" class="nav-link">Kezdőlap</a></li>
+                  <li class="{{ request()->is('about') ? 'active' : '' }}"><a href="{{ url('/about') }}" class="nav-link">Rólunk</a></li>
+                  <li class="{{ request()->is('trips') ? 'active' : '' }}"><a href="{{ url('/trips') }}" class="nav-link">Utazások</a></li>
+                  <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{ url('/contact') }}" class="nav-link">Kapcsolat</a></li>
+                  @auth
+                  <li class="{{ request()->is('profil') ? 'active' : '' }}"><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
+                  <li>
+                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
+                      @csrf
+                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
+                    </form>
+                  </li>
+                  @else
+                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
+                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
+                  @endauth
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      @yield('body')
+
+      <footer class="site-footer bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
+              <div class="row">
+                <div class="col-4 gal_col">
+                  <a href="#"><img src="{{ asset('oldal/images/insta_1.jpg') }}" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="col-4 gal_col">
+                  <a href="#"><img src="{{ asset('oldal/images/insta_2.jpg') }}" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="col-4 gal_col">
+                  <a href="#"><img src="{{ asset('oldal/images/insta_3.jpg') }}" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="col-4 gal_col">
+                  <a href="#"><img src="{{ asset('oldal/images/insta_4.jpg') }}" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="col-4 gal_col">
+                  <a href="#"><img src="{{ asset('oldal/images/insta_5.jpg') }}" alt="Image" class="img-fluid"></a>
+                </div>
+                <div class="col-4 gal_col">
+                  <a href="#"><img src="{{ asset('oldal/images/insta_6.jpg') }}" alt="Image" class="img-fluid"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 ml-auto">
+              <div class="row">
+                <div class="col-lg-6 ml-auto">
+                  <h2 class="footer-heading mb-4">Gyors elérés</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="{{ url('/') }}">Kezdőlap</a></li>
+                    <li><a href="{{ url('/about') }}">Rólunk</a></li>
+                    <li><a href="{{ url('/trips') }}">Utazások</a></li>
+                    <li><a href="{{ url('/contact') }}">Kapcsolat</a></li>
+                    <li><a href="{{ url('/blog') }}">Regisztráció</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <h2 class="footer-heading mb-4">Köszönjük!</h2>
+                  <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
     <script src="{{ asset('oldal/js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('oldal/js/jquery-migrate-3.0.0.js') }}"></script>
     <script src="{{ asset('oldal/js/popper.min.js') }}"></script>

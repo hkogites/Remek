@@ -37,10 +37,7 @@
         <div class="site-mobile-menu-body"></div>
       </div>
 
-      <style>
-      .listing-item .listing-image{width:100%;height:500px;overflow:hidden}
-      .listing-item .listing-image img{width:100%;height:100%;object-fit:cover;display:block}
-    </style>
+
 
       <header class="site-navbar site-navbar-target" role="banner">
 
@@ -56,30 +53,13 @@
             </div>
 
             <div class="col-9  text-right">
-              
-
               <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
-
-              
-
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li><a href="/" class="nav-link">Kezdőlap</a></li>
                   <li><a href="/about" class="nav-link">Rólunk</a></li>
                   <li class="active"><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
-                  @auth
-                  <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
-                  <li>
-                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
-                      @csrf
-                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
-                    </form>
-                  </li>
-                  @else
-                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
-                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
-                  @endauth
                 </ul>
               </nav>
             </div>
@@ -91,12 +71,13 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/banner.png')">
+      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/norveg.jpg')">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">Utazási lista</h1>
-              <p>Találd meg a hozzád legjobban illő uticélt.</p>
+              <span class="text-white d-block mb-4">Price: <strong>330 000 Ft</strong></span>
+              <h1 class="mb-3 text-white">Norvégia</h1>
+              <p>Fedezze fel velünk Norvégia lenyűgöző fjordjait, fjelljeit és modern városait! Ez az 5 napos csoportos utazás ideális választás természetkedvelőknek.</p>
               
             </div>
           </div>
@@ -108,45 +89,67 @@
     <div class="site-section">
 
       <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-md-7">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-12">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Utazások</span>
-              <span class="subtitle-39191">Utazások</span>
-              <h3>Utazási ajánlataink</h3>
+            <span class="backdrop text-center">Utazás részletei</span>
+              <span class="subtitle-39191">Utazás</span>
+              <h3>Utazás részletei</h3>
             </div>
           </div>
         </div>
-        <div class="row">
-          @foreach(($destinations ?? []) as $d)
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-            <div class="listing-item">
-              <div class="listing-image">
-                <a href="{{ route('trip.show', $d->slug) }}">
-                  <img src="{{ $d->image_path }}" alt="{{ $d->title }}" class="img-fluid">
-                </a>
-              </div>
-              <div class="listing-item-content">
-                <a class="px-3 mb-3 category bg-primary" href="{{ route('trip.show', $d->slug) }}">{{ number_format($d->price_huf, 0, ' ', ' ') }} Ft</a>
-                <h2 class="mb-1">
-                  <a href="{{ route('trip.show', $d->slug) }}">
-                    {{ $d->title }}<br>
-                    @if($d->start_date && $d->end_date)
-                      {{ \Illuminate\Support\Carbon::parse($d->start_date)->format('Y.m.d') }}-{{ \Illuminate\Support\Carbon::parse($d->end_date)->format('m.d') }}
-                    @endif
-                  </a>
-                </h2>
-              </div>
-            </div>
+
+
+        <div class="row mt-5 pt-5">
+          <div class="col-md-6">
+            <p><b>Norvégiai csoportos utazás – 5 nap / 4 éjszaka</b><hr>
+
+            <p>1. nap: Érkezés Osloba és városnézés<br>
+                <ul>
+                    <li>Indulás Budapestről járattal Oslo repülőterére.</li>
+                    <li>Transzfer a szállodába, szállás elfoglalása.</li>
+                    <li>Városnézés: Vigeland park, Operaház, Királyi Palota kívülről.</li>
+                </ul>
+            </p><hr>
+
+            <p>2. nap: Bergen felé és fjordok<br>
+                <ul>
+                    <li>Vonatos út Bergenbe (Flåm-vasút fakultatív).</li>
+                    <li>Városnézés: Bryggen, halpiac, szállás.</li>
+                </ul>
+            </p><hr>
+
+            <p>3. nap: Fjordkirándulás<br>
+                <ul>
+                    <li>Egész napos hajókirándulás a fjordoknál.</li>
+                </ul>
+            </p><hr>
+
+            <p>4. nap: Szabadprogram / fakultatív programok<br>
+            <ul>
+                <li>Fløibanen sikló, múzeumok, rövid túrák.</li>
+            </ul></p><hr>
+
+            <p>5. nap: Hazautazás<br>
+            <ul>
+                <li>Transzfer a repülőtérre, visszaút Budapestre.</li>
+            </ul>
+            </p><hr>
+            <p>Ár: 330.000 Ft / fő</p><hr>
+
+            <p><a href="/contact" class="btn btn-primary py-3 px-4 my-4">Contact Us</a></p>
           </div>
-          @endforeach
+          <div class="col-md-6">
+            <img src="/oldal/images/norveg.jpg" alt="Image" class="img-fluid">
+          </div>
         </div>
 
       </div>
     </div>
 
 
-
+    
+    </div>
 
 
     
@@ -155,25 +158,25 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
+            <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
               </div>
             </div>
           </div>
@@ -186,7 +189,6 @@
                   <li><a href="/about">Rólunk</a></li>
                   <li><a href="/trips">Utazások</a></li>
                   <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -197,6 +199,7 @@
             </div>
           </div>
         </div>
+        
       </div>
     </footer>
 
@@ -222,4 +225,3 @@
   </body>
 
 </html>
-

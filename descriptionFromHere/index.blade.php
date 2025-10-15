@@ -1,4 +1,4 @@
-<!doctype html>
+﻿﻿<!doctype html>
 <html lang="en">
 
   <head>
@@ -67,18 +67,7 @@
                   <li><a href="/about" class="nav-link">Rólunk</a></li>
                   <li><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
-                  @auth
-                  <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
-                  <li>
-                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
-                      @csrf
-                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
-                    </form>
-                  </li>
-                  @else
-                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
-                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
-                  @endauth
+                  <li><a href="/blog" class="nav-link">Regisztráció</a></li>
 
                 </ul>
               </nav>
@@ -354,4 +343,3 @@
   </body>
 
 </html>
-

@@ -53,12 +53,7 @@
             </div>
 
             <div class="col-9  text-right">
-              
-
               <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
-
-              
-
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li><a href="/" class="nav-link">Kezdőlap</a></li>
@@ -88,13 +83,13 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/img_4.jpg')">
+      <div class="site-section-cover overlay" style="background-image: url('/oldal/images/olasz.jpg')">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <span class="text-white d-block mb-4">Price: <strong>$200.00</strong></span>
-              <h1 class="mb-3 text-white">Expedita fugiat</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
+              <span class="text-white d-block mb-4">Price: <strong>156 000 Ft</strong></span>
+              <h1 class="mb-3 text-white">Olaszország</h1>
+              <p>Verona romantikája, a Garda-tó nyugalma, Milánó nyüzsgése, a Comói-tó eleganciája és Velence egyedülálló szépsége – mindezt hat napba sűrítve, kényelmes utazással, magyar idegenvezetéssel. Ez a körutazás nem csupán egy kirándulás, hanem egy igazi élménycsomag, ahol a művészet, a természet, a gasztronómia és a történelem találkozik.</p>
               
             </div>
           </div>
@@ -109,9 +104,9 @@
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-12">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Journey Begin</span>
-              <span class="subtitle-39191">Journey</span>
-              <h3>Your Journey Starts Here</h3>
+            <span class="backdrop text-center">Utazás részletei</span>
+              <span class="subtitle-39191">Utazás</span>
+              <h3>Utazás részletei</h3>
             </div>
           </div>
         </div>
@@ -119,16 +114,98 @@
 
         <div class="row mt-5 pt-5">
           <div class="col-md-6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia facere sed non necessitatibus pariatur, dignissimos rem hic eligendi assumenda quasi, sequi voluptatum voluptatibus praesentium dolorum! Vero necessitatibus nemo cumque, a ut tempore. Accusamus perferendis tenetur molestiae soluta architecto consequuntur laudantium, iusto sed, asperiores necessitatibus molestias libero deserunt mollitia quas consequatur.</p>
-            <p>Totam sunt nam, quos cum officiis, ab incidunt doloribus delectus, quas quam excepturi. Id, eaque placeat distinctio consectetur enim reiciendis alias pariatur atque tempora ea ab dolorem earum exercitationem libero repellat modi voluptate! Fugit architecto magnam ea sunt minima asperiores. Numquam illum, error expedita vel debitis excepturi, voluptatem laborum reprehenderit!</p>
-            <p>Quo pariatur dolores commodi quas, fugit tenetur quam aperiam veniam. Veniam dolorum ipsum facilis sint sunt, sequi, ex similique numquam neque sed reprehenderit veritatis distinctio dolorem debitis, ducimus explicabo dolore. Cumque placeat beatae sint laboriosam molestias nobis possimus porro necessitatibus est delectus, asperiores at, sed aspernatur perferendis temporibus, alias voluptatibus.</p>
-            <p>Vitae consectetur dolor delectus ipsa rem, eos. Veritatis vero facilis, illo deserunt in aliquam dolore ex consequuntur facere laborum tempore provident voluptate porro voluptatem suscipit iure praesentium sint temporibus, reprehenderit. Nisi reprehenderit molestias sed obcaecati nostrum, dolor illum, debitis quis, quisquam eveniet totam. Eaque, nobis. Tenetur deleniti amet, atque fugiat.</p>
-            <p>Illo a voluptate nam amet explicabo officia doloribus? At harum mollitia doloremque deserunt repellat perspiciatis in aliquam quos cumque, deleniti exercitationem. Placeat soluta laboriosam ullam dicta ducimus, in atque temporibus molestias distinctio dolorum, tenetur rerum velit cumque asperiores id earum corporis, neque officiis libero voluptatem! Commodi nostrum iste tenetur, ea.</p>
+            <p><b>Észak-Olaszországi körutazás – 6 nap / 5 éjszaka</b>
 
-            <p><a href="#" class="btn btn-primary py-3 px-4 my-4">Contact Us</a></p>
+            Verona – Garda-tó – Sirmione – Milánó – Comói-tó – Bergamo – Velence
+            Autóbuszos utazás – 50 fős csoport számára</p><hr>
+
+            <p>1. nap: Indulás – Verona – Garda-tó<br> Indulás: Kora reggeli órákban indulás Magyarországról (pl. Budapest vagy Győr), pihenőkkel útközben. <br>Érkezés Veronába: Kora délután, városnézés helyi idegenvezetővel:
+                <ul>
+                    <li>Aréna di Verona – a híres római amfiteátrum</li>
+                    <li>Julietta háza – a híres erkély</li>
+                    <li>Piazza delle Erbe, Piazza dei Signori</li>
+                    <li>Továbbutazás a Garda-tóhoz, szállás elfoglalása a tó közelében (pl. Peschiera del Garda vagy Desenzano).</li>
+                    <li>Vacsora, szállás a Garda-tónál.</li>
+
+                </ul>
+
+            </p><hr>
+
+            <p>2. nap: Garda-tó – Sirmione – Bergamo<br>
+
+            Délelőtt: Látogatás Sirmionéba, a Garda-tó ékszerdobozába:<br>
+            <ul>
+                <li>Scaligeri vár, séta az óvárosban</li>
+                <li>Fakultatív hajókirándulás a Garda-tavon (kb. 30-45 perc)</li>
+                <li>Délután: Továbbutazás Bergamóba</li>
+                <li>Siklóval fel a Felsővárosba (Città Alta)</li>
+                <li>Piazza Vecchia, Santa Maria Maggiore-bazilika, Colleoni kápolna</li>
+            </ul>
+
+            Este: Szállás Bergamo vagy környékén, vacsora.</p><hr>
+
+            <p>3. nap: Milánó – a divat és kultúra fővárosa<br>
+
+            Egész napos kirándulás Milánóba, városnézés:<br>
+            <ul>
+                <li>Milánói dóm, a világ egyik legnagyobb katedrálisa</li>
+                <li>Galleria Vittorio Emanuele II</li>
+                <li>La Scala operaház</li>
+                <li>Fotószünet a Castello Sforzesco előtt</li>
+                <li>Szabadidő vásárlásra vagy egyéni felfedezésre.</li>
+            </ul>
+            Visszautazás a szállásra, vacsora.</p><hr>
+
+
+            <p><b>4. nap:</b> Comói-tó – Tremezzo – Bellagio (fakultatív hajókirándulás)<br>
+
+            Kirándulás a festői Comói-tóhoz:<br>
+            <ul>
+                <li>Látogatás Como városába – Dóm, tóparti sétány</li>
+                <li>Fakultatív hajókirándulás a tavon: Tremezzo (Villa Carlotta) és Bellagio – a tó gyöngyszeme</li>
+                <li>Visszatérés a szállásra a kora esti órákban.</li>
+            </ul>
+            Vacsora, szállás.</p><hr>
+
+            <p>5. nap: Velence – a lagúnák városa<br>
+
+            Kora reggeli indulás Velencébe, átszállás hajóra Punta Sabbioni kikötőjében.<br>
+            Városnézés Velencében:<br>
+            <ul>
+                <li>Szent Márk tér, Bazilika, Dózse-palota, Campanile</li>
+                <li>Rialto-híd, Canale Grande</li>
+                <li>Szabadidő, vásárlási lehetőség, kávézás a híres kávézókban.</li>
+                <li>Késő délután visszatérés a kikötőbe, utazás a szállásra Velence környékén (pl. Mestre vagy Lido di Jesolo).</li>
+                <li>Vacsora, szállás.</li>
+            </ul>
+
+            </p><hr>
+
+            <p>6. nap: Hazautazás – Udine vagy Grado (megálló útközben)<br>
+
+            Reggeli után indulás Magyarország felé.<br>
+            <ul>
+                <li>Útközbeni rövid megálló Udine vagy a tengerparti Grado városában, pihenő, szabadprogram.</li>
+                <li>Érkezés Magyarországra az esti órákban.</li>
+            </ul>
+            </p><hr>
+
+            <p>Részvételi díj tartalmazza:<br>
+            <ul>
+                <li>Kényelmes, légkondicionált, 50 fős autóbusz bérleti díját</li>
+                <li>5 éjszaka szállást 3*-os szállodákban, reggelivel és vacsorával</li>
+                <li>Helyi idegenvezetést Veronában, Milánóban és Velencében</li>
+                <li>Útlemondási biztosítás</li>
+                <li>Magyar nyelvű csoportkísérőt</li>
+            </ul>
+            </p><hr>
+            <p>Ár: 156.000 Ft / fő</p><hr>
+
+
+            <p><a href="/contact" class="btn btn-primary py-3 px-4 my-4">Contact Us</a></p>
           </div>
           <div class="col-md-6">
-            <img src="/oldal/images/img_4.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/olasz.jpg" alt="Image" class="img-fluid">
           </div>
         </div>
 
@@ -136,23 +213,7 @@
     </div>
 
 
-    <div class="site-section py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop">Story</span>
-              <span class="subtitle-39191">Discover Story</span>
-              <h3>Our Story</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quae expedita fugiat quo incidunt, possimus temporibus aperiam eum, quaerat sapiente.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis enim a pariatur molestiae.</p>
-          </div>
-          <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/traveler.jpg" alt="Image" class="img-fluid">
-          </div>
-        </div>
-      </div>
+    
     </div>
 
 
@@ -165,22 +226,22 @@
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/olasz.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/mallorca.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/norvég.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/török.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/praga.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/lisbon.jpg" alt="Image" class="img-fluid"></a>
               </div>
             </div>
           </div>
@@ -193,33 +254,17 @@
                   <li><a href="/about">Rólunk</a></li>
                   <li><a href="/trips">Utazások</a></li>
                   <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Newsletter</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odio iure animi ullam quam, deleniti rem!</p>
-                <form action="#" class="d-flex" class="subscribe">
-                  <input type="text" class="form-control mr-3" placeholder="Email">
-                  <input type="submit" value="Send" class="btn btn-primary">
-                </form>
+              <h2 class="footer-heading mb-4">Köszönjük!</h2>
+              <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
               </div>
               
             </div>
           </div>
         </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-              <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-            </div>
-          </div>
-
-        </div>
+        
       </div>
     </footer>
 
@@ -245,4 +290,3 @@
   </body>
 
 </html>
-

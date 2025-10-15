@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
   <head>
@@ -20,6 +20,11 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/oldal/css/style.css">
+
+    <style>
+      .listing-item .listing-image{width:100%;height:500px;overflow:hidden}
+      .listing-item .listing-image img{width:100%;height:100%;object-fit:cover;display:block}
+    </style>
 
   </head>
 
@@ -63,20 +68,9 @@
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li><a href="index.html" class="nav-link">Kezdőlap</a></li>
                   <li><a href="about.html" class="nav-link">Rólunk</a></li>
-                  <li><a href="trips.html" class="nav-link">Utazások</a></li>
-                  <li class="active"><a href="contact.html" class="nav-link">Kapcsolat</a></li>
-                  @auth
-                  <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
-                  <li>
-                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
-                      @csrf
-                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
-                    </form>
-                  </li>
-                  @else
-                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
-                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
-                  @endauth
+                  <li class="active"><a href="trips.html" class="nav-link">Utazások</a></li>
+                  <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
+                  <li><a href="blog.html" class="nav-link">Regisztráció</a></li>
                 </ul>
               </nav>
             </div>
@@ -92,8 +86,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">Kapcsolatfelvétel</h1>
-              <p>Probléma merült fel? Lépjen kapcsolatba velünk, és utazása biztonságát gyorsan rendezni fogjuk. Kérjük, ne habozzon! Ne késlekedjen, segítünk! Kérjük, írjon nekünk! Kérjük, kérjük ne várjon sokáig! Hamarosan válaszolunk Önnek! Kérjük, keressen minket!</p>
+              <h1 class="mb-3 text-white">Utazási lista</h1>
+              <p>Találd meg a hozzád legjobban illő uticélt.</p>
               
             </div>
           </div>
@@ -103,77 +97,99 @@
 
 
     <div class="site-section">
+
       <div class="container">
-
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-10">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-7">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Kapcsolat</span>
-              <span class="subtitle-39191">Lépjen kapcsolatba velünk!</span>
-              <h3>Kapcsolatfelvétel</h3>
+              <span class="backdrop text-center">Utazások</span>
+              <span class="subtitle-39191">Utazások</span>
+              <h3>Utazási ajánlataink</h3>
             </div>
           </div>
         </div>
-       
         <div class="row">
-          <div class="col-lg-8 mb-5" >
-            @if(session('status'))
-              <div class="alert alert-success">{{ session('status') }}</div>
-            @endif
-            @if ($errors->any())
-              <div class="alert alert-danger">
-                <ul class="mb-0">
-                  @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                  @endforeach
-                </ul>
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="/oldal/images/olaszo.jpg" alt="Image" class="img-fluid" href="trip-olasz.html">
               </div>
-            @endif
-            <form action="{{ route('contact.send') }}" method="post">
-              @csrf
-              <div class="form-group row">
-                <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" placeholder="Keresztnév" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" placeholder="Vezetéknév (nem kötelező)">
-                </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="trip-olasz.html">156 000 Ft</a>
+                <h2 class="mb-1"><a href="trip-olasz.html">Észak-Olaszországi körút<br>2026.06.20-06.26</a></h2>
               </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-mail cím" required>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <textarea name="message" id="message" class="form-control" placeholder="Írja meg üzenetét..." cols="30" rows="10" required>{{ old('message') }}</textarea>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-lg-4 ml-auto">
-            <div class="bg-white p-3 p-md-5">
-              <h3 class="text-black mb-4">Elérhetőségeink</h3>
-              <ul class="list-unstyled footer-link">
-                <li class="d-block mb-3">
-                  <span class="d-block text-black">Cím:</span>
-                  <span>Kaposvár, Pázmány Péter u. 17, 7400</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Telefon:</span><span>+36 30 911 2222</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>hkogites@gmail.com</span></li>
-              </ul>
             </div>
           </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="/oldal/images/mallorca.jpg" alt="Image" class="img-fluid" href="trip-mallorca.html">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="trip-mallorca.html">190 000 Ft</a>
+                <h2 class="mb-1"><a href="trip-mallorca.html">Mallorca<br>2026.04.03-04.08</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="/oldal/images/norway.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="trip-norway.html">330 000 Ft</a>
+                <h2 class="mb-1"><a href="trip-norway.html">Norvégia<br>2026.12.22.-12.27</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="/oldal/images/töröko.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="trip-turkey.html">170 000 Ft</a>
+                <h2 class="mb-1"><a href="trip-turkey.html">Törökország<br>2026.03.03-03.09</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="/oldal/images/praga.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="trip-prague.html">75 000 Ft</a>
+                <h2 class="mb-1"><a href="trip-prague.html">Prága<br>2026.10.23.-10.25.</a></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+            <div class="listing-item">
+              <div class="listing-image">
+                <img src="/oldal/images/lisbon.jpg" alt="Image" class="img-fluid">
+              </div>
+              <div class="listing-item-content">
+                <a class="px-3 mb-3 category bg-primary" href="trip-lisbon.html">250 000 Ft</a>
+                <h2 class="mb-1"><a href="trip-lisbon.html">Lisszabon<br>2026.09.01-09.06</a></h2>
+              </div>
+            </div>
+          </div>
+
         </div>
-        
+
       </div>
-    </div> <!-- END .site-section -->
+    </div>
+
+
+    
+    </div>
+
 
     
 
@@ -181,10 +197,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
+            <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/olaszo.jpg" alt="Image" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
                 <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
@@ -208,16 +224,16 @@
             <div class="col-lg-6 ml-auto">
                 <h2 class="footer-heading mb-4">Gyors elérés</h2>
                 <ul class="list-unstyled">
-                  <li><a href="/">Kezdőlap</a></li>
-                  <li><a href="/about">Rólunk</a></li>
-                  <li><a href="/trips">Utazások</a></li>
-                  <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
+                  <li><a href="index.html">Kezdőlap</a></li>
+                  <li><a href="about.html">Rólunk</a></li>
+                  <li><a href="trips.html">Utazások</a></li>
+                  <li><a href="contact.html">Kapcsolat</a></li>
+                  <li><a href="blog.html">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
+              <h2 class="footer-heading mb-4">Köszönjük!</h2>
+              <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
               </div>
               
             </div>

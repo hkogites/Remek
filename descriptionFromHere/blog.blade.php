@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
   <head>
@@ -64,19 +64,8 @@
                   <li><a href="index.html" class="nav-link">Kezdőlap</a></li>
                   <li><a href="about.html" class="nav-link">Rólunk</a></li>
                   <li><a href="trips.html" class="nav-link">Utazások</a></li>
-                  <li class="active"><a href="contact.html" class="nav-link">Kapcsolat</a></li>
-                  @auth
-                  <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
-                  <li>
-                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
-                      @csrf
-                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
-                    </form>
-                  </li>
-                  @else
-                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
-                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
-                  @endauth
+                  <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
+				  <li class="active"><a href="blog.html" class="nav-link">Regisztráció</a></li>
                 </ul>
               </nav>
             </div>
@@ -92,8 +81,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">Kapcsolatfelvétel</h1>
-              <p>Probléma merült fel? Lépjen kapcsolatba velünk, és utazása biztonságát gyorsan rendezni fogjuk. Kérjük, ne habozzon! Ne késlekedjen, segítünk! Kérjük, írjon nekünk! Kérjük, kérjük ne várjon sokáig! Hamarosan válaszolunk Önnek! Kérjük, keressen minket!</p>
+              <h1 class="mb-3 text-white">Our Blog</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta veritatis in tenetur doloremque, maiores doloribus officia iste. Dolores.</p>
               
             </div>
           </div>
@@ -105,83 +94,114 @@
     <div class="site-section">
       <div class="container">
 
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-10">
-            <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Kapcsolat</span>
-              <span class="subtitle-39191">Lépjen kapcsolatba velünk!</span>
-              <h3>Kapcsolatfelvétel</h3>
-            </div>
-          </div>
-        </div>
        
         <div class="row">
-          <div class="col-lg-8 mb-5" >
-            @if(session('status'))
-              <div class="alert alert-success">{{ session('status') }}</div>
-            @endif
-            @if ($errors->any())
-              <div class="alert alert-danger">
-                <ul class="mb-0">
-                  @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                  @endforeach
-                </ul>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_1.jpg" alt="Image"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
               </div>
-            @endif
-            <form action="{{ route('contact.send') }}" method="post">
-              @csrf
-              <div class="form-group row">
-                <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}" placeholder="Keresztnév" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}" placeholder="Vezetéknév (nem kötelező)">
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="E-mail cím" required>
-                </div>
-              </div>
-
-              <div class="form-group row">
-                <div class="col-md-12">
-                  <textarea name="message" id="message" class="form-control" placeholder="Írja meg üzenetét..." cols="30" rows="10" required>{{ old('message') }}</textarea>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-lg-4 ml-auto">
-            <div class="bg-white p-3 p-md-5">
-              <h3 class="text-black mb-4">Elérhetőségeink</h3>
-              <ul class="list-unstyled footer-link">
-                <li class="d-block mb-3">
-                  <span class="d-block text-black">Cím:</span>
-                  <span>Kaposvár, Pázmány Péter u. 17, 7400</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Telefon:</span><span>+36 30 911 2222</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>hkogites@gmail.com</span></li>
-              </ul>
             </div>
           </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_2.jpg" alt="Image"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_3.jpg" alt="Image"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_1.jpg" alt="Image"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_2.jpg" alt="Image"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_3.jpg" alt="Image"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
+        <div class="col-12 mt-5 text-center">
+          <span class="p-3">1</span>
+          <a href="#" class="p-3">2</a>
+          <a href="#" class="p-3">3</a>
+          <a href="#" class="p-3">4</a>
         </div>
         
       </div>
     </div> <!-- END .site-section -->
 
-    
-
     <footer class="site-footer bg-light">
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
+            <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
                 <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
@@ -205,19 +225,23 @@
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
-            <div class="col-lg-6 ml-auto">
+			<div class="col-lg-6 ml-auto">
                 <h2 class="footer-heading mb-4">Gyors elérés</h2>
                 <ul class="list-unstyled">
-                  <li><a href="/">Kezdőlap</a></li>
-                  <li><a href="/about">Rólunk</a></li>
-                  <li><a href="/trips">Utazások</a></li>
-                  <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
+                  <li><a href="index.html">Kezdőlap</a></li>
+                  <li><a href="about.html">Rólunk</a></li>
+                  <li><a href="trips.html">Utazások</a></li>
+                  <li><a href="contact.html">Kapcsolat</a></li>
+                  <li><a href="blog.html">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
+                <h2 class="footer-heading mb-4">Newsletter</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odio iure animi ullam quam, deleniti rem!</p>
+                <form action="#" class="d-flex" class="subscribe">
+                  <input type="text" class="form-control mr-3" placeholder="Email">
+                  <input type="submit" value="Send" class="btn btn-primary">
+                </form>
               </div>
               
             </div>
