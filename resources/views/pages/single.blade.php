@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
   <head>
@@ -268,29 +268,6 @@
     <footer class="site-footer bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Instagram</h2>
-            <div class="row">
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-            </div>
-          </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">

@@ -23,6 +23,7 @@ class Destination extends Model
         'slug',
         'title',
         'price_huf',
+<<<<<<< HEAD
         'start_date',
         'end_date',
         'image_path',
@@ -30,4 +31,19 @@ class Destination extends Model
         'detail_url',
         'leiras',
     ];
+=======
+        'evszak',
+        'start_date',
+        'end_date',
+        'image_path',
+        'detail_url',
+        'foglallimit',
+        'leiras',
+    ];
+
+    protected $casts = [
+        'start_date' => 'date',
+        'end_date' => 'date',
+    ];
+>>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
 }

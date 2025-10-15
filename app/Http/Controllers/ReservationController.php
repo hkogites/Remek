@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ReservationConfirmation;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Carbon;
+>>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
 
 class ReservationController extends Controller
 {
@@ -84,6 +91,67 @@ class ReservationController extends Controller
         
         Reservation::create($data);
 
+<<<<<<< HEAD
         return redirect()->route('profile')->with('status', 'Foglalás rögzítve. Hamarosan felvesszük Önnel a kapcsolatot.');
     }
+=======
+        // Send confirmation email to the provided address
+        try {
+            $pricePerPerson = (int)($destination->price_huf ?? 0);
+            $people = (int)($data['people_count'] ?? 1);
+            $total = $pricePerPerson * max(1, $people);
+
+            // Format dates safely regardless of whether they are strings or Carbon instances
+            $startFmt = null;
+            if (!empty($destination->start_date)) {
+                $startFmt = ($destination->start_date instanceof \DateTimeInterface)
+                    ? $destination->start_date->format('Y.m.d')
+                    : Carbon::parse($destination->start_date)->format('Y.m.d');
+            }
+            $endFmt = null;
+            if (!empty($destination->end_date)) {
+                $endFmt = ($destination->end_date instanceof \DateTimeInterface)
+                    ? $destination->end_date->format('Y.m.d')
+                    : Carbon::parse($destination->end_date)->format('Y.m.d');
+            }
+
+            $mailData = [
+                'full_name' => $data['full_name'],
+                'email' => $data['email'],
+                'people_count' => $people,
+                'price_huf' => $pricePerPerson,
+                'total_price_huf' => $total,
+                'start_date' => $startFmt,
+                'end_date' => $endFmt,
+                'destination_title' => (string)($destination->title ?? 'Utazás'),
+                'note' => $data['note'] ?? null,
+            ];
+            $mailable = new ReservationConfirmation($mailData);
+            $to = $data['email'];
+            $bcc = env('ADMIN_EMAIL');
+            Log::info('Sending reservation confirmation email', ['to' => $to, 'bcc' => (bool)$bcc, 'mailData' => $mailData]);
+            $mailer = Mail::to($to);
+            if (!empty($bcc)) {
+                $mailer->bcc($bcc);
+            }
+            $mailer->send($mailable);
+            Log::info('Reservation confirmation email sent');
+        } catch (\Throwable $e) {
+            Log::error('Failed to send reservation confirmation email', ['error' => $e->getMessage(), 'trace' => $e->getTraceAsString()]);
+            // Do not block the reservation flow if email fails
+        }
+
+        return redirect()->route('profile')->with('status', 'Foglalás rögzítve. Hamarosan felvesszük Önnel a kapcsolatot.');
+    }
+
+    public function destroy(Reservation $reservation): RedirectResponse
+    {
+        // Allow only the owner to delete
+        if ($reservation->user_id !== Auth::id()) {
+            abort(403);
+        }
+        $reservation->delete();
+        return redirect()->route('profile')->with('status', 'Foglalás törölve.');
+    }
+>>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
 }

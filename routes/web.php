@@ -7,8 +7,11 @@ use App\Http\Controllers\TripDetailController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+<<<<<<< HEAD
 use App\Http\Controllers\Admin\DestinationController as AdminDestinationController;
 use App\Http\Middleware\AdminMiddleware;
+=======
+>>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
 
 Route::view('/', 'pages.index');
 Route::redirect('/index.html', '/', 301);
@@ -57,10 +60,15 @@ Route::middleware('auth')->group(function () {
     // Reservations
     Route::get('/trip/{slug}/reserve', [ReservationController::class, 'create'])->name('reservations.create');
     Route::post('/trip/{slug}/reserve', [ReservationController::class, 'store'])->name('reservations.store');
+<<<<<<< HEAD
+=======
+    Route::delete('/reservations/{reservation}', [ReservationController::class, 'destroy'])->name('reservations.destroy');
+>>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
 });
 
 // Contact form submit
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+<<<<<<< HEAD
 
 // Admin routes (auth + admin only)
 Route::middleware(['auth', AdminMiddleware::class])
@@ -70,3 +78,5 @@ Route::middleware(['auth', AdminMiddleware::class])
         Route::redirect('/', '/admin/destinations', 302)->name('home');
         Route::resource('destinations', AdminDestinationController::class)->except(['show']);
     });
+=======
+>>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836

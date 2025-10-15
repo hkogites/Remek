@@ -155,6 +155,7 @@
     <footer class="site-footer bg-light">
       <div class="container">
         <div class="row">
+<<<<<<< HEAD
           <div class="col-lg-3">
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
@@ -178,6 +179,9 @@
               </div>
             </div>
           </div>
+=======
+          
+>>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">

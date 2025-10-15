@@ -61,9 +61,12 @@
                   <li><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
                   @auth
+<<<<<<< HEAD
                   @if(auth()->user()->is_admin)
                   <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
                   @endif
+=======
+>>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">
@@ -211,29 +214,7 @@
     <footer class="site-footer bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
-            <div class="row">
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-            </div>
-          </div>
+          
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">

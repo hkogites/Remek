@@ -1,0 +1,4 @@
+Email-es értesítés
+Utazás kvíz
+Random utazás idő és dátum alapján
+Utazások csoportosítása évszak alapján
