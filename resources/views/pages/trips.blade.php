@@ -69,6 +69,9 @@
                   <li class="active"><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
                   @auth
+                  @if(auth()->user()->is_admin)
+                  <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
+                  @endif
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">

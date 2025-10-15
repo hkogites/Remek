@@ -7,6 +7,8 @@ use App\Http\Controllers\TripDetailController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Admin\DestinationController as AdminDestinationController;
+use App\Http\Middleware\AdminMiddleware;
 
 Route::view('/', 'pages.index');
 Route::redirect('/index.html', '/', 301);
@@ -59,3 +61,12 @@ Route::middleware('auth')->group(function () {
 
 // Contact form submit
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+// Admin routes (auth + admin only)
+Route::middleware(['auth', AdminMiddleware::class])
+    ->prefix('admin')
+    ->as('admin.')
+    ->group(function () {
+        Route::redirect('/', '/admin/destinations', 302)->name('home');
+        Route::resource('destinations', AdminDestinationController::class)->except(['show']);
+    });

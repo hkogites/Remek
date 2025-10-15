@@ -17,10 +17,14 @@
             <li class="{{ request()->is('trips') ? 'active' : '' }}"><a href="{{ url('/trips') }}" class="nav-link">Trips</a></li>
             <li class="{{ request()->is('blog') ? 'active' : '' }}"><a href="{{ url('/blog') }}" class="nav-link">Blog</a></li>
             <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{ url('/contact') }}" class="nav-link">Contact</a></li>
+            @auth
+              @if(auth()->user()->is_admin)
+                <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
+              @endif
+            @endauth
           </ul>
         </nav>
       </div>
     </div>
   </div>
 </header>
-
