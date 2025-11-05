@@ -164,7 +164,6 @@
     <footer class="site-footer bg-light">
       <div class="container">
         <div class="row">
-<<<<<<< HEAD
           <div class="col-lg-3">
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
@@ -187,8 +186,6 @@
                 <a href="/trips"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
               </div>
             </div>
-=======
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">

@@ -24,33 +24,12 @@
                   <th>Dátum</th>
                   <th>Státusz</th>
                   <th>Létrehozva</th>
-<<<<<<< HEAD
-=======
                   <th>Művelet</th>
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
                 </tr>
               </thead>
               <tbody>
                 @foreach($reservations as $res)
                   <tr>
-<<<<<<< HEAD
-                    <td>
-                      @if($res->destination)
-                        <a href="{{ route('trip.show', $res->destination->slug) }}">{{ $res->destination->title }}</a>
-                      @else
-                        -
-                      @endif
-                    </td>
-                    <td>
-                      @if($res->destination && $res->destination->start_date && $res->destination->end_date)
-                        {{ \Illuminate\Support\Carbon::parse($res->destination->start_date)->format('Y.m.d') }} - {{ \Illuminate\Support\Carbon::parse($res->destination->end_date)->format('Y.m.d') }}
-                      @else
-                        -
-                      @endif
-                    </td>
-                    <td>{{ ucfirst($res->status) }}</td>
-                    <td>{{ $res->created_at?->format('Y.m.d H:i') }}</td>
-=======
                   <td>
                     @if($res->destination)
                       <a href="{{ route('trip.show', $res->destination->slug) }}">{{ $res->destination->title }}</a>
@@ -74,7 +53,6 @@
                         <button type="submit" class="btn btn-sm btn-danger">Törlés</button>
                       </form>
                     </td>
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
                   </tr>
                 @endforeach
               </tbody>

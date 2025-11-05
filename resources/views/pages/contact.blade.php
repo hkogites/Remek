@@ -66,12 +66,9 @@
                   <li><a href="trips.html" class="nav-link">Utazások</a></li>
                   <li class="active"><a href="contact.html" class="nav-link">Kapcsolat</a></li>
                   @auth
-<<<<<<< HEAD
                   @if(auth()->user()->is_admin)
                   <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
                   @endif
-=======
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">
@@ -186,7 +183,6 @@
     <footer class="site-footer bg-light">
       <div class="container">
         <div class="row">
-<<<<<<< HEAD
           <div class="col-lg-3">
             <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
             <div class="row">
@@ -210,8 +206,6 @@
               </div>
             </div>
           </div>
-=======
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">

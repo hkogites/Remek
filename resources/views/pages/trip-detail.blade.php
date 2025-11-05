@@ -65,12 +65,9 @@
                   <li class="active"><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
                   @auth
-<<<<<<< HEAD
                   @if(auth()->user()->is_admin)
                   <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
                   @endif
-=======
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">
@@ -93,11 +90,7 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-<<<<<<< HEAD
       <div class="site-section-cover overlay" style="background-image: url('{{ $destination->image2_path ?? $destination->image_path }}')">
-=======
-      <div class="site-section-cover overlay" style="background-image: url('{{ $destination->image_path }}')">
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
@@ -130,11 +123,7 @@
               <p><a href="/contact" class="btn btn-primary py-3 px-4 my-4">Kapcsolat</a></p>
             </div>
             <div class="col-md-6">
-<<<<<<< HEAD
               <img src="{{ $destination->image2_path ?? $destination->image_path }}" alt="{{ $destination->title }}" class="img-fluid">
-=======
-              <img src="{{ $destination->image_path }}" alt="{{ $destination->title }}" class="img-fluid">
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
             </div>
           @endif
         </div>
@@ -163,7 +152,6 @@
     <footer class="site-footer bg-light">
       <div class="container">
         <div class="row">
-<<<<<<< HEAD
           <div class="col-lg-3">
             <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
             <div class="row">
@@ -187,8 +175,6 @@
               </div>
             </div>
           </div>
-=======
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">

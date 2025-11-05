@@ -8,13 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReservationConfirmation;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Carbon;
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
 
 class ReservationController extends Controller
 {
@@ -91,10 +88,6 @@ class ReservationController extends Controller
         
         Reservation::create($data);
 
-<<<<<<< HEAD
-        return redirect()->route('profile')->with('status', 'Foglalás rögzítve. Hamarosan felvesszük Önnel a kapcsolatot.');
-    }
-=======
         // Send confirmation email to the provided address
         try {
             $pricePerPerson = (int)($destination->price_huf ?? 0);
@@ -153,5 +146,5 @@ class ReservationController extends Controller
         $reservation->delete();
         return redirect()->route('profile')->with('status', 'Foglalás törölve.');
     }
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
 }
+

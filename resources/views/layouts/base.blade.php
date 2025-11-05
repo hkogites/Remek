@@ -48,12 +48,9 @@
                   <li class="{{ request()->is('trips') ? 'active' : '' }}"><a href="{{ url('/trips') }}" class="nav-link">Utazások</a></li>
                   <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{ url('/contact') }}" class="nav-link">Kapcsolat</a></li>
                   @auth
-<<<<<<< HEAD
                   @if(auth()->user()->is_admin)
                   <li class="{{ request()->is('admin*') ? 'active' : '' }}"><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
                   @endif
-=======
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
                   <li class="{{ request()->is('profil') ? 'active' : '' }}"><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">
@@ -74,7 +71,6 @@
 
       @yield('body')
 
-<<<<<<< HEAD
       @hasSection('footer')
         @yield('footer')
       @else
@@ -120,37 +116,12 @@
                     <h2 class="footer-heading mb-4">Köszönjük!</h2>
                     <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
                   </div>
-=======
-      <footer class="site-footer bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="row">
-                <div class="col-lg-6 ml-auto">
-                  <h2 class="footer-heading mb-4">Gyors elérés</h2>
-                  <ul class="list-unstyled">
-                    <li><a href="{{ url('/') }}">Kezdőlap</a></li>
-                    <li><a href="{{ url('/about') }}">Rólunk</a></li>
-                    <li><a href="{{ url('/trips') }}">Utazások</a></li>
-                    <li><a href="{{ url('/contact') }}">Kapcsolat</a></li>
-                    <li><a href="{{ url('/blog') }}">Regisztráció</a></li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                  <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </footer>
       @endif
-=======
-        </div>
-      </footer>
->>>>>>> 402e2fc82c5bcf1443789af573a3376b720a2836
 
     </div>
 
