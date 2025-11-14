@@ -1957,3 +1957,23 @@ h1, h2, h3, h4, h5,
 }
 
 /* Fixed banner behind navbar removed to keep navbar plain white */
+.kozepre {
+ 
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Button text colors - ensure white text on colored backgrounds */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  color: #fff !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  color: #fff !important;
+}

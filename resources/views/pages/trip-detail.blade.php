@@ -21,6 +21,27 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/oldal/css/style.css">
 
+    <style>
+      /* Force center alignment for booking buttons - override any conflicting styles */
+      .site-section .container > div[style*="text-align: center"] {
+        text-align: center !important;
+        width: 100% !important;
+        display: block !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        float: none !important;
+      }
+      .site-section .container > div[style*="text-align: center"] .btn {
+        display: inline-block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+      }
+      .site-section .container > div[style*="text-align: center"] p {
+        text-align: center !important;
+        margin: 0.5rem auto 0 auto !important;
+      }
+    </style>
+
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -38,56 +59,7 @@
 
 
 
-      <header class="site-navbar site-navbar-target" role="banner">
-
-        <div class="container">
-          <div class="row align-items-center position-relative">
-
-            <div class="col-3 ">
-              <div class="site-logo">
-                <a href="/" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-9  text-right">
-              
-
-              <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
-
-              
-
-              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
-                <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="/" class="nav-link">Kezdőlap</a></li>
-                  <li><a href="/about" class="nav-link">Rólunk</a></li>
-                  <li class="active"><a href="/trips" class="nav-link">Utazások</a></li>
-                  <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
-                  @auth
-                  @if(auth()->user()->is_admin)
-                  <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
-                  @endif
-                  <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
-                  <li>
-                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
-                      @csrf
-                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
-                    </form>
-                  </li>
-                  @else
-                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
-                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
-                  @endauth
-                </ul>
-              </nav>
-            </div>
-
-            
-          </div>
-        </div>
-
-      </header>
+      @include('components.navbar')
 
     <div class="ftco-blocks-cover-1">
       <div class="site-section-cover overlay" style="background-image: url('{{ $destination->image2_path ?? $destination->image_path }}')">
@@ -128,22 +100,21 @@
           @endif
         </div>
 
-        <div class="row mt-4">
-          <div class="col-md-12 text-center">
-            @auth
-              @if(!empty($isFull) && $isFull)
-                <a class="btn btn-secondary disabled" href="#" aria-disabled="true" style="pointer-events:none; opacity:0.7;">Betelt</a>
-              @else
-                <a class="btn btn-primary" href="{{ route('reservations.create', $destination->slug) }}">Lefoglalom</a>
-              @endif
+        <div style="margin-bottom: 2rem; text-align: center; width: 100%; display: block;">
+          @auth
+            @if(!empty($isFull) && $isFull)
+              <a class="btn btn-secondary disabled" href="#" aria-disabled="true" style="pointer-events:none; opacity:0.7; display: inline-block;">Betelt</a>
             @else
-              <a class="btn btn-outline-primary" href="{{ route('login') }}">Bejelentkezés a foglaláshoz</a>
-            @endauth
-            @if(!empty($limit))
-              <p class="mt-2 text-muted">Foglalások: {{ $currentReservations }}{{ $limit ? ' / '.$limit : '' }}</p>
+              <a class="btn btn-primary" href="{{ route('reservations.create', $destination->slug) }}" style="display: inline-block;">Lefoglalom</a>
             @endif
-          </div>
+          @else
+            <a class="btn btn-outline-primary" href="{{ route('login') }}" style="display: inline-block;">Bejelentkezés a foglaláshoz</a>
+          @endauth
+          @if(!empty($limit))
+            <p class="mt-2 text-muted" style="text-align: center; margin-top: 0.5rem;">Foglalások: {{ $currentReservations }}{{ $limit ? ' / '.$limit : '' }}</p>
+          @endif
         </div>
+        
 
       </div>
     </div>
@@ -151,51 +122,22 @@
 
     <footer class="site-footer bg-light">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
-            <div class="row">
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-            </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h2 class="footer-heading mb-4">Gyors elérés</h2>
+            <ul class="list-unstyled">
+              <li><a href="/">Kezdőlap</a></li>
+              <li><a href="/about">Rólunk</a></li>
+              <li><a href="/trips">Utazások</a></li>
+              <li><a href="/contact">Kapcsolat</a></li>
+              <li><a href="/blog">Regisztráció</a></li>
+            </ul>
           </div>
-          <div class="col-lg-8 ml-auto">
-            <div class="row">
-            <div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors elérés</h2>
-                <ul class="list-unstyled">
-                  <li><a href="/">Kezdőlap</a></li>
-                  <li><a href="/about">Rólunk</a></li>
-                  <li><a href="/trips">Utazások</a></li>
-                  <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-              </div>
-              
-            </div>
+          <div class="col-lg-6">
+            <h2 class="footer-heading mb-4">Köszönjük!</h2>
+            <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
           </div>
         </div>
-        
       </div>
     </footer>
 

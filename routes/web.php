@@ -7,6 +7,7 @@ use App\Http\Controllers\TripDetailController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\QuizController;
 use App\Http\Controllers\Admin\DestinationController as AdminDestinationController;
 use App\Http\Middleware\AdminMiddleware;
 
@@ -41,6 +42,10 @@ Route::redirect('/trip-prague', '/trip/trip-prague', 301);
 Route::redirect('/trip-prague.html', '/trip/trip-prague', 301);
 Route::redirect('/trip-lisbon', '/trip/trip-lisbon', 301);
 Route::redirect('/trip-lisbon.html', '/trip/trip-lisbon', 301);
+
+// Quiz
+Route::get('/quiz', [QuizController::class, 'show'])->name('quiz.show');
+Route::post('/quiz', [QuizController::class, 'submit'])->name('quiz.submit');
 
 // Auth routes (Hungarian)
 Route::get('/bejelentkezes', [AuthController::class, 'showLogin'])->name('login');
