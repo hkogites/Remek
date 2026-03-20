@@ -47,7 +47,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="/" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -61,6 +61,12 @@
                   <li class="active"><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
                   @auth
+                  @if(auth()->user()->is_admin)
+                  <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
+                  @endif
+                  @if(auth()->user()->is_iroda)
+                  <li><a href="{{ url('/iroda') }}" class="nav-link">Iroda</a></li>
+                  @endif
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">
@@ -205,7 +211,7 @@
             <p><a href="/contact" class="btn btn-primary py-3 px-4 my-4">Contact Us</a></p>
           </div>
           <div class="col-md-6">
-            <img src="/oldal/images/olasz.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/olasz.jpg" class="img-fluid">
           </div>
         </div>
 
@@ -226,22 +232,22 @@
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="/trips"><img src="/oldal/images/olasz.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/olasz.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="/trips"><img src="/oldal/images/mallorca.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/mallorca.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="/trips"><img src="/oldal/images/norvég.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/norvég.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="/trips"><img src="/oldal/images/török.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/török.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="/trips"><img src="/oldal/images/praga.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/praga.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="/trips"><img src="/oldal/images/lisbon.jpg" alt="Image" class="img-fluid"></a>
+                <a href="/trips"><img src="/oldal/images/lisbon.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>

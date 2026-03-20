@@ -1,4 +1,4 @@
-Ôªø<!doctype html>
+<!doctype html>
 <html lang="en">
 
   <head>
@@ -47,7 +47,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="index.html" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -61,21 +61,21 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="index.html" class="nav-link">Kezd≈ëlap</a></li>
-                  <li><a href="about.html" class="nav-link">R√≥lunk</a></li>
-                  <li><a href="trips.html" class="nav-link">Utaz√°sok</a></li>
+                  <li><a href="index.html" class="nav-link">Kezdolap</a></li>
+                  <li><a href="about.html" class="nav-link">RÛlunk</a></li>
+                  <li><a href="trips.html" class="nav-link">Utaz·sok</a></li>
 				  <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
 				  @auth
 				  <li class="{{ request()->is('profil') ? 'active' : '' }}"><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
 				  <li>
 				    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
 				      @csrf
-				      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkez√©s</button>
+				      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">KijelentkezÈs</button>
 				    </form>
 				  </li>
 				  @else
-				  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkez√©s</a></li>
-				  <li class="active"><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztr√°ci√≥</a></li>
+				  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">BejelentkezÈs</a></li>
+				  <li class="active"><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztr·ciÛ</a></li>
 				  @endauth
                 </ul>
               </nav>
@@ -110,7 +110,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="post-entry-1 h-100">
               <a href="single.html">
-                <img src="/oldal/images/img_1.jpg" alt="Image"
+                <img src="/oldal/images/img_1.jpg"
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
@@ -124,22 +124,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="post-entry-1 h-100">
               <a href="single.html">
-                <img src="/oldal/images/img_2.jpg" alt="Image"
-                 class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                
-                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
-                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="post-entry-1 h-100">
-              <a href="single.html">
-                <img src="/oldal/images/img_3.jpg" alt="Image"
+                <img src="/oldal/images/img_2.jpg"
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
@@ -154,21 +139,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="post-entry-1 h-100">
               <a href="single.html">
-                <img src="/oldal/images/img_1.jpg" alt="Image"
-                 class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                
-                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
-                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="post-entry-1 h-100">
-              <a href="single.html">
-                <img src="/oldal/images/img_2.jpg" alt="Image"
+                <img src="/oldal/images/img_3.jpg"
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
@@ -183,7 +154,36 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="post-entry-1 h-100">
               <a href="single.html">
-                <img src="/oldal/images/img_3.jpg" alt="Image"
+                <img src="/oldal/images/img_1.jpg"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_2.jpg"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_3.jpg"
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
@@ -215,35 +215,35 @@
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_1.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_2.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_3.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_4.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_5.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_6.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
 			<div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors el√©r√©s</h2>
+                <h2 class="footer-heading mb-4">Gyors elÈrÈs</h2>
                 <ul class="list-unstyled">
-                  <li><a href="index.html">Kezd≈ëlap</a></li>
-                  <li><a href="about.html">R√≥lunk</a></li>
-                  <li><a href="trips.html">Utaz√°sok</a></li>
+                  <li><a href="index.html">Kezdolap</a></li>
+                  <li><a href="about.html">RÛlunk</a></li>
+                  <li><a href="trips.html">Utaz·sok</a></li>
                   <li><a href="contact.html">Kapcsolat</a></li>
-                  <li><a href="{{ url('/regisztracio') }}">Regisztr√°ci√≥</a></li>
+                  <li><a href="{{ url('/regisztracio') }}">Regisztr·ciÛ</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">

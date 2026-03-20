@@ -45,7 +45,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="/" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -63,6 +63,9 @@
                   @auth
                   @if(auth()->user()->is_admin)
                   <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
+                  @endif
+                  @if(auth()->user()->is_iroda)
+                  <li><a href="{{ url('/iroda') }}" class="nav-link">Iroda</a></li>
                   @endif
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
@@ -113,7 +116,7 @@
             <p>A csapatunk úgy gondolja, mindenkinek megjár az a lehetőség, hogy álmaikat megvalósítsák. Velünk mindenki megtalálja a legideálisabb lehetőséget!</p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/kep2.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/kep2.jpg" class="img-fluid">
           </div>
         </div>
       </div>
@@ -131,7 +134,7 @@
             <p>A HKO célja, hogy egyszerűsíti és személyre szabja az utazások tervezését és megvalósítását, segítve a felhasználókat abban, hogy könnyedén felfedezhessék a legjobb ajánlatokat és helyeket.</p>
           </div>
           <div class="col-md-6 order-1" data-aos="fade-left">
-            <img src="/oldal/images/kep.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/kep.jpg" class="img-fluid">
           </div>
         </div>
       </div>
@@ -154,7 +157,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/dorina2.jpg" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/dorina2.jpg" class="img-fluid mb-4">
               <div class="px-4">
                 <h2 class="mb-2">Horváth Dorina</h2>
                 <p class="caption mb-4">Backend, Frontend</p>
@@ -167,7 +170,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/dodi.jpg" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/dodi.jpg" class="img-fluid mb-4">
               <div class="px-4">
                 <h2 class="mb-2">Koszednár Dorina</h2>
                 <p class="caption mb-4">Frontend, Backend</p>
@@ -180,7 +183,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/ádám.png" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/ádám.png" class="img-fluid mb-4">
               <div class="px-4">
                 <h2 class="mb-2">Osbáth Ádám</h2>
                 <p class="caption mb-4">Adatbázis, Frontend</p>
@@ -221,7 +224,7 @@
                   <li><a href="/about">Rólunk</a></li>
                   <li><a href="/trips">Utazások</a></li>
                   <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
+                  <li><a href="/regisztracio">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">

@@ -1,13 +1,13 @@
 @extends('layouts.base')
 
-@section('title', 'Admin – Uticél szerkesztése')
+@section('title', ($prefix === 'iroda' ? 'Iroda – Uticél szerkesztése' : 'Admin – Uticél szerkesztése'))
 
 @section('body')
   <div class="site-section py-5">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h3 mb-0">Uticél szerkesztése</h1>
-        <a class="btn btn-light" href="{{ route('admin.destinations.index') }}">Vissza</a>
+        <a class="btn btn-light" href="{{ route($prefix . '.destinations.index') }}">Vissza</a>
       </div>
 
       @if ($errors->any())
@@ -22,7 +22,7 @@
 
       <div class="card shadow-sm">
         <div class="card-body">
-          <form method="POST" action="{{ route('admin.destinations.update', $destination) }}">
+          <form method="POST" action="{{ route($prefix . '.destinations.update', $destination) }}">
             @csrf
             @method('PUT')
             <div class="row g-3">

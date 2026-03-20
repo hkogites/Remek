@@ -47,7 +47,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="index.html" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -66,6 +66,24 @@
                   <li><a href="trips.html" class="nav-link">Utazások</a></li>
                   <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
 				  <li class="active"><a href="blog.html" class="nav-link">Regisztráció</a></li>
+                  @auth
+                  @if(auth()->user()->is_admin)
+                  <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
+                  @endif
+                  @if(auth()->user()->is_iroda)
+                  <li><a href="{{ url('/iroda') }}" class="nav-link">Iroda</a></li>
+                  @endif
+                  <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
+                  <li>
+                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
+                      @csrf
+                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
+                    </form>
+                  </li>
+                  @else
+                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
+                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
+                  @endauth
                 </ul>
               </nav>
             </div>
@@ -99,7 +117,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="post-entry-1 h-100">
               <a href="single.html">
-                <img src="/oldal/images/img_1.jpg" alt="Image"
+                <img src="/oldal/images/img_1.jpg"
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
@@ -113,22 +131,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="post-entry-1 h-100">
               <a href="single.html">
-                <img src="/oldal/images/img_2.jpg" alt="Image"
-                 class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                
-                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
-                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="post-entry-1 h-100">
-              <a href="single.html">
-                <img src="/oldal/images/img_3.jpg" alt="Image"
+                <img src="/oldal/images/img_2.jpg"
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
@@ -143,21 +146,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="post-entry-1 h-100">
               <a href="single.html">
-                <img src="/oldal/images/img_1.jpg" alt="Image"
-                 class="img-fluid">
-              </a>
-              <div class="post-entry-1-contents">
-                
-                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
-                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="post-entry-1 h-100">
-              <a href="single.html">
-                <img src="/oldal/images/img_2.jpg" alt="Image"
+                <img src="/oldal/images/img_3.jpg"
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">
@@ -172,7 +161,36 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="post-entry-1 h-100">
               <a href="single.html">
-                <img src="/oldal/images/img_3.jpg" alt="Image"
+                <img src="/oldal/images/img_1.jpg"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_2.jpg"
+                 class="img-fluid">
+              </a>
+              <div class="post-entry-1-contents">
+                
+                <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
+                <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="post-entry-1 h-100">
+              <a href="single.html">
+                <img src="/oldal/images/img_3.jpg"
                  class="img-fluid">
               </a>
               <div class="post-entry-1-contents">

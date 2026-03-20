@@ -70,3 +70,27 @@ Route::middleware(['auth', AdminMiddleware::class])
         Route::redirect('/', '/admin/destinations', 302)->name('home');
         Route::resource('destinations', AdminDestinationController::class)->except(['show']);
     });
+
+// Iroda routes (auth + iroda/admin only) - TEMPORARILY DISABLED FOR API TESTING
+/*Route::middleware(['auth', 'iroda'])
+    ->prefix('iroda')
+    ->as('iroda.')
+    ->group(function () {
+        Route::redirect('/', '/iroda/destinations', 302)->name('home');
+        
+        // Full destination management for iroda users
+        Route::get('/destinations', [AdminDestinationController::class, 'index'])->name('destinations.index');
+        Route::get('/destinations/create', [AdminDestinationController::class, 'create'])->name('destinations.create');
+        Route::post('/destinations', [AdminDestinationController::class, 'store'])->name('destinations.store');
+        Route::get('/destinations/{destination}/edit', [AdminDestinationController::class, 'edit'])->name('destinations.edit');
+        Route::put('/destinations/{destination}', [AdminDestinationController::class, 'update'])->name('destinations.update');
+        Route::delete('/destinations/{destination}', [AdminDestinationController::class, 'destroy'])->name('destinations.destroy');
+        
+        // Enhanced reservations management for iroda
+        Route::get('/reservations', [App\Http\Controllers\Iroda\ReservationController::class, 'index'])->name('reservations.index');
+        Route::get('/reservations/{reservation}/edit', [App\Http\Controllers\Iroda\ReservationController::class, 'edit'])->name('reservations.edit');
+        Route::post('/reservations/{reservation}/update-details', [App\Http\Controllers\Iroda\ReservationController::class, 'updateDetails'])->name('reservations.update-details');
+        Route::post('/reservations/{reservation}/update-status', [App\Http\Controllers\Iroda\ReservationController::class, 'updateStatus'])->name('reservations.update-status');
+        Route::post('/reservations/{reservation}/send-email', [App\Http\Controllers\Iroda\ReservationController::class, 'sendEmail'])->name('reservations.send-email');
+        Route::delete('/reservations/{reservation}', [App\Http\Controllers\Iroda\ReservationController::class, 'destroy'])->name('reservations.destroy');
+    });*/

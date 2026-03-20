@@ -6,18 +6,27 @@ use App\Http\Controllers\Controller;
 use App\Models\Destination;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Route;
 
 class DestinationController extends Controller
 {
+    private function getRoutePrefix()
+    {
+        $currentRoute = Route::currentRouteName();
+        return str_starts_with($currentRoute, 'iroda.') ? 'iroda' : 'admin';
+    }
+
     public function index()
     {
         $destinations = Destination::orderBy('title')->paginate(20);
-        return view('admin.destinations.index', compact('destinations'));
+        $prefix = $this->getRoutePrefix();
+        return view('admin.destinations.index', compact('destinations', 'prefix'));
     }
 
     public function create()
     {
-        return view('admin.destinations.create');
+        $prefix = $this->getRoutePrefix();
+        return view('admin.destinations.create', compact('prefix'));
     }
 
     public function store(Request $request)
@@ -36,12 +45,14 @@ class DestinationController extends Controller
 
         Destination::create($data);
 
-        return Redirect::route('admin.destinations.index')->with('status', 'Uticél létrehozva.');
+        $prefix = $this->getRoutePrefix();
+        return Redirect::route("{$prefix}.destinations.index")->with('status', 'Uticél létrehozva.');
     }
 
     public function edit(Destination $destination)
     {
-        return view('admin.destinations.edit', compact('destination'));
+        $prefix = $this->getRoutePrefix();
+        return view('admin.destinations.edit', compact('destination', 'prefix'));
     }
 
     public function update(Request $request, Destination $destination)
@@ -60,12 +71,14 @@ class DestinationController extends Controller
 
         $destination->update($data);
 
-        return Redirect::route('admin.destinations.index')->with('status', 'Uticél frissítve.');
+        $prefix = $this->getRoutePrefix();
+        return Redirect::route("{$prefix}.destinations.index")->with('status', 'Uticél frissítve.');
     }
 
     public function destroy(Destination $destination)
     {
         $destination->delete();
-        return Redirect::route('admin.destinations.index')->with('status', 'Uticél törölve.');
+        $prefix = $this->getRoutePrefix();
+        return Redirect::route("{$prefix}.destinations.index")->with('status', 'Uticél törölve.');
     }
 }

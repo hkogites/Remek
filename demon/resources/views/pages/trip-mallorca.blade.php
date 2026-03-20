@@ -47,7 +47,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="index.html" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -195,7 +195,7 @@
             <p><a href="contact.html" class="btn btn-primary py-3 px-4 my-4">Contact Us</a></p>
           </div>
           <div class="col-md-6">
-            <img src="/oldal/images/mallorca.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/mallorca.jpg" class="img-fluid">
           </div>
         </div>
 
@@ -216,22 +216,22 @@
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_1.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_2.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_3.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_4.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_5.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_6.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>

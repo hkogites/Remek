@@ -1,4 +1,4 @@
-ÔªøÔªø<!doctype html>
+?<!doctype html>
 <html lang="en">
 
   <head>
@@ -49,7 +49,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="/" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -63,11 +63,11 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li class="active"><a href="/" class="nav-link">Kezd≈ëlap</a></li>
-                  <li><a href="/about" class="nav-link">R√≥lunk</a></li>
-                  <li><a href="/trips" class="nav-link">Utaz√°sok</a></li>
+                  <li class="active"><a href="/" class="nav-link">Kezdolap</a></li>
+                  <li><a href="/about" class="nav-link">RÛlunk</a></li>
+                  <li><a href="/trips" class="nav-link">Utaz·sok</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
-                  <li><a href="/blog" class="nav-link">Regisztr√°ci√≥</a></li>
+                  <li><a href="/blog" class="nav-link">Regisztr·ciÛ</a></li>
 
                 </ul>
               </nav>
@@ -85,7 +85,7 @@
           <div class="row align-items-center">
             <div class="col-md-5" data-aos="fade-right">
               <h1 class="mb-3 text-white">The Way Beyond</h1>
-              <p>K√©sz√ºlj√∂n fel egy lelket √©s testet megv√°lt√≥ fantasztikusan j√≥ utaz√°sra. Vel√ºnk b√°rmi lehets√©ges. Ak√°r eladunk egy kocog√≥t is.
+              <p>KÈsz¸ljˆn fel egy lelket Ès testet megv·ltÛ fantasztikusan jÛ utaz·sra. Vel¸nk b·rmi lehetsÈges. Ak·r eladunk egy kocogÛt is.
               </p>
             </div>
           </div>
@@ -104,12 +104,12 @@
               <span class="subtitle-39191">A HKO csapata</span>
               <h3>Csapatunk</h3>
             </div>
-            <p>A HKO csapata h√°rom lelkes di√°kb√≥l √°ll, akik k√∂z√∂sen dolgoznak egy online platformon, hogy seg√≠tsenek a vil√°gj√°r√≥knak a t√∂k√©letes utaz√°s megtervez√©s√©hez. C√©lunk, hogy egyszer≈±en hozz√°f√©rhet≈ëv√© tegy√ºk a legjobb aj√°nlatokat, megval√≥s√≠tsuk az utaz√≥k √°lmait. 
+            <p>A HKO csapata h·rom lelkes di·kbÛl ·ll, akik kˆzˆsen dolgoznak egy online platformon, hogy segÌtsenek a vil·gj·rÛknak a tˆkÈletes utaz·s megtervezÈsÈhez. CÈlunk, hogy egyszeruen hozz·fÈrhetovÈ tegy¸k a legjobb aj·nlatokat, megvalÛsÌtsuk az utazÛk ·lmait. 
             </p>
-            <p>A csapatunk √∫gy gondolja, mindenkinek megj√°r az a lehet≈ës√©g, hogy √°lmaikat megval√≥s√≠ts√°k. Vel√ºnk mindenki megtal√°lja a legide√°lisabb lehet≈ës√©get!</p>
+            <p>A csapatunk ˙gy gondolja, mindenkinek megj·r az a lehetosÈg, hogy ·lmaikat megvalÛsÌts·k. Vel¸nk mindenki megtal·lja a legide·lisabb lehetosÈget!</p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/hegy.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/hegy.jpg" class="img-fluid">
           </div>
         </div>
       </div>
@@ -121,9 +121,9 @@
         <div class="row justify-content-center text-center">
           <div class="col-md-7">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Aj√°nlatok</span>
-              <span class="subtitle-39191">Pr√≥b√°ld ki</span>
-              <h3>Utazz vel√ºnk!</h3>
+              <span class="backdrop text-center">Aj·nlatok</span>
+              <span class="subtitle-39191">PrÛb·ld ki</span>
+              <h3>Utazz vel¸nk!</h3>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_1.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_1.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$200.00</a>
@@ -143,7 +143,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_2.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_2.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$390.00</a>
@@ -155,7 +155,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_3.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_3.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$180.00</a>
@@ -180,7 +180,7 @@
             <div class="heading-39101 mb-5">
               <span class="backdrop text-center">Tervben</span>
               <span class="subtitle-39191">Tervben vannak</span>
-              <h3>K√∂zelg≈ë utaz√°sok</h3>
+              <h3>Kˆzelgo utaz·sok</h3>
             </div>
           </div>
         </div>
@@ -213,9 +213,9 @@
             <div class="col-md-6">
 
               <div class="testimonial-39191 upcoming-card text-center">
-                <img src="/oldal/images/japankor.jpg" alt="Image" class="img-fluid">
-                <p><strong>Ismerd meg Jap√°nt!</strong></p>
-                <p>Hamarosan el√©rhet≈ë</p>
+                <img src="/oldal/images/japankor.jpg" class="img-fluid">
+                <p><strong>Ismerd meg Jap·nt!</strong></p>
+                <p>Hamarosan elÈrheto</p>
               </div>    
               
             </div>
@@ -223,9 +223,9 @@
             <div class="col-md-6">
 
               <div class="testimonial-39191 upcoming-card text-center">
-                <img src="/oldal/images/albankor.jpg" alt="Image" class="img-fluid">
-                <p><strong>Ismerd meg Alb√°ni√°t!</strong></p>
-                <p>Hamarosan el√©rhet≈ë</p>
+                <img src="/oldal/images/albankor.jpg" class="img-fluid">
+                <p><strong>Ismerd meg Alb·ni·t!</strong></p>
+                <p>Hamarosan elÈrheto</p>
               </div>    
               
             </div>
@@ -235,9 +235,9 @@
             <div class="col-md-6">
 
               <div class="testimonial-39191 upcoming-card text-center">
-                <img src="/oldal/images/izlandkor.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/izlandkor.jpg" class="img-fluid">
                 <p><strong>Ismerd meg Izlandot!</strong></p>
-                <p>Hamarosan el√©rhet≈ë</p>
+                <p>Hamarosan elÈrheto</p>
               </div>    
               
             </div>
@@ -245,9 +245,9 @@
             <div class="col-md-6">
 
               <div class="testimonial-39191 upcoming-card text-center">
-                <img src="/oldal/images/spanyolkor.jpg" alt="Image" class="img-fluid">
-                <p><strong>Ismerd meg Spanyolorsz√°got!</strong></p>
-                <p>Hamarosan el√©rhet≈ë</p>
+                <img src="/oldal/images/spanyolkor.jpg" class="img-fluid">
+                <p><strong>Ismerd meg Spanyolorsz·got!</strong></p>
+                <p>Hamarosan elÈrheto</p>
               </div>    
               
             </div>
@@ -262,8 +262,8 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
-          <h2 class="font-weight-bold text-white">Utazz vel√ºnk!</h2>
-            <p class="text-white">Ha √©rdekeln√©nek az utaz√°sok vedd fel vel√ºnk a kapcsolatot!</p>
+          <h2 class="font-weight-bold text-white">Utazz vel¸nk!</h2>
+            <p class="text-white">Ha ÈrdekelnÈnek az utaz·sok vedd fel vel¸nk a kapcsolatot!</p>
             <p class="mb-0"><a href="/contact" class="btn btn-primary text-white py-3 px-4">Kapcsolat</a></p>
           </div>
         </div>
@@ -274,43 +274,43 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kital√°lunk valamit</h2>
+            <h2 class="footer-heading mb-3">Ide majd kital·lunk valamit</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_1.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_2.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_3.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_4.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_5.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_6.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors el√©r√©s</h2>
+                <h2 class="footer-heading mb-4">Gyors elÈrÈs</h2>
                 <ul class="list-unstyled">
-                  <li><a href="/">Kezd≈ëlap</a></li>
-                  <li><a href="/about">R√≥lunk</a></li>
-                  <li><a href="/trips">Utaz√°sok</a></li>
+                  <li><a href="/">Kezdolap</a></li>
+                  <li><a href="/about">RÛlunk</a></li>
+                  <li><a href="/trips">Utaz·sok</a></li>
                   <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztr√°ci√≥</a></li>
+                  <li><a href="/blog">Regisztr·ciÛ</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">K√∂sz√∂nj√ºk!</h2>
-                <p>K√∂sz√∂nj√ºk, hogy minket v√°lasztott! Rem√©lj√ºk, hogy megfelelt√ºnk elv√°r√°sainak!</p>
+                <h2 class="footer-heading mb-4">Kˆszˆnj¸k!</h2>
+                <p>Kˆszˆnj¸k, hogy minket v·lasztott! RemÈlj¸k, hogy megfelelt¸nk elv·r·sainak!</p>
                 
               </div>
             </div>

@@ -1,4 +1,4 @@
-Ôªø<!doctype html>
+<!doctype html>
 <html lang="en">
 
   <head>
@@ -52,7 +52,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="index.html" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -66,11 +66,11 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="index.html" class="nav-link">Kezd≈ëlap</a></li>
-                  <li><a href="about.html" class="nav-link">R√≥lunk</a></li>
-                  <li class="active"><a href="trips.html" class="nav-link">Utaz√°sok</a></li>
+                  <li><a href="index.html" class="nav-link">Kezdolap</a></li>
+                  <li><a href="about.html" class="nav-link">RÛlunk</a></li>
+                  <li class="active"><a href="trips.html" class="nav-link">Utaz·sok</a></li>
                   <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
-                  <li><a href="blog.html" class="nav-link">Regisztr√°ci√≥</a></li>
+                  <li><a href="blog.html" class="nav-link">Regisztr·ciÛ</a></li>
                 </ul>
               </nav>
             </div>
@@ -86,8 +86,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">Utaz√°si lista</h1>
-              <p>Tal√°ld meg a hozz√°d legjobban ill≈ë utic√©lt.</p>
+              <h1 class="mb-3 text-white">Utaz·si lista</h1>
+              <p>Tal·ld meg a hozz·d legjobban illo uticÈlt.</p>
               
             </div>
           </div>
@@ -102,9 +102,9 @@
         <div class="row justify-content-center text-center">
           <div class="col-md-7">
             <div class="heading-39101 mb-5">
-              <span class="backdrop text-center">Utaz√°sok</span>
-              <span class="subtitle-39191">Utaz√°sok</span>
-              <h3>Utaz√°si aj√°nlataink</h3>
+              <span class="backdrop text-center">Utaz·sok</span>
+              <span class="subtitle-39191">Utaz·sok</span>
+              <h3>Utaz·si aj·nlataink</h3>
             </div>
           </div>
         </div>
@@ -112,11 +112,11 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/olaszo.jpg" alt="Image" class="img-fluid" href="trip-olasz.html">
+                <img src="/oldal/images/olaszo.jpg" class="img-fluid" href="trip-olasz.html">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="trip-olasz.html">156 000 Ft</a>
-                <h2 class="mb-1"><a href="trip-olasz.html">√âszak-Olaszorsz√°gi k√∂r√∫t<br>2026.06.20-06.26</a></h2>
+                <h2 class="mb-1"><a href="trip-olasz.html">…szak-Olaszorsz·gi kˆr˙t<br>2026.06.20-06.26</a></h2>
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/mallorca.jpg" alt="Image" class="img-fluid" href="trip-mallorca.html">
+                <img src="/oldal/images/mallorca.jpg" class="img-fluid" href="trip-mallorca.html">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="trip-mallorca.html">190 000 Ft</a>
@@ -136,11 +136,11 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/norway.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/norway.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="trip-norway.html">330 000 Ft</a>
-                <h2 class="mb-1"><a href="trip-norway.html">Norv√©gia<br>2026.12.22.-12.27</a></h2>
+                <h2 class="mb-1"><a href="trip-norway.html">NorvÈgia<br>2026.12.22.-12.27</a></h2>
               </div>
             </div>
           </div>
@@ -148,11 +148,11 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/t√∂r√∂ko.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/tˆrˆko.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="trip-turkey.html">170 000 Ft</a>
-                <h2 class="mb-1"><a href="trip-turkey.html">T√∂r√∂korsz√°g<br>2026.03.03-03.09</a></h2>
+                <h2 class="mb-1"><a href="trip-turkey.html">Tˆrˆkorsz·g<br>2026.03.03-03.09</a></h2>
               </div>
             </div>
           </div>
@@ -160,11 +160,11 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/praga.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/praga.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="trip-prague.html">75 000 Ft</a>
-                <h2 class="mb-1"><a href="trip-prague.html">Pr√°ga<br>2026.10.23.-10.25.</a></h2>
+                <h2 class="mb-1"><a href="trip-prague.html">Pr·ga<br>2026.10.23.-10.25.</a></h2>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/lisbon.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/lisbon.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="trip-lisbon.html">250 000 Ft</a>
@@ -200,40 +200,40 @@
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/olaszo.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/olaszo.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_2.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_3.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_4.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_5.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_6.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors el√©r√©s</h2>
+                <h2 class="footer-heading mb-4">Gyors elÈrÈs</h2>
                 <ul class="list-unstyled">
-                  <li><a href="index.html">Kezd≈ëlap</a></li>
-                  <li><a href="about.html">R√≥lunk</a></li>
-                  <li><a href="trips.html">Utaz√°sok</a></li>
+                  <li><a href="index.html">Kezdolap</a></li>
+                  <li><a href="about.html">RÛlunk</a></li>
+                  <li><a href="trips.html">Utaz·sok</a></li>
                   <li><a href="contact.html">Kapcsolat</a></li>
-                  <li><a href="blog.html">Regisztr√°ci√≥</a></li>
+                  <li><a href="blog.html">Regisztr·ciÛ</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
-              <h2 class="footer-heading mb-4">K√∂sz√∂nj√ºk!</h2>
-              <p>K√∂sz√∂nj√ºk, hogy minket v√°lasztott! Rem√©lj√ºk, hogy megfelelt√ºnk elv√°r√°sainak!</p>
+              <h2 class="footer-heading mb-4">Kˆszˆnj¸k!</h2>
+              <p>Kˆszˆnj¸k, hogy minket v·lasztott! RemÈlj¸k, hogy megfelelt¸nk elv·r·sainak!</p>
               </div>
               
             </div>

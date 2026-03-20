@@ -14,6 +14,66 @@
     <link rel="stylesheet" href="{{ asset('oldal/fonts/flaticon/font/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('oldal/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('oldal/css/style.css') }}">
+    <style>
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-radius: 4px;
+            padding: 8px 0;
+            top: 100%;
+            left: 0;
+            border: 1px solid #dee2e6;
+        }
+        
+        .site-menu li {
+            position: relative;
+        }
+        
+        .site-menu li:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-item {
+            display: block;
+            padding: 8px 16px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .nav-link {
+            position: relative;
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #fff;
+        }
+        
+        .nav-link:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* Ensure dropdown stays above other content */
+        .site-navigation {
+            position: relative;
+            z-index: 100;
+        }
+    </style>
     @stack('styles')
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -35,7 +95,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="{{ url('/') }}" class="font-weight-bold">
-                  <img src="{{ asset('oldal/images/logo.png') }}" alt="Image" class="img-fluid">
+                  <img src="{{ asset('oldal/images/logo.png') }}" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -50,6 +110,15 @@
                   @auth
                   @if(auth()->user()->is_admin)
                   <li class="{{ request()->is('admin*') ? 'active' : '' }}"><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
+                  @endif
+                  @if(auth()->user()->is_iroda)
+                  <li class="{{ request()->is('iroda*') ? 'active' : '' }}">
+                    <a href="{{ url('/iroda') }}" class="nav-link">Iroda</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{{ url('/iroda/destinations') }}" class="dropdown-item">Úticélok</a></li>
+                      <li><a href="{{ url('/iroda/reservations') }}" class="dropdown-item">Foglalások</a></li>
+                    </ul>
+                  </li>
                   @endif
                   <li class="{{ request()->is('profil') ? 'active' : '' }}"><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
@@ -81,22 +150,22 @@
                 <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
                 <div class="row">
                   <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_1.jpg') }}" alt="Image" class="img-fluid"></a>
+                    <a href="#"><img src="{{ asset('oldal/images/insta_1.jpg') }}" class="img-fluid"></a>
                   </div>
                   <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_2.jpg') }}" alt="Image" class="img-fluid"></a>
+                    <a href="#"><img src="{{ asset('oldal/images/insta_2.jpg') }}" class="img-fluid"></a>
                   </div>
                   <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_3.jpg') }}" alt="Image" class="img-fluid"></a>
+                    <a href="#"><img src="{{ asset('oldal/images/insta_3.jpg') }}" class="img-fluid"></a>
                   </div>
                   <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_4.jpg') }}" alt="Image" class="img-fluid"></a>
+                    <a href="#"><img src="{{ asset('oldal/images/insta_4.jpg') }}" class="img-fluid"></a>
                   </div>
                   <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_5.jpg') }}" alt="Image" class="img-fluid"></a>
+                    <a href="#"><img src="{{ asset('oldal/images/insta_5.jpg') }}" class="img-fluid"></a>
                   </div>
                   <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_6.jpg') }}" alt="Image" class="img-fluid"></a>
+                    <a href="#"><img src="{{ asset('oldal/images/insta_6.jpg') }}" class="img-fluid"></a>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-Ôªø<!doctype html>
+<!doctype html>
 <html lang="en">
 
   <head>
@@ -47,7 +47,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="index.html" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -61,21 +61,21 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="index.html" class="nav-link">Kezd≈ëlap</a></li>
-                  <li><a href="about.html" class="nav-link">R√≥lunk</a></li>
-                  <li class="active"><a href="trips.html" class="nav-link">Utaz√°sok</a></li>
+                  <li><a href="index.html" class="nav-link">Kezdolap</a></li>
+                  <li><a href="about.html" class="nav-link">RÛlunk</a></li>
+                  <li class="active"><a href="trips.html" class="nav-link">Utaz·sok</a></li>
                   <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
                   @auth
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">
                       @csrf
-                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkez√©s</button>
+                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">KijelentkezÈs</button>
                     </form>
                   </li>
                   @else
-                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkez√©s</a></li>
-                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztr√°ci√≥</a></li>
+                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">BejelentkezÈs</a></li>
+                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztr·ciÛ</a></li>
                   @endauth
                 </ul>
               </nav>
@@ -118,7 +118,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_1.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_1.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$200.00</a>
@@ -130,7 +130,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_2.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_2.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$390.00</a>
@@ -142,7 +142,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_3.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_3.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$180.00</a>
@@ -154,7 +154,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_4.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_4.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$600.00</a>
@@ -166,7 +166,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_5.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_5.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$330.00</a>
@@ -178,7 +178,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_6.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_6.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$450.00</a>
@@ -206,7 +206,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis enim a pariatur molestiae.</p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/traveler.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/traveler.jpg" class="img-fluid">
           </div>
         </div>
       </div>
@@ -222,35 +222,35 @@
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_1.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_2.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_3.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_4.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_5.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_6.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors el√©r√©s</h2>
+                <h2 class="footer-heading mb-4">Gyors elÈrÈs</h2>
                 <ul class="list-unstyled">
-                  <li><a href="index.html">Kezd≈ëlap</a></li>
-                  <li><a href="about.html">R√≥lunk</a></li>
-                  <li><a href="trips.html">Utaz√°sok</a></li>
+                  <li><a href="index.html">Kezdolap</a></li>
+                  <li><a href="about.html">RÛlunk</a></li>
+                  <li><a href="trips.html">Utaz·sok</a></li>
                   <li><a href="contact.html">Kapcsolat</a></li>
-                  <li><a href="{{ url('/regisztracio') }}">Regisztr√°ci√≥</a></li>
+                  <li><a href="{{ url('/regisztracio') }}">Regisztr·ciÛ</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">

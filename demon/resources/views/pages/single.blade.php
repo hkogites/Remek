@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
   <head>
@@ -47,7 +47,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="index.html" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -61,11 +61,11 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="index.html" class="nav-link">Kezdőlap</a></li>
-                  <li><a href="about.html" class="nav-link">Rólunk</a></li>
-                  <li><a href="trips.html" class="nav-link">Utazások</a></li>
+                  <li><a href="index.html" class="nav-link">Kezdolap</a></li>
+                  <li><a href="about.html" class="nav-link">R�lunk</a></li>
+                  <li><a href="trips.html" class="nav-link">Utaz�sok</a></li>
                   <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
-                  <li class="active"><a href="blog.html" class="nav-link">Regisztráció</a></li>
+                  <li class="active"><a href="blog.html" class="nav-link">Regisztr�ci�</a></li>
                 </ul>
               </nav>
             </div>
@@ -98,7 +98,7 @@
 
             <blockquote><p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p></blockquote>
 
-            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didnâ€™t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
 
             <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
 
@@ -106,7 +106,7 @@
 
             <blockquote><p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p></blockquote>
 
-            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didnâ€™t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
             
             <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
 
@@ -121,7 +121,7 @@
               <ul class="comment-list">
                 <li class="comment">
                   <div class="vcard bio">
-                    <img src="/oldal/images/person_2.jpg" alt="Image">
+                    <img src="/oldal/images/person_2.jpg">
                   </div>
                   <div class="comment-body">
                     <h3>Jacob Smith</h3>
@@ -133,7 +133,7 @@
 
                 <li class="comment">
                   <div class="vcard bio">
-                    <img src="/oldal/images/person_3.jpg" alt="Image">
+                    <img src="/oldal/images/person_3.jpg">
                   </div>
                   <div class="comment-body">
                     <h3>Chris Meyer</h3>
@@ -145,7 +145,7 @@
                   <ul class="children">
                     <li class="comment">
                       <div class="vcard bio">
-                        <img src="/oldal/images/person_5.jpg" alt="Image">
+                        <img src="/oldal/images/person_5.jpg">
                       </div>
                       <div class="comment-body">
                         <h3>Chintan Patel</h3>
@@ -158,7 +158,7 @@
                       <ul class="children">
                         <li class="comment">
                           <div class="vcard bio">
-                            <img src="/oldal/images/person_1.jpg" alt="Image">
+                            <img src="/oldal/images/person_1.jpg">
                           </div>
                           <div class="comment-body">
                             <h3>Jean Doe</h3>
@@ -170,7 +170,7 @@
                             <ul class="children">
                               <li class="comment">
                                 <div class="vcard bio">
-                                  <img src="/oldal/images/person_4.jpg" alt="Image">
+                                  <img src="/oldal/images/person_4.jpg">
                                 </div>
                                 <div class="comment-body">
                                   <h3>Ben Afflick</h3>
@@ -188,7 +188,7 @@
 
                 <li class="comment">
                   <div class="vcard bio">
-                    <img src="/oldal/images/person_1.jpg" alt="Image">
+                    <img src="/oldal/images/person_1.jpg">
                   </div>
                   <div class="comment-body">
                     <h3>Jean Doe</h3>
@@ -249,7 +249,7 @@
               </div>
             </div>
             <div class="sidebar-box">
-              <img src="/oldal/images/person_1.jpg" alt="Image" class="img-fluid mb-4 w-50 rounded-circle">
+              <img src="/oldal/images/person_1.jpg" class="img-fluid mb-4 w-50 rounded-circle">
               <h3 class="text-black">About The Author</h3>
               <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
               <p><a href="#" class="btn btn-primary btn-md text-white">Read More</a></p>
@@ -272,35 +272,35 @@
             <h2 class="footer-heading mb-3">Instagram</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_1.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_2.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_3.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_4.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_5.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_6.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors elérés</h2>
+                <h2 class="footer-heading mb-4">Gyors el�r�s</h2>
                 <ul class="list-unstyled">
-                  <li><a href="index.html">Kezdőlap</a></li>
-                  <li><a href="about.html">Rólunk</a></li>
-                  <li><a href="trips.html">Utazások</a></li>
+                  <li><a href="index.html">Kezdolap</a></li>
+                  <li><a href="about.html">R�lunk</a></li>
+                  <li><a href="trips.html">Utaz�sok</a></li>
                   <li><a href="contact.html">Kapcsolat</a></li>
-                  <li><a href="blog.html">Regisztráció</a></li>
+                  <li><a href="blog.html">Regisztr�ci�</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">

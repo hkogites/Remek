@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'Admin – Uticélok')
+@section('title', ($prefix === 'iroda' ? 'Iroda – Uticélok' : 'Admin – Uticélok'))
 
 @section('body')
   <div class="site-section py-5">
@@ -12,10 +12,10 @@
       <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
           <h1 class="h3 mb-1">Uticélok</h1>
-          <div class="text-muted">Admin felület · összesen: {{ $destinations->total() }}</div>
+          <div class="text-muted">{{ $prefix === 'iroda' ? 'Iroda' : 'Admin' }} felület · összesen: {{ $destinations->total() }}</div>
         </div>
         <div>
-          <a class="btn btn-primary" href="{{ route('admin.destinations.create') }}">
+          <a class="btn btn-primary" href="{{ route($prefix . '.destinations.create') }}">
             + Új uticél
           </a>
         </div>
@@ -44,8 +44,8 @@
                   <td>{{ $d->start_date }}</td>
                   <td>{{ $d->end_date }}</td>
                   <td class="text-end">
-                    <a class="btn btn-sm btn-outline-secondary" href="{{ route('admin.destinations.edit', $d) }}">Szerkesztés</a>
-                    <form action="{{ route('admin.destinations.destroy', $d) }}" method="POST" class="d-inline" onsubmit="return confirm('Biztos törli?');">
+                    <a class="btn btn-sm btn-outline-secondary" href="{{ route($prefix . '.destinations.edit', $d) }}">Szerkesztés</a>
+                    <form action="{{ route($prefix . '.destinations.destroy', $d) }}" method="POST" class="d-inline" onsubmit="return confirm('Biztos törli?');">
                       @csrf
                       @method('DELETE')
                       <button class="btn btn-sm btn-outline-danger" type="submit">Törlés</button>

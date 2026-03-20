@@ -1,4 +1,4 @@
-ï»¿ï»¿<!doctype html>
+?<!doctype html>
 <html lang="en">
 
   <head>
@@ -45,7 +45,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="/" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -56,11 +56,11 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="/" class="nav-link">KezdÅ‘lap</a></li>
-                  <li class="active"><a href="/about" class="nav-link">RÃ³lunk</a></li>
-                  <li><a href="/trips" class="nav-link">UtazÃ¡sok</a></li>
+                  <li><a href="/" class="nav-link">Kezdolap</a></li>
+                  <li class="active"><a href="/about" class="nav-link">Rólunk</a></li>
+                  <li><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
-                  <li><a href="/blog" class="nav-link">RegisztrÃ¡ciÃ³</a></li>
+                  <li><a href="/blog" class="nav-link">Regisztráció</a></li>
 
                 </ul>
               </nav>
@@ -75,8 +75,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-5" data-aos="fade-up">
-              <h1 class="mb-3 text-white">RÃ³lunk</h1>
-              <p>A HKO csapata egy 3 emberbÅ‘l Ã¡llÃ³ csapat, akik szeretnÃ©k az emberek mindennapjait szÃ­nesebbÃ© vÃ¡ltoztatni</p>
+              <h1 class="mb-3 text-white">Rólunk</h1>
+              <p>A HKO csapata egy 3 emberbol álló csapat, akik szeretnék az emberek mindennapjait színesebbé változtatni</p>
               
             </div>
           </div>
@@ -94,12 +94,12 @@
               <span class="subtitle-39191">A HKO csapata</span>
               <h3>Csapatunk</h3>
             </div>
-            <p>A HKO csapata hÃ¡rom lelkes diÃ¡kbÃ³l Ã¡ll, akik kÃ¶zÃ¶sen dolgoznak egy online platformon, hogy segÃ­tsenek a vilÃ¡gjÃ¡rÃ³knak a tÃ¶kÃ©letes utazÃ¡s megtervezÃ©sÃ©hez. CÃ©lunk, hogy egyszerÅ±en hozzÃ¡fÃ©rhetÅ‘vÃ© tegyÃ¼k a legjobb ajÃ¡nlatokat, megvalÃ³sÃ­tsuk az utazÃ³k Ã¡lmait. 
+            <p>A HKO csapata három lelkes diákból áll, akik közösen dolgoznak egy online platformon, hogy segítsenek a világjáróknak a tökéletes utazás megtervezéséhez. Célunk, hogy egyszeruen hozzáférhetové tegyük a legjobb ajánlatokat, megvalósítsuk az utazók álmait. 
             </p>
-            <p>A csapatunk Ãºgy gondolja, mindenkinek megjÃ¡r az a lehetÅ‘sÃ©g, hogy Ã¡lmaikat megvalÃ³sÃ­tsÃ¡k. VelÃ¼nk mindenki megtalÃ¡lja a legideÃ¡lisabb lehetÅ‘sÃ©get!</p>
+            <p>A csapatunk úgy gondolja, mindenkinek megjár az a lehetoség, hogy álmaikat megvalósítsák. Velünk mindenki megtalálja a legideálisabb lehetoséget!</p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/kep2.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/kep2.jpg" class="img-fluid">
           </div>
         </div>
       </div>
@@ -110,14 +110,14 @@
         <div class="row align-items-center">
           <div class="col-md-5 order-2 ml-auto">
             <div class="heading-39101 mb-5">
-              <span class="backdrop">CÃ©ljaink</span>
-              <span class="subtitle-39191">Miket szeretnÃ©nk elÃ©rni</span>
-              <h3>CÃ©ljaink</h3>
+              <span class="backdrop">Céljaink</span>
+              <span class="subtitle-39191">Miket szeretnénk elérni</span>
+              <h3>Céljaink</h3>
             </div>
-            <p>A HKO cÃ©lja, hogy egyszerÅ±sÃ­ti Ã©s szemÃ©lyre szabja az utazÃ¡sok tervezÃ©sÃ©t Ã©s megvalÃ³sÃ­tÃ¡sÃ¡t, segÃ­tve a felhasznÃ¡lÃ³kat abban, hogy kÃ¶nnyedÃ©n felfedezhessÃ©k a legjobb ajÃ¡nlatokat Ã©s helyeket.</p>
+            <p>A HKO célja, hogy egyszerusíti és személyre szabja az utazások tervezését és megvalósítását, segítve a felhasználókat abban, hogy könnyedén felfedezhessék a legjobb ajánlatokat és helyeket.</p>
           </div>
           <div class="col-md-6 order-1" data-aos="fade-left">
-            <img src="/oldal/images/kep.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/kep.jpg" class="img-fluid">
           </div>
         </div>
       </div>
@@ -140,11 +140,11 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/dorina2.jpg" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/dorina2.jpg" class="img-fluid mb-4">
               <div class="px-4">
-                <h2 class="mb-2">HorvÃ¡th Dorina</h2>
+                <h2 class="mb-2">Horváth Dorina</h2>
                 <p class="caption mb-4">Backend, Frontend</p>
-                <p>A kÃ³d Ã©s a design is biztos kezekben nÃ¡la.</p>
+                <p>A kód és a design is biztos kezekben nála.</p>
                 <div class="social_29128 mt-5">
                </div>
               </div>
@@ -153,11 +153,11 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/dodi.jpg" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/dodi.jpg" class="img-fluid mb-4">
               <div class="px-4">
-                <h2 class="mb-2">KoszednÃ¡r Dorina</h2>
+                <h2 class="mb-2">Koszednár Dorina</h2>
                 <p class="caption mb-4">Frontend, Backend</p>
-                <p>KreativitÃ¡sa Ã©s rendszerszemlÃ©lete jÃ³l egÃ©szÃ­tik ki egymÃ¡st.</p>
+                <p>Kreativitása és rendszerszemlélete jól egészítik ki egymást.</p>
                 <div class="social_29128 mt-5">
                </div>
               </div>
@@ -166,11 +166,11 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="person-29191 text-center">
-              <img src="/oldal/images/Ã¡dÃ¡m.png" alt="Image" class="img-fluid mb-4">
+              <img src="/oldal/images/ádám.png" class="img-fluid mb-4">
               <div class="px-4">
-                <h2 class="mb-2">OsbÃ¡th ÃdÃ¡m</h2>
-                <p class="caption mb-4">AdatbÃ¡zis, Frontend</p>
-                <p>MegbÃ­zhatÃ³an kezeli az adatokat Ã©s a felhasznÃ¡lÃ³i Ã©lmÃ©nyt.</p>
+                <h2 class="mb-2">Osbáth Ádám</h2>
+                <p class="caption mb-4">Adatbázis, Frontend</p>
+                <p>Megbízhatóan kezeli az adatokat és a felhasználói élményt.</p>
                 <div class="social_29128 mt-5">
                </div>
               </div>
@@ -186,8 +186,8 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
-            <h2 class="font-weight-bold text-white">Utazz velÃ¼nk!</h2>
-            <p class="text-white">Ha Ã©rdekelnÃ©nek az utazÃ¡sok vedd fel velÃ¼nk a kapcsolatot!</p>
+            <h2 class="font-weight-bold text-white">Utazz velünk!</h2>
+            <p class="text-white">Ha érdekelnének az utazások vedd fel velünk a kapcsolatot!</p>
             <p class="mb-0"><a href="/contact" class="btn btn-primary text-white py-3 px-4">Kapcsolat</a></p>
           </div>
         </div>
@@ -198,43 +198,43 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kitalÃ¡lunk valamit</h2>
+            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
             <div class="row">
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_1.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_1.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_2.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_2.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_3.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_3.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_4.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_4.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_5.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_5.jpg" class="img-fluid"></a>
               </div>
               <div class="col-4 gal_col">
-                <a href="#"><img src="/oldal/images/insta_6.jpg" alt="Image" class="img-fluid"></a>
+                <a href="#"><img src="/oldal/images/insta_6.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
             <div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors elÃ©rÃ©s</h2>
+                <h2 class="footer-heading mb-4">Gyors elérés</h2>
                 <ul class="list-unstyled">
-                  <li><a href="/">KezdÅ‘lap</a></li>
-                  <li><a href="/about">RÃ³lunk</a></li>
-                  <li><a href="/trips">UtazÃ¡sok</a></li>
+                  <li><a href="/">Kezdolap</a></li>
+                  <li><a href="/about">Rólunk</a></li>
+                  <li><a href="/trips">Utazások</a></li>
                   <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">RegisztrÃ¡ciÃ³</a></li>
+                  <li><a href="/blog">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">KÃ¶szÃ¶njÃ¼k!</h2>
-                <p>KÃ¶szÃ¶njÃ¼k, hogy minket vÃ¡lasztott! RemÃ©ljÃ¼k, hogy megfeleltÃ¼nk elvÃ¡rÃ¡sainak!</p>
+                <h2 class="footer-heading mb-4">Köszönjük!</h2>
+                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
                 
               </div>
               

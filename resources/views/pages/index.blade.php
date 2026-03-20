@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="/oldal/css/bootstrap.min.css">
     <link rel="stylesheet" href="/oldal/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/oldal/css/jquery.fancybox.smin.css">
+    <link rel="stylesheet" href="/oldal/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/oldal/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/oldal/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/oldal/fonts/flaticon/font/flaticon.css">
@@ -49,7 +49,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="/" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -70,6 +70,9 @@
                   @auth
                   @if(auth()->user()->is_admin)
                   <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
+                  @endif
+                  @if(auth()->user()->is_iroda)
+                  <li><a href="{{ url('/iroda') }}" class="nav-link">Iroda</a></li>
                   @endif
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
@@ -123,7 +126,7 @@
             <p>A csapatunk úgy gondolja, mindenkinek megjár az a lehetőség, hogy álmaikat megvalósítsák. Velünk mindenki megtalálja a legideálisabb lehetőséget!</p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
-            <img src="/oldal/images/hegy.jpg" alt="Image" class="img-fluid">
+            <img src="/oldal/images/hegy.jpg" class="img-fluid">
           </div>
         </div>
       </div>
@@ -145,7 +148,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_1.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_1.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$200.00</a>
@@ -157,7 +160,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_2.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_2.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$390.00</a>
@@ -169,7 +172,7 @@
           <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
             <div class="listing-item">
               <div class="listing-image">
-                <img src="/oldal/images/img_3.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/img_3.jpg" class="img-fluid">
               </div>
               <div class="listing-item-content">
                 <a class="px-3 mb-3 category bg-primary" href="#">$180.00</a>
@@ -227,7 +230,7 @@
             <div class="col-md-6">
 
               <div class="testimonial-39191 upcoming-card text-center">
-                <img src="/oldal/images/japankor.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/japankor.jpg" class="img-fluid">
                 <p><strong>Ismerd meg Japánt!</strong></p>
                 <p>Hamarosan elérhető</p>
               </div>    
@@ -237,7 +240,7 @@
             <div class="col-md-6">
 
               <div class="testimonial-39191 upcoming-card text-center">
-                <img src="/oldal/images/albankor.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/albankor.jpg" class="img-fluid">
                 <p><strong>Ismerd meg Albániát!</strong></p>
                 <p>Hamarosan elérhető</p>
               </div>    
@@ -249,7 +252,7 @@
             <div class="col-md-6">
 
               <div class="testimonial-39191 upcoming-card text-center">
-                <img src="/oldal/images/izlandkor.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/izlandkor.jpg" class="img-fluid">
                 <p><strong>Ismerd meg Izlandot!</strong></p>
                 <p>Hamarosan elérhető</p>
               </div>    
@@ -259,7 +262,7 @@
             <div class="col-md-6">
 
               <div class="testimonial-39191 upcoming-card text-center">
-                <img src="/oldal/images/spanyolkor.jpg" alt="Image" class="img-fluid">
+                <img src="/oldal/images/spanyolkor.jpg" class="img-fluid">
                 <p><strong>Ismerd meg Spanyolországot!</strong></p>
                 <p>Hamarosan elérhető</p>
               </div>    

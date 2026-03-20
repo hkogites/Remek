@@ -18,7 +18,7 @@
           <div class="col-3 ">
             <div class="site-logo">
               <a href="/" class="font-weight-bold">
-                <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                <img src="/oldal/images/logo.png" class="img-fluid">
               </a>
             </div>
           </div>

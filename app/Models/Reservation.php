@@ -20,10 +20,17 @@ class Reservation extends Model
         'people_count',
         'note',
         'status',
+        'email_sent',
+        'admin_notes',
     ];
 
     public function destination(): BelongsTo
     {
         return $this->belongsTo(Destination::class);
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
     }
 }

@@ -47,7 +47,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="/" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
+                  <img src="/oldal/images/logo.png" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -66,6 +66,24 @@
                   <li><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
                   <li class="active"><a href="/blog" class="nav-link">Regisztráció</a></li>
+                  @auth
+                  @if(auth()->user()->is_admin)
+                  <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
+                  @endif
+                  @if(auth()->user()->is_iroda)
+                  <li><a href="{{ url('/iroda') }}" class="nav-link">Iroda</a></li>
+                  @endif
+                  <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
+                  <li>
+                    <form method="POST" action="{{ route('logout') }}" style="display:inline;">
+                      @csrf
+                      <button type="submit" class="nav-link p-0" style="display:inline; background:none; border:0; padding:0; font: inherit; color: inherit; cursor:pointer;">Kijelentkezés</button>
+                    </form>
+                  </li>
+                  @else
+                  <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
+                  <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
+                  @endauth
                 </ul>
               </nav>
             </div>
@@ -121,7 +139,7 @@
               <ul class="comment-list">
                 <li class="comment">
                   <div class="vcard bio">
-                    <img src="/oldal/images/person_2.jpg" alt="Image">
+                    <img src="/oldal/images/person_2.jpg">
                   </div>
                   <div class="comment-body">
                     <h3>Jacob Smith</h3>
@@ -133,7 +151,7 @@
 
                 <li class="comment">
                   <div class="vcard bio">
-                    <img src="/oldal/images/person_3.jpg" alt="Image">
+                    <img src="/oldal/images/person_3.jpg">
                   </div>
                   <div class="comment-body">
                     <h3>Chris Meyer</h3>
@@ -145,7 +163,7 @@
                   <ul class="children">
                     <li class="comment">
                       <div class="vcard bio">
-                        <img src="/oldal/images/person_5.jpg" alt="Image">
+                        <img src="/oldal/images/person_5.jpg">
                       </div>
                       <div class="comment-body">
                         <h3>Chintan Patel</h3>
@@ -158,7 +176,7 @@
                       <ul class="children">
                         <li class="comment">
                           <div class="vcard bio">
-                            <img src="/oldal/images/person_1.jpg" alt="Image">
+                            <img src="/oldal/images/person_1.jpg">
                           </div>
                           <div class="comment-body">
                             <h3>Jean Doe</h3>
@@ -170,7 +188,7 @@
                             <ul class="children">
                               <li class="comment">
                                 <div class="vcard bio">
-                                  <img src="/oldal/images/person_4.jpg" alt="Image">
+                                  <img src="/oldal/images/person_4.jpg">
                                 </div>
                                 <div class="comment-body">
                                   <h3>Ben Afflick</h3>
@@ -188,7 +206,7 @@
 
                 <li class="comment">
                   <div class="vcard bio">
-                    <img src="/oldal/images/person_1.jpg" alt="Image">
+                    <img src="/oldal/images/person_1.jpg">
                   </div>
                   <div class="comment-body">
                     <h3>Jean Doe</h3>
@@ -249,7 +267,7 @@
               </div>
             </div>
             <div class="sidebar-box">
-              <img src="/oldal/images/person_1.jpg" alt="Image" class="img-fluid mb-4 w-50 rounded-circle">
+              <img src="/oldal/images/person_1.jpg" class="img-fluid mb-4 w-50 rounded-circle">
               <h3 class="text-black">About The Author</h3>
               <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
               <p><a href="#" class="btn btn-primary btn-md text-white">Read More</a></p>
