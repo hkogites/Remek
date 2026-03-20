@@ -45,7 +45,7 @@
             <div class="col-3 ">
               <div class="site-logo">
                 <a href="/" class="font-weight-bold">
-                  <img src="/oldal/images/logo.png" class="img-fluid">
+                  <img src="/oldal/images/logo.png" alt="Image" class="img-fluid">
                 </a>
               </div>
             </div>
@@ -63,9 +63,6 @@
                   @auth
                   @if(auth()->user()->is_admin)
                   <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
-                  @endif
-                  @if(auth()->user()->is_iroda)
-                  <li><a href="{{ url('/iroda') }}" class="nav-link">Iroda</a></li>
                   @endif
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
@@ -224,7 +221,7 @@
                   <li><a href="/about">Rólunk</a></li>
                   <li><a href="/trips">Utazások</a></li>
                   <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/regisztracio">Regisztráció</a></li>
+                  <li><a href="/blog">Regisztráció</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -236,7 +233,6 @@
             </div>
           </div>
         </div>
-        
       </div>
     </footer>
 

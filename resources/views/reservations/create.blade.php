@@ -96,35 +96,20 @@
 
     <footer class="site-footer bg-light">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
-            <div class="row">
-              <div class="col-4 gal_col"><a href="#"><img src="/oldal/images/insta_1.jpg" class="img-fluid" alt=""></a></div>
-              <div class="col-4 gal_col"><a href="#"><img src="/oldal/images/insta_2.jpg" class="img-fluid" alt=""></a></div>
-              <div class="col-4 gal_col"><a href="#"><img src="/oldal/images/insta_3.jpg" class="img-fluid" alt=""></a></div>
-              <div class="col-4 gal_col"><a href="#"><img src="/oldal/images/insta_4.jpg" class="img-fluid" alt=""></a></div>
-              <div class="col-4 gal_col"><a href="#"><img src="/oldal/images/insta_5.jpg" class="img-fluid" alt=""></a></div>
-              <div class="col-4 gal_col"><a href="#"><img src="/oldal/images/insta_6.jpg" class="img-fluid" alt=""></a></div>
-            </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h2 class="footer-heading mb-4">Gyors elérés</h2>
+            <ul class="list-unstyled">
+              <li><a href="/">Kezdőlap</a></li>
+              <li><a href="/about">Rólunk</a></li>
+              <li><a href="/trips">Utazások</a></li>
+              <li><a href="/contact">Kapcsolat</a></li>
+              <li><a href="/blog">Regisztráció</a></li>
+            </ul>
           </div>
-          <div class="col-lg-8 ml-auto">
-            <div class="row">
-              <div class="col-lg-6 ml-auto">
-                <h2 class="footer-heading mb-4">Gyors elérés</h2>
-                <ul class="list-unstyled">
-                  <li><a href="/">Kezdőlap</a></li>
-                  <li><a href="/about">Rólunk</a></li>
-                  <li><a href="/trips">Utazások</a></li>
-                  <li><a href="/contact">Kapcsolat</a></li>
-                  <li><a href="/blog">Regisztráció</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-              </div>
-            </div>
+          <div class="col-lg-6">
+            <h2 class="footer-heading mb-4">Köszönjük!</h2>
+            <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
           </div>
         </div>
       </div>

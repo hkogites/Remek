@@ -169,23 +169,9 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-8 ml-auto">
-                <div class="row">
-                  <div class="col-lg-6 ml-auto">
-                    <h2 class="footer-heading mb-4">Gyors elérés</h2>
-                    <ul class="list-unstyled">
-                      <li><a href="{{ url('/') }}">Kezdőlap</a></li>
-                      <li><a href="{{ url('/about') }}">Rólunk</a></li>
-                      <li><a href="{{ url('/trips') }}">Utazások</a></li>
-                      <li><a href="{{ url('/contact') }}">Kapcsolat</a></li>
-                      <li><a href="{{ url('/blog') }}">Regisztráció</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-6">
-                    <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                    <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-                  </div>
-                </div>
+              <div class="col-lg-6">
+                <h2 class="footer-heading mb-4">Köszönjük!</h2>
+                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
               </div>
             </div>
           </div>
