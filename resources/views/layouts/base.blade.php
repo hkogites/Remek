@@ -111,15 +111,6 @@
                   @if(auth()->user()->is_admin)
                   <li class="{{ request()->is('admin*') ? 'active' : '' }}"><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
                   @endif
-                  @if(auth()->user()->is_iroda)
-                  <li class="{{ request()->is('iroda*') ? 'active' : '' }}">
-                    <a href="{{ url('/iroda') }}" class="nav-link">Iroda</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="{{ url('/iroda/destinations') }}" class="dropdown-item">Úticélok</a></li>
-                      <li><a href="{{ url('/iroda/reservations') }}" class="dropdown-item">Foglalások</a></li>
-                    </ul>
-                  </li>
-                  @endif
                   <li class="{{ request()->is('profil') ? 'active' : '' }}"><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">

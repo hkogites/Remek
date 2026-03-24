@@ -71,9 +71,6 @@
                   @if(auth()->user()->is_admin)
                   <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
                   @endif
-                  @if(auth()->user()->is_iroda)
-                  <li><a href="{{ url('/iroda') }}" class="nav-link">Iroda</a></li>
-                  @endif
                   <li><a href="{{ route('profile') }}" class="nav-link">Profil</a></li>
                   <li>
                     <form method="POST" action="{{ route('logout') }}" style="display:inline;">
