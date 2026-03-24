@@ -46,6 +46,7 @@ Route::redirect('/trip-lisbon.html', '/trip/trip-lisbon', 301);
 // Quiz
 Route::get('/quiz', [QuizController::class, 'show'])->name('quiz.show');
 Route::post('/quiz', [QuizController::class, 'submit'])->name('quiz.submit');
+Route::get('/quiz/result', [QuizController::class, 'result'])->name('quiz.result');
 
 // Auth routes (Hungarian)
 Route::get('/bejelentkezes', [AuthController::class, 'showLogin'])->name('login');
