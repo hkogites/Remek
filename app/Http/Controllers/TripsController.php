@@ -16,15 +16,21 @@ class TripsController extends Controller
         if (in_array((int)$seasonParam, [1,2,3,4], true)) {
             $selectedSeason = (int)$seasonParam;
         }
+        
         $query = Destination::query();
+        
+        // Évszak szerinti szűrés
         if ($selectedSeason !== null && Schema::hasColumn('destination', 'evszak')) {
             $query->where('evszak', $selectedSeason);
         }
+        
+        // Rendezés kezdő dátum szerint, ha van ilyen oszlop
         if (Schema::hasColumn('destination', 'start_date')) {
             $query->orderBy('start_date');
         } else {
             $query->orderBy('id');
         }
+        
         $destinations = $query->get();
 
         $seasonNames = [
@@ -33,6 +39,7 @@ class TripsController extends Controller
             3 => 'Nyár',
             4 => 'Ősz',
         ];
+        
         return view('pages.trips', [
             'destinations' => $destinations,
             'seasonNames' => $seasonNames,
@@ -40,4 +47,3 @@ class TripsController extends Controller
         ]);
     }
 }
-

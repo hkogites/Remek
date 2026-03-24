@@ -4,223 +4,226 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Destination;
-use Illuminate\Support\Facades\Schema;
 
 class SeasonalDestinationsSeeder extends Seeder
 {
-    public function run(): void
+    public function run()
     {
-        // 1=Tél, 2=Tavasz, 3=Nyár, 4=Ősz
-        $items = [
-            // Tavasz (2)
+        // Téli úti célok
+        $winter_destinations = [
             [
-                'slug' => 'trip-japan-spring',
-                'title' => 'Japán – Cseresznyevirágzás',
-                'evszak' => 2,
-                'price_huf' => 520000,
-                'start_date' => '2026-03-28',
-                'end_date' => '2026-04-05',
-                'image_path' => '/oldal/images/japankor.jpg',
-                'detail_url' => '/trip-japan-spring',
-                'leiras' => 'Tavasszal Japán a hanami, a cseresznyevirágzás ünnepe miatt varázslatos. Kiotó, Tokió és Oszaka parkjai ünnepi hangulatban telnek meg, a kellemes tavaszi idő pedig ideális a kertek és történelmi városrészek felfedezéséhez. Az időszak népszerűsége miatt javasolt az időbeni foglalás.',
-            ],
-            [
-                'slug' => 'trip-netherlands-spring',
-                'title' => 'Hollandia – Tulipánok és Keukenhof',
-                'evszak' => 2,
-                'price_huf' => 240000,
-                'start_date' => '2026-04-15',
-                'end_date' => '2026-04-20',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-netherlands-spring',
-                'leiras' => 'Hollandia tavasszal a tulipánok hazája. A világ egyik legnagyobb virágparkja, a Keukenhof színpompás látványt nyújt, Amszterdam csatornái és múzeumai pedig új életre kelnek. Friss, kellemes idő, biciklis városnézés és a Király Napja teszi emlékezetessé az évszakot.',
-            ],
-            [
-                'slug' => 'trip-portugal-spring',
-                'title' => 'Portugália – Lisszabon, Porto és Douro',
-                'evszak' => 2,
-                'price_huf' => 260000,
-                'start_date' => '2026-05-10',
-                'end_date' => '2026-05-15',
-                'image_path' => '/oldal/images/Lisbon.jpg',
-                'detail_url' => '/trip-portugal-spring',
-                'leiras' => 'Portugáliában tavasszal enyhe, napos idő és virágzó táj fogad. Lisszabon és Porto bájos utcái ilyenkor különösen élvezetesek, a Douro-völgyben beindul a szőlőültetvények ébredése. Az Algarve partvidékén a tavasz végén már a strandolás is szóba jöhet.',
-            ],
-            [
-                'slug' => 'trip-morocco-spring',
-                'title' => 'Marokkó – Sivatagi kaland',
-                'evszak' => 2,
-                'price_huf' => 280000,
-                'start_date' => '2026-03-18',
-                'end_date' => '2026-03-24',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-morocco-spring',
-                'leiras' => 'Marokkó tavasszal nappal kellemesen meleg, estére üdítően hűvös – tökéletes a sivatagi túrákhoz. Marrákes, Fez és Chefchaouen színes bazárjai kevésbé zsúfoltak, az Atlasz hegyeiben pedig kiváló túraútvonalak várnak.',
-            ],
-
-            // Nyár (3)
-            [
-                'slug' => 'trip-iceland-summer',
-                'title' => 'Izland – Éjféli Nap és vízesések',
-                'evszak' => 3,
-                'price_huf' => 590000,
-                'start_date' => '2026-06-18',
-                'end_date' => '2026-06-25',
-                'image_path' => '/oldal/images/izlandkor.jpg',
-                'detail_url' => '/trip-iceland-summer',
-                'leiras' => 'Izland nyáron a természet rajongóinak paradicsoma: a nap szinte alig nyugszik le, így jut idő vízesésekre, gejzírekre és vulkanikus tájakra. Husavík környékén bálnales, a Ring Road mentén pedig életre szóló autós túra vár.',
-            ],
-            [
-                'slug' => 'trip-canada-summer',
-                'title' => 'Kanada – Nemzeti parkok és városok',
-                'evszak' => 3,
-                'price_huf' => 620000,
-                'start_date' => '2026-07-10',
-                'end_date' => '2026-07-20',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-canada-summer',
-                'leiras' => 'Kanada nyáron fesztiválokkal, kristálytiszta tavakkal és hatalmas hegyekkel csábít. A Sziklás-hegység túrái, Montreal és Quebec kulturális élményei, valamint a kempingezés és kajakozás a kanadai életérzés részei.',
-            ],
-            [
-                'slug' => 'trip-greece-summer',
-                'title' => 'Görögország – Szigetek és tenger',
-                'evszak' => 3,
-                'price_huf' => 220000,
-                'start_date' => '2026-08-05',
-                'end_date' => '2026-08-12',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-greece-summer',
-                'leiras' => 'A görög szigetek a tengerparti pihenés Mekkái. Santorini és Mykonos ikonikus látképe, Kréta és Rodosz öblei, valamint a mediterrán konyha és naplementék felejthetetlenné teszik a nyarat.',
-            ],
-            [
-                'slug' => 'trip-norway-summer',
-                'title' => 'Norvégia – Fjordok és kalandok',
-                'evszak' => 3,
-                'price_huf' => 330000,
-                'start_date' => '2026-07-22',
-                'end_date' => '2026-07-28',
+                'name' => 'Norvégiai téli varázslat',
+                'title' => 'Norvégiai téli varázslat',
+                'slug' => 'norway-winter',
+                'ar' => 380000,
+                'leiras' => 'Fedezze fel Norvégia téli szépségét! A sarki fény, a hófödte fjordok és a hagyományos vikings falvak.',
+                'description' => 'Fedezze fel Norvégia téli szépségét! A sarki fény, a hófödte fjordok és a hagyományos vikings falvak. Ez a téli kaland bemutatja Oslo, Bergen és a híres Tromső varázsát.',
+                'price_huf' => 380000,
+                'foglallimit' => 20,
+                'start_date' => '2024-12-15',
+                'end_date' => '2024-12-22',
                 'image_path' => '/oldal/images/norway.jpg',
-                'detail_url' => '/trip-norway-summer',
-                'leiras' => 'Norvégia nyáron fjordjaival, lélegzetelállító kilátóival és az éjféli nappal csábít. Túrázás, kajakozás és hajózás vár, a városok – például Bergen és Oslo – pedig nyüzsgő, mégis természetközeli élményt adnak.',
-            ],
-
-            // Ősz (4)
-            [
-                'slug' => 'trip-italy-autumn',
-                'title' => 'Olaszország – Szüret és városok',
-                'evszak' => 4,
-                'price_huf' => 240000,
-                'start_date' => '2026-10-02',
-                'end_date' => '2026-10-07',
-                'image_path' => '/oldal/images/italy.jpg',
-                'detail_url' => '/trip-italy-autumn',
-                'leiras' => 'Ősszel az olasz táj szüret illatával és meleg színeivel hívogat. Toszkánától Umbriáig borvacsorák, szarvasgombafesztiválok és nyugodtabb városnézés vár, a nagyvárosokban pedig enyhébb az idő és kevesebb a tömeg.',
-            ],
-            [
-                'slug' => 'trip-japan-autumn',
-                'title' => 'Japán – Őszi lombszíneződés',
-                'evszak' => 4,
-                'price_huf' => 520000,
-                'start_date' => '2026-11-08',
-                'end_date' => '2026-11-16',
-                'image_path' => '/oldal/images/japankor.jpg',
-                'detail_url' => '/trip-japan-autumn',
-                'leiras' => 'Japán ősszel a momiji, a vörös-arany lombszíneződés miatt különleges. Kiotó és Nara templomkertjei, bambuszligetei és hegyvidéki ösvényei fotózásra és természetjárásra csábítanak, kellemes, száraz időben.',
-            ],
-            [
-                'slug' => 'trip-usa-newengland-autumn',
-                'title' => 'USA – Új-Anglia őszi tájak',
-                'evszak' => 4,
-                'price_huf' => 650000,
-                'start_date' => '2026-10-10',
-                'end_date' => '2026-10-18',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-usa-newengland-autumn',
-                'leiras' => 'Új-Anglia (Vermont, Maine, Massachusetts) világhírű őszi színkavalkádja kisvárosi fesztiválokkal, farmokkal és autós kirándulásokkal párosul. A dombos táj és a régi fehér templomtornyok igazi képeslap-hangulatot adnak.',
-            ],
-            [
-                'slug' => 'trip-france-autumn',
-                'title' => 'Franciaország – Borvidékek és városok',
-                'evszak' => 4,
-                'price_huf' => 270000,
-                'start_date' => '2026-09-20',
-                'end_date' => '2026-09-25',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-france-autumn',
-                'leiras' => 'Franciaország ősszel a borvidékek szüretével, szezonális gasztronómiával és romantikus városnézéssel csábít. Párizs lágy fényei és a csendes vidéki tájak békés, inspiráló hangulatot nyújtanak.',
-            ],
-
-            // Tél (1)
-            [
-                'slug' => 'trip-austria-winter',
-                'title' => 'Ausztria – Síbirodalom és advent',
+                'image2_path' => '/oldal/images/norway2.jpg',
+                'detail_url' => '/trip/norway-winter',
                 'evszak' => 1,
-                'price_huf' => 180000,
-                'start_date' => '2026-12-15',
-                'end_date' => '2026-12-20',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-austria-winter',
-                'leiras' => 'Ausztria télen a síelők és az adventi vásárok rajongóit várja. Tirol és Salzburg síparadicsomai mellett Bécs és Graz ünnepi fényei, forralt borai és zenei programjai varázslatos hangulatot teremtenek.',
             ],
             [
-                'slug' => 'trip-finland-winter',
-                'title' => 'Finnország – Lappföld és sarki fény',
+                'name' => 'Izlandi tűz és jég',
+                'title' => 'Izlandi tűz és jég',
+                'slug' => 'iceland-winter',
+                'ar' => 420000,
+                'leiras' => 'A tűz és jég országa télen! Izland gejzírjei, jégbarlangjai, vulkánjai és a híres északi fény.',
+                'description' => 'A tűz és jég országa télen! Izland gejzírjei, jégbarlangjai, vulkánjai és a híres északi fény. Reykjavík és a Golden Circle téli varázsa.',
+                'price_huf' => 420000,
+                'foglallimit' => 15,
+                'start_date' => '2025-01-10',
+                'end_date' => '2025-01-17',
+                'image_path' => '/oldal/images/izland.jpg',
+                'image2_path' => '/oldal/images/izland2.jpg',
+                'detail_url' => '/trip/iceland-winter',
                 'evszak' => 1,
-                'price_huf' => 540000,
-                'start_date' => '2027-01-18',
-                'end_date' => '2027-01-24',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-finland-winter',
-                'leiras' => 'Finnországban a hóval borított tájak, a Mikulásfalva és a sarki fény teszi különlegessé a telet. Motoros szán, husky túrák, jéghalászat és szaunázás vár – mindez az északi égbolton táncoló aurora kíséretében.',
             ],
             [
-                'slug' => 'trip-thailand-winter',
-                'title' => 'Thaiföld – Trópusi feltöltődés',
+                'name' => 'Ausztriai síparadicsom',
+                'title' => 'Ausztriai síparadicsom',
+                'slug' => 'austria-ski',
+                'ar' => 280000,
+                'leiras' => 'Ausztria legjobb síterepei! A Tirol hegyvidék, Innsbruck és Salzburg környéke.',
+                'description' => 'Ausztria legjobb síterepei! A Tirol hegyvidék, Innsbruck és Salzburg környéke. Téli sportok, fürdők és a híres osztrák konyha.',
+                'price_huf' => 280000,
+                'foglallimit' => 25,
+                'start_date' => '2025-01-20',
+                'end_date' => '2025-01-27',
+                'image_path' => '/oldal/images/austria.jpg',
+                'image2_path' => '/oldal/images/austria2.webp',
+                'detail_url' => '/trip/austria-ski',
                 'evszak' => 1,
-                'price_huf' => 390000,
-                'start_date' => '2027-02-04',
-                'end_date' => '2027-02-12',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-thailand-winter',
-                'leiras' => 'Thaiföld a télből a nyárba vezet: száraz, napos, meleg idő, csodás szigetek és gazdag kultúra. Bangkok, Chiang Mai és a déli tengerpartok változatos programokat kínálnak a pihenéstől az aktív kalandokig.',
-            ],
-            [
-                'slug' => 'trip-chile-winter',
-                'title' => 'Chile – Patagónia és borvidékek',
-                'evszak' => 1,
-                'price_huf' => 680000,
-                'start_date' => '2027-01-22',
-                'end_date' => '2027-01-31',
-                'image_path' => '/oldal/images/hegy.jpg',
-                'detail_url' => '/trip-chile-winter',
-                'leiras' => 'Chilében ilyenkor nyár van: Patagónia gleccserei és hegyvidékei könnyen bejárhatók, Santiago és a közeli borvidékek pedig kiváló gasztronómiát kínálnak. A csendes-óceáni part mentén pihenés és kirándulás vár.',
             ],
         ];
 
-        $hasLegacyName = Schema::hasColumn('destination', 'name');
-        $hasLegacyAr = Schema::hasColumn('destination', 'ar');
-        $hasFoglallimit = Schema::hasColumn('destination', 'foglallimit');
+        // Tavaszi úti célok
+        $spring_destinations = [
+            [
+                'name' => 'Hollandiai tulipánok',
+                'title' => 'Hollandiai tulipánok',
+                'slug' => 'netherlands-tulips',
+                'ar' => 165000,
+                'leiras' => 'Hollandia tavaszi szépsége! A Keukenhof kert, a híres tulipánmezők és Amszterdam csatornái.',
+                'description' => 'Hollandia tavaszi szépsége! A Keukenhof kert, a híres tulipánmezők és Amszterdam csatornái. Fedezze fel a holland virágkultúrát és a történelmi városokat.',
+                'price_huf' => 165000,
+                'foglallimit' => 30,
+                'start_date' => '2025-04-15',
+                'end_date' => '2025-04-22',
+                'image_path' => '/oldal/images/netherlands.jpg',
+                'image2_path' => '/oldal/images/Netherlands2.jpg',
+                'detail_url' => '/trip/netherlands-tulips',
+                'evszak' => 2,
+            ],
+            [
+                'name' => 'Prága és környéke',
+                'title' => 'Prága és környéke',
+                'slug' => 'prague-spring',
+                'ar' => 125000,
+                'leiras' => 'Európa egyik legromantikusabb fővárosa tavasszal! A prágai vár, a Károly híd és a régi város hangulata.',
+                'description' => 'Európa egyik legromantikusabb fővárosa tavasszal! A prágai vár, a Károly híd és a régi város hangulata. Fedezze fel Csehország szívét és a közeli Karlštejn várat.',
+                'price_huf' => 125000,
+                'foglallimit' => 40,
+                'start_date' => '2025-05-20',
+                'end_date' => '2025-05-25',
+                'image_path' => '/oldal/images/praga.jpg',
+                'image2_path' => '/oldal/images/praga2.jpeg',
+                'detail_url' => '/trip/prague-spring',
+                'evszak' => 2,
+            ],
+            [
+                'name' => 'Máltai történelem',
+                'title' => 'Máltai történelem',
+                'slug' => 'malta-spring',
+                'ar' => 165000,
+                'leiras' => 'A lovagok szigete tavasszal! Málta történelmi városai, a híres Blue Lagoon és a mediterrán hangulat.',
+                'description' => 'A lovagok szigete tavasszal! Málta történelmi városai, a híres Blue Lagoon és a mediterrán hangulat. Valletta, Mdina és a Gozo sziget felfedezése.',
+                'price_huf' => 165000,
+                'foglallimit' => 35,
+                'start_date' => '2025-05-10',
+                'end_date' => '2025-05-17',
+                'image_path' => '/oldal/images/malta.jpg',
+                'image2_path' => '/oldal/images/malta2.jpg',
+                'detail_url' => '/trip/malta-spring',
+                'evszak' => 2,
+            ],
+        ];
 
-        foreach ($items as $item) {
-            $data = $item;
-            // Ensure required non-null fields exist on legacy schemas
-            if (!array_key_exists('leiras', $data)) {
-                $data['leiras'] = '';
-            }
-            if ($hasLegacyName) {
-                $data['name'] = $item['title'];
-            }
-            if ($hasLegacyAr) {
-                $data['ar'] = $item['price_huf'];
-            }
-            if ($hasFoglallimit && !array_key_exists('foglallimit', $data)) {
-                // Randomize capacity between 5 and 30 with increments of 2 and/or 5
-                $choices = [5,6,8,10,12,14,15,16,18,20,22,24,25,26,28,30];
-                $data['foglallimit'] = $choices[array_rand($choices)];
-            }
+        // Nyári úti célok
+        $summer_destinations = [
+            [
+                'name' => 'Görög szigetvilág',
+                'title' => 'Görög szigetvilág',
+                'slug' => 'greece-islands',
+                'ar' => 220000,
+                'leiras' => 'Görögország leggyönyörűbb szigetei! Santorini, Mykonos és a híres Kréta.',
+                'description' => 'Görögország leggyönyörűbb szigetei! Santorini, Mykonos és a híres Kréta. Tiszta tengerpartok, fehér házak és a mediterrán konyha.',
+                'price_huf' => 220000,
+                'foglallimit' => 25,
+                'start_date' => '2025-06-15',
+                'end_date' => '2025-06-22',
+                'image_path' => '/oldal/images/greece.jpg',
+                'image2_path' => '/oldal/images/greece2.jpg',
+                'detail_url' => '/trip/greece-islands',
+                'evszak' => 3,
+            ],
+            [
+                'name' => 'Spanyol riviéra',
+                'title' => 'Spanyol riviéra',
+                'slug' => 'spain-riviera',
+                'ar' => 245000,
+                'leiras' => 'Spanyolország napsütötte partjai! Costa Brava, Costa del Sol és a híres Barcelona.',
+                'description' => 'Spanyolország napsütötte partjai! Costa Brava, Costa del Sol és a híres Barcelona. Tapas kultúra, flamenco és a mediterrán életérzés.',
+                'price_huf' => 245000,
+                'foglallimit' => 30,
+                'start_date' => '2025-07-01',
+                'end_date' => '2025-07-08',
+                'image_path' => '/oldal/images/spain.jpg',
+                'image2_path' => '/oldal/images/spain2.jpg',
+                'detail_url' => '/trip/spain-riviera',
+                'evszak' => 3,
+            ],
+            [
+                'name' => 'Olasz tengerpart',
+                'title' => 'Olasz tengerpart',
+                'slug' => 'italy-coast',
+                'ar' => 265000,
+                'leiras' => 'Olaszország legjobb tengerpartjai! Amalfi part, Cinque Terre és a szicíliai szépségek.',
+                'description' => 'Olaszország legjobb tengerpartjai! Amalfi part, Cinque Terre és a szicíliai szépségek. Pizza, pasta és a dolce vita élménye.',
+                'price_huf' => 265000,
+                'foglallimit' => 20,
+                'start_date' => '2025-08-10',
+                'end_date' => '2025-08-17',
+                'image_path' => '/oldal/images/italy.jpg',
+                'image2_path' => '/oldal/images/italy2.jpg',
+                'detail_url' => '/trip/italy-coast',
+                'evszak' => 3,
+            ],
+        ];
+
+        // őszi úti célok
+        $autumn_destinations = [
+            [
+                'name' => 'Törökországi ősz',
+                'title' => 'Törökországi ősz',
+                'slug' => 'turkey-autumn',
+                'ar' => 195000,
+                'leiras' => 'Törökország őszben! Isztambul és a török riviéra. Kelet és Nyugat találkozása.',
+                'description' => 'Törökország őszben! Isztambul és a török riviéra. Kelet és Nyugat találkozása, a Hagia Sophia, a Kék mecset és a boszporusz partjai.',
+                'price_huf' => 195000,
+                'foglallimit' => 25,
+                'start_date' => '2025-10-01',
+                'end_date' => '2025-10-08',
+                'image_path' => '/oldal/images/turkey.jpg',
+                'image2_path' => '/oldal/images/turkey2.jpg',
+                'detail_url' => '/trip/turkey-autumn',
+                'evszak' => 4,
+            ],
+            [
+                'name' => 'Francia borvidékek',
+                'title' => 'Francia borvidékek',
+                'slug' => 'france-wine',
+                'ar' => 285000,
+                'leiras' => 'Franciaország híres borvidékei ősszel! Bordeaux, Burgundia és Champagne.',
+                'description' => 'Franciaország híres borvidékei ősszel! Bordeaux, Burgundia és Champagne. Szüret, kastélyok és a francia gasztronómia.',
+                'price_huf' => 285000,
+                'foglallimit' => 20,
+                'start_date' => '2025-09-15',
+                'end_date' => '2025-09-22',
+                'image_path' => '/oldal/images/france.jpg',
+                'image2_path' => '/oldal/images/france2.jpg',
+                'detail_url' => '/trip/france-wine',
+                'evszak' => 4,
+            ],
+            [
+                'name' => 'Kanadai őszi színek',
+                'title' => 'Kanadai őszi színek',
+                'slug' => 'canada-fall',
+                'ar' => 355000,
+                'leiras' => 'Kanada lenyűgöző őszi színei! Québec, Ontario és a híres Maple syrup.',
+                'description' => 'Kanada lenyűgöző őszi színei! Québec, Ontario és a híres Maple syrup. Erdők, tavak és a kanadai vadon.',
+                'price_huf' => 355000,
+                'foglallimit' => 15,
+                'start_date' => '2025-10-15',
+                'end_date' => '2025-10-22',
+                'image_path' => '/oldal/images/canada.jpg',
+                'image2_path' => '/oldal/images/canada2.jpg',
+                'detail_url' => '/trip/canada-fall',
+                'evszak' => 4,
+            ],
+        ];
+
+        // Összes úti cél egyesítése
+        $all_destinations = array_merge($winter_destinations, $spring_destinations, $summer_destinations, $autumn_destinations);
+
+        foreach ($all_destinations as $destination) {
             Destination::updateOrCreate(
-                ['slug' => $item['slug']],
-                $data
+                ['slug' => $destination['slug']],
+                $destination
             );
         }
     }
