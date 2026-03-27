@@ -141,7 +141,7 @@
               <h3>Utazz velünk!</h3>
             </div>
           </div>
-        </div>
+        </div>    
         <style>
           /* "Ajánlatok" kártyák: egységes kép- és kártyaméret */
           .offers-section .listing-item {
