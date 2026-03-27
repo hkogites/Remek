@@ -3,7 +3,7 @@
 
 <head>
     <title>Teszt Eredmények - Az ideális úti céljaid</title>
-    <link rel="icon" type="image/x-icon" href="/oldal/images/logokicsi.png">
+    <link rel="icon" type="image/png" href="/oldal/images/ikon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -49,6 +49,12 @@
             margin-bottom: 20px;
             border-left: 5px solid #007bff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .destination-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
         
         .destination-card:hover {
@@ -212,7 +218,7 @@
                 <div class="result-container">
                     <div class="result-header result-animation">
                         <h2 class="personality-badge">
-                            🎯 Te egy {{ $results['personality'] }} típusú utazó vagy!
+                            Te egy {{ $results['personality'] }} típusú utazó vagy!
                         </h2>
                         <p class="lead">Az alábbi úti célok illenek a legjobban személyiségedhez:</p>
                     </div>
@@ -257,27 +263,31 @@
                         ];
                     @endphp
 
-                    @foreach($results['top_destinations'] as $destination => $score)
-                        <div class="destination-card result-animation" style="animation-delay: {{ $loop->iteration * 0.1 }}s">
+                    @foreach($results['top_destinations'] as $destination => $data)
+                        <a
+                            href="{{ $data['detail_url'] ?? '#' }}"
+                            class="destination-card destination-card-link result-animation"
+                            style="animation-delay: {{ $loop->iteration * 0.1 }}s"
+                        >
                             <div class="destination-rank">#{{ $loop->iteration }}</div>
-                            <h3 class="destination-name">{{ $destinationNames[$destination] ?? $destination }}</h3>
-                            <div class="destination-score">Pontszám: {{ $score }}/15</div>
+                            <h3 class="destination-name">{{ $data['title'] ?? $destinationNames[$destination] ?? $destination }}</h3>
+                            <div class="destination-score">Pontszám: {{ $data['score'] ?? 0 }}/15</div>
                             <p class="destination-description">
-                                {{ $destinationDescriptions[$destination] ?? 'Egyedülálló úti cél, amely tökéletesen illik hozzád.' }}
+                                {{ $data['description'] ?? $destinationDescriptions[$destination] ?? 'Egyedülálló úti cél, amely tökéletesen illik hozzád.' }}
                             </p>
-                        </div>
+                        </a>
                     @endforeach
 
                     <div class="action-buttons result-animation" style="animation-delay: 0.5s">
                         <a href="/trips" class="btn-primary">
-                            🗺️ Úticélok megtekintése
+                            Úticélok megtekintése
                         </a>
                         <a href="/quiz" class="btn-secondary">
-                            🔄 Teszt újból
+                            Teszt újból
                         </a>
                         @if(!auth()->check())
                             <a href="/regisztracio" class="btn-primary">
-                                👤 Regisztráció és foglalás
+                                Regisztráció és foglalás
                             </a>
                         @endif
                     </div>
@@ -285,30 +295,7 @@
             </div>
         </div>
 
-        <footer class="site-footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 ml-auto">
-                        <div class="row">
-                            <div class="col-lg-6 ml-auto">
-                                <h2 class="footer-heading mb-4">Gyors elérés</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="/">Kezdőlap</a></li>
-                                    <li><a href="/about">Rólunk</a></li>
-                                    <li><a href="/trips">Utazások</a></li>
-                                    <li><a href="/contact">Kapcsolat</a></li>
-                                    <li><a href="/quiz">Teszt</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('partials.footer')
 
     </div>
 

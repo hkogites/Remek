@@ -24,6 +24,7 @@
                   <li><a href="/about" class="nav-link">Rólunk</a></li>
                   <li><a href="/trips" class="nav-link">Utazások</a></li>
                   <li><a href="/contact" class="nav-link">Kapcsolat</a></li>
+                  <li><a href="/quiz" class="nav-link">Teszt</a></li>
                   @auth
                   @if(auth()->user()->is_admin)
                   <li><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
@@ -36,7 +37,6 @@
                     </form>
                   </li>
                   @else
-                  <li><a href="/quiz" class="nav-link">Kvíz</a></li>
                   <li><a href="{{ url('/bejelentkezes') }}" class="nav-link">Bejelentkezés</a></li>
                   <li><a href="{{ url('/regisztracio') }}" class="nav-link">Regisztráció</a></li>
                   @endauth

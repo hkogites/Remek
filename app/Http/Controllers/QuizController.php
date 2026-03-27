@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
+use App\Models\Destination;
 
 class QuizController extends Controller
 {
@@ -86,9 +88,101 @@ class QuizController extends Controller
         
         // Determine personality type based on answers
         $personality = $this->determinePersonality($answers);
-        
+
+        // Destination key -> fallback display text (used if DB mapping/record is missing).
+        // Keeping this ensures the page won't break even if a specific quiz key
+        // doesn't have a corresponding destination row in the database.
+        $fallbackNames = [
+            'prague' => 'Prága',
+            'paris' => 'Párizs',
+            'rome' => 'Róma',
+            'amsterdam' => 'Amszterdam',
+            'barcelona' => 'Barcelona',
+            'lisbon' => 'Lisszabon',
+            'vienna' => 'Bécs',
+            'budapest' => 'Budapest',
+            'prague_castle' => 'Prágai Vár',
+            'eiffel_tower' => 'Eiffel-torony',
+            'colosseum' => 'Colosseum',
+            'sagrada_familia' => 'Sagrada Família',
+            'anne_frank_house' => 'Anne Frank Ház',
+            'belem_tower' => 'Belémi torony',
+            'schonbrunn_palace' => 'Schönbrunn Palota',
+            'parliament_hungary' => 'Parlament'
+        ];
+
+        $fallbackDescriptions = [
+            'prague' => 'Európa egyik legromantikusabb fővárosa, lenyűgöző építészettel és történelemmel.',
+            'paris' => 'Az a szerelem és a művészet városa, ikonikus látnivalókkal és romantikus hangulattal.',
+            'rome' => 'Az örök város, ahol minden sarkon történelem és kultúra vár.',
+            'amsterdam' => 'Művészeti galériák, csatornák és modern, laza hangulat.',
+            'barcelona' => 'Tengerpart, modern építészet és gazdag kulturális élet.',
+            'lisbon' => 'Történelmi negyedek, hagyományos konyha és mediterrán hangulat.',
+            'vienna' => 'Kulturális központ, kávéházak és császári paloták.',
+            'budapest' => 'Történelmi fürdők, impozáns épületek és megfizethető árak.',
+            'prague_castle' => 'Prága szíve, történelmi jelentőségű várkomplexum.',
+            'eiffel_tower' => 'Párizs ikonikus szimbóluma, lenyűgöző kilátással.',
+            'colosseum' => 'Róma ősi amfiteátruma, a római birodalom jelképe.',
+            'sagrada_familia' => 'Gaudi mesterműve, Barcelona egyik leglátogatottabb helye.',
+            'anne_frank_house' => 'Mozgató történelmi élmény Amszterdam szívében.',
+            'belem_tower' => 'Lisszabon történelmi jelképe, a tengeri felfedezések emléke.',
+            'schonbrunn_palace' => 'Bécs császári palotája, kertekkel és gazdag történelemmel.',
+            'parliament_hungary' => 'Budapest ikonikus épülete, a magyar parlament székhelye.'
+        ];
+
+        $quizKeyToDestinationSlug = [
+            'prague' => 'trip-prague',
+            'paris' => 'trip-france-autumn',
+            'rome' => 'trip-olasz',
+            'amsterdam' => 'trip-netherlands-spring',
+            'barcelona' => 'trip-mallorca',
+            'lisbon' => 'trip-lisbon',
+            'vienna' => 'trip-austria-winter',
+            'budapest' => 'trip-prague',
+
+            // Landmark/variant keys map to the same base destination packages.
+            'prague_castle' => 'trip-prague',
+            'eiffel_tower' => 'trip-france-autumn',
+            'colosseum' => 'trip-olasz',
+            'sagrada_familia' => 'trip-mallorca',
+            'anne_frank_house' => 'trip-netherlands-spring',
+            'belem_tower' => 'trip-lisbon',
+            'schonbrunn_palace' => 'trip-austria-winter',
+            'parliament_hungary' => 'trip-prague',
+        ];
+
+        $topDestinationsDetails = [];
+        foreach ($topDestinations as $destinationKey => $score) {
+            $slug = $quizKeyToDestinationSlug[$destinationKey] ?? null;
+            $destination = $slug ? Destination::where('slug', $slug)->first() : null;
+
+            $detailUrl = null;
+            if ($destination) {
+                $title = $destination->title ?? ($fallbackNames[$destinationKey] ?? $destinationKey);
+                $leirasPlain = trim(strip_tags((string) ($destination->leiras ?? '')));
+                $description = $leirasPlain !== ''
+                    ? Str::limit($leirasPlain, 200)
+                    : ($fallbackDescriptions[$destinationKey] ?? '');
+                // Use the app route format consistently:
+                // /trip/{slug}, where slug is the destination.slug (e.g. "trip-france-autumn").
+                // This avoids mismatches where DB detail_url is something like "/trip-france-autumn".
+                $detailUrl = '/trip/' . $destination->slug;
+            } else {
+                $title = $fallbackNames[$destinationKey] ?? $destinationKey;
+                $description = $fallbackDescriptions[$destinationKey] ?? '';
+                $detailUrl = $slug ? ('/trip/' . $slug) : null;
+            }
+
+            $topDestinationsDetails[$destinationKey] = [
+                'score' => $score,
+                'title' => $title,
+                'description' => $description,
+                'detail_url' => $detailUrl,
+            ];
+        }
+
         return [
-            'top_destinations' => $topDestinations,
+            'top_destinations' => $topDestinationsDetails,
             'personality' => $personality,
             'all_scores' => $scores
         ];

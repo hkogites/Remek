@@ -5,6 +5,7 @@
     <title>SmartVoyager - Utazások</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/oldal/images/ikon.png">
 
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/oldal/fonts/icomoon/style.css">
@@ -196,7 +197,7 @@
                 <div class="row align-items-center justify-content-center text-center h-100">
                     <div class="col-md-12 d-flex align-items-center justify-content-center h-100">
                         <div class="heading-39101 mb-5 text-center">
-                            <h3>Utazási ajánlataink</h3>
+                            <h1 class="mb-3 font-weight-bold text-white">Utazási ajánlataink</h1>
                             <p class="lead text-white">Fedezze fel szezonális úti céljainkat!</p>
                         </div>
                     </div>
@@ -249,26 +250,7 @@
         </div>
     </div>
 
-    <footer class="site-footer bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <h2 class="footer-heading mb-4">Gyors elérés</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="/">Kezdőlap</a></li>
-                        <li><a href="/about">Rólunk</a></li>
-                        <li><a href="/trips">Utazások</a></li>
-                        <li><a href="/contact">Kapcsolat</a></li>
-                        <li><a href="/quiz">Teszt</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                    <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('partials.footer')
 
 </div>
 

@@ -4,6 +4,7 @@
     <title>Foglalás - {{ $destination->title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/oldal/images/ikon.png">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/oldal/fonts/icomoon/style.css">
     <link rel="stylesheet" href="/oldal/css/bootstrap.min.css">
@@ -27,6 +28,7 @@
               <ul class="site-menu main-menu js-clone-nav ml-auto ">
                 <li><a href="/" class="nav-link">Kezdőlap</a></li>
                 <li><a href="/trips" class="nav-link">Utazások</a></li>
+                  <li><a href="/quiz" class="nav-link">Teszt</a></li>
                 <li><a href="{{ route('trip.show', $destination->slug) }}" class="nav-link">Vissza: {{ $destination->title }}</a></li>
               </ul>
             </nav>
@@ -94,26 +96,7 @@
       </div>
     </div>
 
-    <footer class="site-footer bg-light">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h2 class="footer-heading mb-4">Gyors elérés</h2>
-            <ul class="list-unstyled">
-              <li><a href="/">Kezdőlap</a></li>
-              <li><a href="/about">Rólunk</a></li>
-              <li><a href="/trips">Utazások</a></li>
-              <li><a href="/contact">Kapcsolat</a></li>
-              <li><a href="/blog">Regisztráció</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-6">
-            <h2 class="footer-heading mb-4">Köszönjük!</h2>
-            <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    @include('partials.footer')
 
   </div>
 

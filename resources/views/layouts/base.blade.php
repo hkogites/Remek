@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title', 'Trips')</title>
+    <link rel="icon" type="image/png" href="{{ asset('oldal/images/ikon.png') }}">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('oldal/fonts/icomoon/style.css') }}">
     <link rel="stylesheet" href="{{ asset('oldal/css/bootstrap.min.css') }}">
@@ -107,6 +108,7 @@
                   <li class="{{ request()->is('about') ? 'active' : '' }}"><a href="{{ url('/about') }}" class="nav-link">Rólunk</a></li>
                   <li class="{{ request()->is('trips') ? 'active' : '' }}"><a href="{{ url('/trips') }}" class="nav-link">Utazások</a></li>
                   <li class="{{ request()->is('contact') ? 'active' : '' }}"><a href="{{ url('/contact') }}" class="nav-link">Kapcsolat</a></li>
+                  <li class="{{ request()->is('quiz*') ? 'active' : '' }}"><a href="{{ url('/quiz') }}" class="nav-link">Teszt</a></li>
                   @auth
                   @if(auth()->user()->is_admin)
                   <li class="{{ request()->is('admin*') ? 'active' : '' }}"><a href="{{ url('/admin') }}" class="nav-link">Admin</a></li>
@@ -134,39 +136,7 @@
       @hasSection('footer')
         @yield('footer')
       @else
-        <footer class="site-footer bg-light">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
-                <h2 class="footer-heading mb-3">Ide majd kitalálunk valamit</h2>
-                <div class="row">
-                  <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_1.jpg') }}" class="img-fluid"></a>
-                  </div>
-                  <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_2.jpg') }}" class="img-fluid"></a>
-                  </div>
-                  <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_3.jpg') }}" class="img-fluid"></a>
-                  </div>
-                  <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_4.jpg') }}" class="img-fluid"></a>
-                  </div>
-                  <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_5.jpg') }}" class="img-fluid"></a>
-                  </div>
-                  <div class="col-4 gal_col">
-                    <a href="#"><img src="{{ asset('oldal/images/insta_6.jpg') }}" class="img-fluid"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-              </div>
-            </div>
-          </div>
-        </footer>
+        @include('partials.footer')
       @endif
 
     </div>

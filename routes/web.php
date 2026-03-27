@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TripsController;
 use App\Http\Controllers\TripDetailController;
 use App\Http\Controllers\ReservationController;
@@ -11,7 +12,7 @@ use App\Http\Controllers\QuizController;
 use App\Http\Controllers\Admin\DestinationController as AdminDestinationController;
 use App\Http\Middleware\AdminMiddleware;
 
-Route::view('/', 'pages.index');
+Route::get('/', [HomeController::class, 'index']);
 Route::redirect('/index.html', '/', 301);
 Route::view('/about', 'pages.about');
 Route::redirect('/about.html', '/about', 301);

@@ -3,7 +3,7 @@
 
 <head>
     <title>Utazás Teszt - Milyen úti cél illik hozzád?</title>
-    <link rel="icon" type="image/x-icon" href="/oldal/images/logokicsi.png">
+    <link rel="icon" type="image/png" href="/oldal/images/ikon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -246,7 +246,7 @@
                         </div>
 
                         <div class="question-card">
-                            <h3 class="question-title">5. Mennyire vonzódnak a történelmi helyszínek?</h3>
+                            <h3 class="question-title">5. Mennyire vonzanak a történelmi helyszínek?</h3>
                             <label class="answer-option">
                                 <input type="radio" name="historic" value="5" required>
                                 <span>Nagyon, szeretem a történelmet</span>
@@ -315,30 +315,7 @@
             </div>
         </div>
 
-        <footer class="site-footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 ml-auto">
-                        <div class="row">
-                            <div class="col-lg-6 ml-auto">
-                                <h2 class="footer-heading mb-4">Gyors elérés</h2>
-                                <ul class="list-unstyled">
-                                    <li><a href="/">Kezdőlap</a></li>
-                                    <li><a href="/about">Rólunk</a></li>
-                                    <li><a href="/trips">Utazások</a></li>
-                                    <li><a href="/contact">Kapcsolat</a></li>
-                                    <li><a href="/quiz">Teszt</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <h2 class="footer-heading mb-4">Köszönjük!</h2>
-                                <p>Köszönjük, hogy minket választott! Reméljük, hogy megfeleltünk elvárásainak!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('partials.footer')
 
     </div>
 
