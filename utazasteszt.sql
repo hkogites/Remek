@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Nov 12. 10:15
--- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.2.12
+-- Host: 127.0.0.1
+-- Generation Time: Mar 26, 2026 at 09:20 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `utazasteszt`
+-- Database: `utazasteszt`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `cache`
+-- Table structure for table `cache`
 --
 
 CREATE TABLE `cache` (
@@ -36,7 +36,7 @@ CREATE TABLE `cache` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `cache_locks`
+-- Table structure for table `cache_locks`
 --
 
 CREATE TABLE `cache_locks` (
@@ -48,7 +48,7 @@ CREATE TABLE `cache_locks` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `cost`
+-- Table structure for table `cost`
 --
 
 CREATE TABLE `cost` (
@@ -65,7 +65,7 @@ CREATE TABLE `cost` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `destination`
+-- Table structure for table `destination`
 --
 
 CREATE TABLE `destination` (
@@ -90,7 +90,7 @@ CREATE TABLE `destination` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- A tábla adatainak kiíratása `destination`
+-- Dumping data for table `destination`
 --
 
 INSERT INTO `destination` (`id`, `slug`, `title`, `price_huf`, `start_date`, `end_date`, `image_path`, `detail_url`, `name`, `country`, `description`, `is_global`, `user_id`, `ar`, `leiras`, `foglallimit`, `evszak`, `image2_path`) VALUES
@@ -117,58 +117,7 @@ INSERT INTO `destination` (`id`, `slug`, `title`, `price_huf`, `start_date`, `en
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `failed_jobs`
---
-
-CREATE TABLE `failed_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
-  `connection` text NOT NULL,
-  `queue` text NOT NULL,
-  `payload` longtext NOT NULL,
-  `exception` longtext NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `jobs`
---
-
-CREATE TABLE `jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `queue` varchar(255) NOT NULL,
-  `payload` longtext NOT NULL,
-  `attempts` tinyint(3) UNSIGNED NOT NULL,
-  `reserved_at` int(10) UNSIGNED DEFAULT NULL,
-  `available_at` int(10) UNSIGNED NOT NULL,
-  `created_at` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `job_batches`
---
-
-CREATE TABLE `job_batches` (
-  `id` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `total_jobs` int(11) NOT NULL,
-  `pending_jobs` int(11) NOT NULL,
-  `failed_jobs` int(11) NOT NULL,
-  `failed_job_ids` longtext NOT NULL,
-  `options` mediumtext DEFAULT NULL,
-  `cancelled_at` int(11) DEFAULT NULL,
-  `created_at` int(11) NOT NULL,
-  `finished_at` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -178,7 +127,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- A tábla adatainak kiíratása `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -194,48 +143,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `notification`
---
-
-CREATE TABLE `notification` (
-  `id` int(11) NOT NULL,
-  `type` enum('email','push','popup') NOT NULL,
-  `threshold` decimal(10,2) DEFAULT NULL,
-  `channel` varchar(50) DEFAULT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `password_reset_tokens`
---
-
-CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `pricewatch`
---
-
-CREATE TABLE `pricewatch` (
-  `id` int(11) NOT NULL,
-  `item_type` enum('flight','hotel','program') NOT NULL,
-  `item_id` varchar(100) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
-  `date` date NOT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `reservations`
+-- Table structure for table `reservations`
 --
 
 CREATE TABLE `reservations` (
@@ -256,7 +164,7 @@ CREATE TABLE `reservations` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `route`
+-- Table structure for table `route`
 --
 
 CREATE TABLE `route` (
@@ -270,19 +178,7 @@ CREATE TABLE `route` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `routedestinations`
---
-
-CREATE TABLE `routedestinations` (
-  `route_id` int(11) NOT NULL,
-  `dest_id` int(11) NOT NULL,
-  `order_no` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `sessions`
+-- Table structure for table `sessions`
 --
 
 CREATE TABLE `sessions` (
@@ -295,7 +191,7 @@ CREATE TABLE `sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- A tábla adatainak kiíratása `sessions`
+-- Dumping data for table `sessions`
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
@@ -304,7 +200,7 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -313,48 +209,38 @@ CREATE TABLE `user` (
   `email` varchar(150) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('user','admin') DEFAULT 'user',
-  `settings` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`settings`))
+  `settings` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`settings`)),
+  `is_admin` tinyint(1) NOT NULL DEFAULT 0,
+  `is_iroda` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- A tábla adatainak kiíratása `user`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `role`, `settings`) VALUES
-(3, 'Teszt Felha', 'hkogites@gmail.com', '$2y$12$Owz3HZz1afLnKqAIvAaPlew7Aq3kboxnc6yMzzTbdRyixqlRbqbqC', 'user', NULL);
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `weather`
---
-
-CREATE TABLE `weather` (
-  `id` int(11) NOT NULL,
-  `dest_id` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `temperature` decimal(5,2) DEFAULT NULL,
-  `conditions` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `role`, `settings`, `is_admin`, `is_iroda`) VALUES
+(2, 'TesztIroda', 'testasd@igazi.email', 'jelszo123', 'user', NULL, 0, 1),
+(3, 'Teszt Felha', 'hkogites@gmail.com', '$2y$12$Owz3HZz1afLnKqAIvAaPlew7Aq3kboxnc6yMzzTbdRyixqlRbqbqC', 'user', NULL, 0, 0),
+(4, 'TesztAdmin', 'testadm@igazi.email', 'jelszo123', 'admin', NULL, 1, 0);
 
 --
--- Indexek a kiírt táblákhoz
+-- Indexes for dumped tables
 --
 
 --
--- A tábla indexei `cache`
+-- Indexes for table `cache`
 --
 ALTER TABLE `cache`
   ADD PRIMARY KEY (`key`);
 
 --
--- A tábla indexei `cache_locks`
+-- Indexes for table `cache_locks`
 --
 ALTER TABLE `cache_locks`
   ADD PRIMARY KEY (`key`);
 
 --
--- A tábla indexei `cost`
+-- Indexes for table `cost`
 --
 ALTER TABLE `cost`
   ADD PRIMARY KEY (`id`),
@@ -363,7 +249,7 @@ ALTER TABLE `cost`
   ADD KEY `dest_id` (`dest_id`);
 
 --
--- A tábla indexei `destination`
+-- Indexes for table `destination`
 --
 ALTER TABLE `destination`
   ADD PRIMARY KEY (`id`),
@@ -371,53 +257,13 @@ ALTER TABLE `destination`
   ADD KEY `user_id` (`user_id`);
 
 --
--- A tábla indexei `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
-
---
--- A tábla indexei `jobs`
---
-ALTER TABLE `jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `jobs_queue_index` (`queue`);
-
---
--- A tábla indexei `job_batches`
---
-ALTER TABLE `job_batches`
-  ADD PRIMARY KEY (`id`);
-
---
--- A tábla indexei `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- A tábla indexei `notification`
---
-ALTER TABLE `notification`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- A tábla indexei `password_reset_tokens`
---
-ALTER TABLE `password_reset_tokens`
-  ADD PRIMARY KEY (`email`);
-
---
--- A tábla indexei `pricewatch`
---
-ALTER TABLE `pricewatch`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- A tábla indexei `reservations`
+-- Indexes for table `reservations`
 --
 ALTER TABLE `reservations`
   ADD PRIMARY KEY (`id`),
@@ -425,21 +271,14 @@ ALTER TABLE `reservations`
   ADD KEY `reservations_destination_id_index` (`destination_id`);
 
 --
--- A tábla indexei `route`
+-- Indexes for table `route`
 --
 ALTER TABLE `route`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- A tábla indexei `routedestinations`
---
-ALTER TABLE `routedestinations`
-  ADD PRIMARY KEY (`route_id`,`dest_id`),
-  ADD KEY `dest_id` (`dest_id`);
-
---
--- A tábla indexei `sessions`
+-- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
@@ -447,95 +286,58 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
--- A tábla indexei `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- A tábla indexei `weather`
---
-ALTER TABLE `weather`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `dest_id` (`dest_id`);
-
---
--- A kiírt táblák AUTO_INCREMENT értéke
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT a táblához `cost`
+-- AUTO_INCREMENT for table `cost`
 --
 ALTER TABLE `cost`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT a táblához `destination`
+-- AUTO_INCREMENT for table `destination`
 --
 ALTER TABLE `destination`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT a táblához `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT a táblához `jobs`
---
-ALTER TABLE `jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT a táblához `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT a táblához `notification`
---
-ALTER TABLE `notification`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT a táblához `pricewatch`
---
-ALTER TABLE `pricewatch`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT a táblához `reservations`
+-- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT a táblához `route`
+-- AUTO_INCREMENT for table `route`
 --
 ALTER TABLE `route`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT a táblához `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT a táblához `weather`
---
-ALTER TABLE `weather`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- Megkötések a kiírt táblákhoz
+-- Constraints for dumped tables
 --
 
 --
--- Megkötések a táblához `cost`
+-- Constraints for table `cost`
 --
 ALTER TABLE `cost`
   ADD CONSTRAINT `cost_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE,
@@ -543,41 +345,16 @@ ALTER TABLE `cost`
   ADD CONSTRAINT `cost_ibfk_3` FOREIGN KEY (`dest_id`) REFERENCES `destination` (`id`) ON DELETE CASCADE;
 
 --
--- Megkötések a táblához `destination`
+-- Constraints for table `destination`
 --
 ALTER TABLE `destination`
   ADD CONSTRAINT `destination_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE SET NULL;
 
 --
--- Megkötések a táblához `notification`
---
-ALTER TABLE `notification`
-  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE;
-
---
--- Megkötések a táblához `pricewatch`
---
-ALTER TABLE `pricewatch`
-  ADD CONSTRAINT `pricewatch_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE;
-
---
--- Megkötések a táblához `route`
+-- Constraints for table `route`
 --
 ALTER TABLE `route`
   ADD CONSTRAINT `route_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE;
-
---
--- Megkötések a táblához `routedestinations`
---
-ALTER TABLE `routedestinations`
-  ADD CONSTRAINT `routedestinations_ibfk_1` FOREIGN KEY (`route_id`) REFERENCES `route` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `routedestinations_ibfk_2` FOREIGN KEY (`dest_id`) REFERENCES `destination` (`id`) ON DELETE CASCADE;
-
---
--- Megkötések a táblához `weather`
---
-ALTER TABLE `weather`
-  ADD CONSTRAINT `weather_ibfk_1` FOREIGN KEY (`dest_id`) REFERENCES `destination` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
